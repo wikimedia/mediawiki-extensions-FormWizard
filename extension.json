@@ -1,0 +1,54 @@
+{
+    "name": "FormWizard",
+    "version": "0.0.1",
+    "author": [
+        "Egbe Eugene",
+        "James Hare"
+    ],
+    "url": "https://www.mediawiki.org/wiki/Extension:Formwizard",
+    "namemsg": "formWizard",
+    "descriptionmsg": "formWizard-desc",
+    "license-name": "GPL-2.0-or-later",
+    "type": "other",
+    "manifest_version": 1,
+    "MessagesDirs": {
+        "FormWizard": [
+            "i18n"
+        ]
+    },
+    "AutoloadClasses": {
+        "SpecialFormWizardPage": "specials/SpecialFormWizardPage.php",
+        "FormWizardHooks": "Hooks.php"
+    },
+    "ResourceModules": {
+        "ext.formWizard": {
+            "scripts": [
+                "ext.formWizard.js"
+            ],
+            "styles": [
+                "ext.formWizard.css"
+            ],
+            "messages": [
+
+            ],
+            "dependencies": [
+
+            ]
+        }
+    },
+    "ResourceFileModulePaths": {
+        "localBasePath": "modules",
+        "remoteExtPath": "FormWizard/modules"
+    },
+    "SpecialPages": {
+        "FormWizardPage": "SpecialFormWizardPage"
+    },
+    "ExtensionMessagesFiles": {
+        "FormWizardAlias": "FormWizard.alias.php"
+    },
+    "Hooks": {
+        "ResourceLoaderTestModules": [
+            "FormWizardHooks::onResourceLoaderTestModules"
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "@metadata": {
+        "authors": [
+            "Egbe Eugene"
+        ]
+    },
+    "formWizard": "The name of the extension",
+    "formWizard-desc": "{{desc|name=FormWizard|url=https://www.mediawiki.org/wiki/Extension:Formwizard}}",
+    "special-formWizardPage-intro": "Description appearing on top of <tvar|1>Special:{{ll|FormWizardPage}}</>.",
+    "special-formWizardPage-title": "Title of the special page Special:FormWizardPage"
+}
