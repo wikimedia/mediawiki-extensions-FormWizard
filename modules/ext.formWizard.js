@@ -1,4 +1,4 @@
-( function () {
+( function ( mw ) {
 	/**
 	 * @class mw.formWizard
 	 * @singleton
