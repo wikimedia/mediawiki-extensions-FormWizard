@@ -9,7 +9,7 @@
     "namemsg": "formWizard",
     "descriptionmsg": "formWizard-desc",
     "license-name": "GPL-2.0-or-later",
-    "type": "other",
+    "type": "parserhook",
     "manifest_version": 1,
     "MessagesDirs": {
         "FormWizard": [
@@ -32,7 +32,7 @@
 
             ],
             "dependencies": [
-                "oojs-ui"
+                "oojs"
             ]
         }
     },
@@ -52,6 +52,13 @@
         ],
         "BeforePageDisplay": [
             "FormWizardHooks::BeforePageDisplay"
+        ],
+        "ParserFirstCallInit": [
+            "FormWizardHooks::onParserSetup"
         ]
+
+    },
+    "ExtensionMessagesFiles": {
+        "formwizard": "FormWizard.i18n.php"
     }
 }

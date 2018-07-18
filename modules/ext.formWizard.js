@@ -4,5 +4,8 @@ $(document).ready(function(e){
 		$('#formwizard-launch').click(function(e){
 			alert('hello!');
 		});
+
+
+		
 	} );
 });
