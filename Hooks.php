@@ -1,20 +1,13 @@
 <?php
+
 /**
- * FormWizard extension hooks
- *
  * @file
  * @ingroup Extensions
- * @license GPL-2.0+
+ * @license GPL-2.0-or-later
  */
+
 class FormWizardHooks {
-	/**
-	 * Conditionally register the unit testing module for the ext.formWizard module
-	 * only if that module is loaded
-	 *
-	 * @param array $testModules The array of registered test modules
-	 * @param ResourceLoader $resourceLoader The reference to the resource loader
-	 * @return true
-	 */
+
 	public static function onResourceLoaderTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
 		$testModules['qunit']['ext.formWizard.tests'] = [
 			'scripts' => [
@@ -29,5 +22,12 @@ class FormWizardHooks {
 		return true;
 	}
 
+	public static function BeforePageDisplay( 
+		OutputPage &$out, 
+		Skin &$skin ) {
 
+		$out->addModules( [
+			'ext.formWizard'
+		] );
+	}
 }

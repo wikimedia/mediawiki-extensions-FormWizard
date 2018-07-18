@@ -32,11 +32,7 @@
 
             ],
             "dependencies": [
-                "oojs",
-                "oojs-ui-core",
-                "oojs-ui-widgets",
-                "wikimedia-ui-base",
-                "jquery"
+                "oojs-ui"
             ]
         }
     },
@@ -55,7 +51,7 @@
             "FormWizardHooks::onResourceLoaderTestModules"
         ],
         "BeforePageDisplay": [
-            "FormWizardHooks::onBeforePageDisplay"
+            "FormWizardHooks::BeforePageDisplay"
         ]
     }
 }
