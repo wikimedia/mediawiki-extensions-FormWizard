@@ -32,7 +32,8 @@
 
             ],
             "dependencies": [
-                "oojs"
+                "oojs",
+                "oojs-ui"
             ]
         }
     },
@@ -55,8 +56,10 @@
         ],
         "ParserFirstCallInit": [
             "FormWizardHooks::onParserSetup"
+        ],
+        "OutputPageParserOutput": [
+            "FormWizardHooks::onOutputPageParserOutput"
         ]
-
     },
     "ExtensionMessagesFiles": {
         "formwizard": "FormWizard.i18n.php"
