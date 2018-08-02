@@ -6,6 +6,13 @@ $( document ).ready( function( e ) {
 			} );
 			var api = new mw.Api();
 
+			/**
+			 * Get data from through the api.
+			 * @param {string} action - The api action.
+			 * @param {string} page - The page on which the action is performed.
+			 * @param {string} format = The format of the result.
+			 * @param {version} version - the api version.
+			 */
 			function getDataSchema( action, page, format, version ) {
 				api.get( {
 					action: action,
@@ -41,7 +48,10 @@ $( document ).ready( function( e ) {
 									fieldsetContainer.push( fieldsetElements );
 						} )
 
-						// starting a new dialog
+						/**
+						 * Create an instance of the ProcessDialog.
+						 * @param {object} config - The processDialog configurations.
+						 */
 						function FormWizardDialog( config ) {
 							FormWizardDialog.parent.call( this, config );
 						}
@@ -136,7 +146,10 @@ $( document ).ready( function( e ) {
 					}
 				} );
 			}
-
+			/**
+			 * Create a TextInputWidget.
+			 * @param {object} dict - The dictionary of configurations.
+			 */
 			function makesmallTextBox( dict ) {
 				var smallTextBox = new OO.ui.TextInputWidget( {
 					placeholder: dict.placeholder,
@@ -148,6 +161,10 @@ $( document ).ready( function( e ) {
 				return smallTextBox;
 			}
 
+			/**
+			 * Create a ComboBoxInputWidget.
+			 * @param {object} dict - The dictionary of configurations.
+			 */
 			function makeDropdown( dict ) {
 				var dropdown =  new OO.ui.ComboBoxInputWidget( {
 					options: dict.options,
@@ -159,6 +176,10 @@ $( document ).ready( function( e ) {
 				return dropdown;
 			}
 
+			/**
+			 * Create a MultilineTextInputWidget.
+			 * @param {object} dict - The dictionary of configurations.
+			 */
 			function makeMultilineText( dict ) {
 				var LargeTextbox = new OO.ui.MultilineTextInputWidget( {
 
@@ -172,6 +193,10 @@ $( document ).ready( function( e ) {
 				return LargeTextbox;
 			}
 
+			/**
+			 * Create a CheckboxMultiselectInputWidget.
+			 * @param {object} dict - The dictionary of configurations.
+			 */
 			function makeCheckboxMultiselect( dict ) {
 				var checkboxMultiselect = new OO.ui.CheckboxMultiselectInputWidget( {
 					value: dict.value,
@@ -181,6 +206,10 @@ $( document ).ready( function( e ) {
 				return checkboxMultiselect;
 			}
 
+			/**
+			 * Create a SelectFileWidget.
+			 * @param {object} dict - The dictionary of configurations.
+			 */
 			function makeSelectFile( dict ) {
 				var selectFileWidget = new OO.ui.SelectFileWidget( {
 					showDropTarget: dict.showDropTarget,
@@ -189,6 +218,10 @@ $( document ).ready( function( e ) {
 				return selectFileWidget;
 			}
 
+			/**
+			 * Create a LabelWidget.
+			 * @param {object} dict - The dictionary of configurations.
+			 */
 			function makeLabelText( dict ) {
 				var labelText =  new OO.ui.LabelWidget( {
 					label: dict.label,
@@ -198,6 +231,10 @@ $( document ).ready( function( e ) {
 				return labelText;
 			}
 
+			/**
+			 * Create a StackLayout.
+			 * @param {object} stackPanels - The panels to be added to the stack.
+			 */
 			function makeStack( stackPanels ) {
 				var stack = new OO.ui.StackLayout( {
 						classes: ['container'],
@@ -207,6 +244,10 @@ $( document ).ready( function( e ) {
 				return stack;
 			}
 
+			/**
+			 * Create a FieldsetLayout.
+			 * @param {object} contentElements - The elements added to the fielset.
+			 */
 			function createFieldSet( contentElements ) {
 				var fieldset = new OO.ui.FieldsetLayout( {
 					classes: [ 'container' ]
@@ -215,6 +256,10 @@ $( document ).ready( function( e ) {
 				return fieldset;
 			}
 
+			/**
+			 * Adds fioelset elements to  PanelLayout.
+			 * @param {object} fieldSetContentElements - The elmentments of the fieldset.
+			 */
 			function AddPanelElementsToPanel( fieldSetContentElements ) {
 				var fieldSet = createFieldSet( fieldSetContentElements );
 				var panel = new OO.ui.PanelLayout( {
@@ -227,11 +272,14 @@ $( document ).ready( function( e ) {
 				return panel;
 			}
 
+			/**
+			 * Create elements from data from config data.
+			 * @param {object} data - The json data from the api request.
+			 */
 			function createElementsFromSchema( data ) {
-
 				var elementSet = [];
 				$.each( data.schema, function( key, value ) {
-					switch( value.type ){
+					switch( value.type ) {
 						case 'smallTextBox':
 							var smallTextBox = makesmallTextBox( value );
 							elementSet.push( smallTextBox );
@@ -245,8 +293,8 @@ $( document ).ready( function( e ) {
 							elementSet.push( button );
 							break;
 						case 'dropdown':
-							var dropdown = makeDropdown(value);
-							elementSet.push(dropdown);
+							var dropdown = makeDropdown( value );
+							elementSet.push( dropdown );
 							break;
 						case 'CheckboxMultiselect':
 							var checkboxMultiselect = makeCheckboxMultiselect( value );
@@ -265,6 +313,10 @@ $( document ).ready( function( e ) {
 				return elementSet;
 			}
 
+			/**
+			 * Get data from a fieldset.
+			 * @param {object} fieldset - the fielset where the data is obtained.
+			 */
 			function getFieldSetData( fieldset ) {
 				var fieldData = [];
 				fieldset.forEach( function( field ) {
@@ -277,6 +329,10 @@ $( document ).ready( function( e ) {
 				return fieldData;
 			}
 
+			/**
+			 * Gets the data from an object holding fieldsets.
+			 * @param {object} fieldsetContainer - The container of fieldsets.
+			 */
 			function getFieldSetContendData( fieldsetContainer ) {
 				var ContentData = [];
 				fieldsetContainer.forEach( function( fieldset ) {
@@ -286,6 +342,10 @@ $( document ).ready( function( e ) {
 				return ContentData;
 			}
 
+			/**
+			 * construct the page content using data.
+			 * @param {object} pageContentData - The data for the page.
+			 */
 			function constructPageConten( pageContentData ) {
 				var pageContent;
 				pageContentData.forEach( function( contentData ) {
@@ -298,6 +358,11 @@ $( document ).ready( function( e ) {
 				return pageContent;
 			}
 
+			/**
+			 * An api request to edit a edit/create a page.
+			 * @param {object} api - instance of the mw.api()
+			 * @param {object} pageContentData - The data for the page.
+			 */
 			function createPage( api, fieldsetContentData ) {
 				var date = new Date();
 				api.postWithToken( 'csrf', {
@@ -307,7 +372,7 @@ $( document ).ready( function( e ) {
 					basetimestamp: date.toISOString()
 				} ).done( function() {
 					mw.loader.using( 'mediawiki.notify', function() {
-						mw.notify( mw.config.get( 'formWizardProject' )+' \n\n'+'Complete', { type: 'info' }  );
+						mw.notify( mw.config.get( 'formWizardProject' )+' \n\n'+'Complete', { type: 'info' } );
 					} );
 				} );
 			}
