@@ -306,8 +306,10 @@ $( document ).ready( function( e ) {
 					appendtext: constructPageConten( fieldsetContentData ),
 					basetimestamp: date.toISOString()
 				} ).done( function() {
-					location.reload();
-				});
+					mw.loader.using( 'mediawiki.notify', function() {
+						mw.notify( mw.config.get( 'formWizardProject' )+' \n\n'+'Complete', { type: 'info' }  );
+					} );
+				} );
 			}
 	});
 });
