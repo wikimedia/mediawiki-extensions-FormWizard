@@ -1,3 +1,19 @@
 .formWizard-title {
 	font-size: 1.1em;
 }
+
+.container {
+  border-width: 0.5px;
+  padding: 5px;
+}
+
+.formWizard-element{
+	padding-top: 1px;
+	padding-bottom: 20px;
+	align: right;
+}
+
+.formWizard-label{
+	font-weight: bold;
+	font-style: italic;
+}

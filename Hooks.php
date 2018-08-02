@@ -30,14 +30,14 @@ class FormWizardHooks {
 			'ext.formWizard'
 		] );
 	}
-	public static function onParserSetup( &$parser ) {
 
+	public static function onParserSetup( &$parser ) {
       // Create a function hook associating the "example" magic word with renderExample()
       $parser->setFunctionHook( 'formwizard', 'FormWizardHooks::showPorjectButton' );
    }
 
    // Render the output of {{#example:}}.
-   public static function showPorjectButton( $parser,$project, $action, $config ) {
+   public static function showPorjectButton( $parser,$project, $action, $config, $pageName ) {
       // The input parameters are wikitext with templates expanded.
       // The output should be wikitext too.
       $output = "<span class='mw-ui-button mw-ui-progressive'
@@ -48,12 +48,14 @@ class FormWizardHooks {
 				</span>";
 			$parser->getOutput()->setExtensionData('formWizardProject', $project);
 	  	$parser->getOutput()->setExtensionData('formWizardconfig', $config);
+	  	$parser->getOutput()->setExtensionData('formWizardPageName', $pageName);
       return $output;
    }
 
    public static function onOutputPageParserOutput( OutputPage &$out, ParserOutput $parseroutput ) {
    		$out->addJsConfigVars( 'formWizardconfig', $parseroutput->getExtensionData('formWizardconfig') );
 			$out->addJsConfigVars( 'formWizardProject', $parseroutput->getExtensionData( 'formWizardProject' ) );
+			$out->addJsConfigVars( 'formWizardPageName', $parseroutput->getExtensionData( 'formWizardPageName' ) );
    }
 
 }
