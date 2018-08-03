@@ -146,6 +146,60 @@ $( document ).ready( function( e ) {
 					}
 				} );
 			}
+
+			/**
+			 * Create a SelectFileWidget.
+			 * @param {object} dict - The dictionary of configurations.
+			 */
+			function makeSelectFileWidget( dict ) {
+				var SelectFileWidget = new OO.ui.SelectFileWidget( {
+				    accept: dict.accept,
+				    showDropTarget: dict.showDropTargets,
+						classes: [ dict.class ]
+				} );
+				return SelectFileWidget;
+			}
+
+			/**
+			 * Create a DropdownInputWidget.
+			 * @param {object} dict - The dictionary of configurations.
+			 */
+			function makeDropdownInputWidget( dict ) {
+				var DropdownInputWidget = new OO.ui.DropdownInputWidget( {
+				    value: dict.value,
+				    options: dict.options,
+						classes: [ dict.class ]
+				} );
+				return DropdownInputWidget;
+			}
+
+			/**
+			 * Create a NumberInputWidget.
+			 * @param {object} dict - The dictionary of configurations.
+			 */
+			function makeNumberInputWidget( dict ) {
+				var NumberInputWidget = new OO.ui.NumberInputWidget( {
+				    isInteger: dict.isInteger,
+				    min: dict.min,
+				    max: dict.max,
+						classes: [ dict.class ]
+				} );
+				return NumberInputWidget;
+			}
+
+			/**
+			 * Create a RadioSelectInputWidget.
+			 * @param {object} dict - The dictionary of configurations.
+			 */
+			function makeRadioSelectInputWidget( dict ) {
+				var RadioSelectInputWidget = new OO.ui.RadioSelectInputWidget( {
+				    value: dict.value,
+				    options: dict.options,
+						classes: [ dict.class ]
+				} );
+				return RadioSelectInputWidget;
+			}
+
 			/**
 			 * Create a TextInputWidget.
 			 * @param {object} dict - The dictionary of configurations.
@@ -165,15 +219,14 @@ $( document ).ready( function( e ) {
 			 * Create a ComboBoxInputWidget.
 			 * @param {object} dict - The dictionary of configurations.
 			 */
-			function makeDropdown( dict ) {
-				var dropdown =  new OO.ui.ComboBoxInputWidget( {
+			function makeComboBoxInputWidget( dict ) {
+				var ComboBoxInputWidget =  new OO.ui.ComboBoxInputWidget( {
 					options: dict.options,
 					label: dict.label,
 					menu: dict.menu.filterFromInput,
 					classes: [dict.class]
 				});
-				console.log(dict.menu.filterFromInput)
-				return dropdown;
+				return ComboBoxInputWidget;
 			}
 
 			/**
@@ -204,18 +257,6 @@ $( document ).ready( function( e ) {
 					classes: [dict.class]
 				} );
 				return checkboxMultiselect;
-			}
-
-			/**
-			 * Create a SelectFileWidget.
-			 * @param {object} dict - The dictionary of configurations.
-			 */
-			function makeSelectFile( dict ) {
-				var selectFileWidget = new OO.ui.SelectFileWidget( {
-					showDropTarget: dict.showDropTarget,
-					classes: [dict.class]
-				} );
-				return selectFileWidget;
 			}
 
 			/**
@@ -288,28 +329,36 @@ $( document ).ready( function( e ) {
 							var MultilineText = makeMultilineText( value );
 							elementSet.push( MultilineText );
 							break;
-						case 'button':
-							var button = makeButton( value );
-							elementSet.push( button );
-							break;
-						case 'dropdown':
-							var dropdown = makeDropdown( value );
-							elementSet.push( dropdown );
+						case 'ComboBoxInputWidget':
+							var ComboBoxInputWidget = makeComboBoxInputWidget( value );
+							elementSet.push( ComboBoxInputWidget );
 							break;
 						case 'CheckboxMultiselect':
 							var checkboxMultiselect = makeCheckboxMultiselect( value );
 							elementSet.push( checkboxMultiselect );
 							break;
-						case 'SelectFileWidget':
-							var selectFileWidget = makeSelectFile( value );
-							elementSet.push ( selectFileWidget );
-							break;
-						case 'Label':
+						case 'LabelText':
 							labelText = makeLabelText( value );
 							elementSet.push( labelText );
 							break;
+						case 'NumberInputWidget':
+							var numberInputWidget = makeNumberInputWidget( value );
+							elementSet.push( numberInputWidget );
+							break;
+						case 'RadioSelectInputWidget':
+							var radioSelectInputWidget = makeRadioSelectInputWidget( value );
+							elementSet.push( radioSelectInputWidget );
+							break;
+						case 'DropdownInputWidget':
+							var dropdownInputWidget = makeDropdownInputWidget( value );
+							elementSet.push( dropdownInputWidget );
+							break;
+						case 'SelectFileWidget':
+							var selectFileWidget = makeSelectFileWidget( value );
+							elementSet.push( selectFileWidget );
+							break;
 					}
-				})
+				} )
 				return elementSet;
 			}
 
@@ -347,6 +396,7 @@ $( document ).ready( function( e ) {
 			 * @param {object} pageContentData - The data for the page.
 			 */
 			function constructPageConten( pageContentData ) {
+				console.log( ' pageContentData ',pageContentData );
 				var pageContent;
 				pageContentData.forEach( function( contentData ) {
 					for ( var i = 0; i < contentData.length; i++) {
