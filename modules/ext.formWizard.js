@@ -318,7 +318,7 @@
 
 		/**
 			* An api request to edit a edit/create a page.
-			* @param {object} api - instance of the mw.api()
+			* @param {object} api - instance of the mw.api().
 			* @param {object} fieldsetContentData - The data used to create page.
 			*/
 
@@ -338,6 +338,13 @@
 				} );
 			} );
 		}
+
+		/**
+			* Create an instance of a dialog.
+			* @param {object} config - dialog configuration.
+			* Note: Changing this name FormWizardDialog means changing the dialog
+			* 	name name below.
+			*/
 
 		function FormWizardDialog( config ) {
 			FormWizardDialog.parent.call( this, config );
