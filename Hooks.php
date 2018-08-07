@@ -8,7 +8,17 @@
 
 class FormWizardHooks {
 
-	public static function onResourceLoaderTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
+	/**
+	 * Conditionally register the unit testing module for the ext.formWizard
+	 * module only if that module is loaded.
+	 *
+	 * @param array &$testModules The array of registered test modules
+	 * @param ResourceLoader &$resourceLoader The reference to the resource
+	 *  loader
+	 * @return true
+	 */
+	public static function onResourceLoaderTestModules( array &$testModules,
+		ResourceLoader &$resourceLoader ) {
 		$testModules['qunit']['ext.formWizard.tests'] = [
 			'scripts' => [
 				'tests/FormWizard.test.js'
@@ -22,41 +32,62 @@ class FormWizardHooks {
 		return true;
 	}
 
+	/**
+	 * Hook for BeforePageDisplay.
+	 *
+	 * Enables JavaScript.
+	 *
+	 * @param OutputPage &$out The OutputPage object.
+	 * @param Skin &$skin Skin object that will be used to generate the page,
+	 *  added in 1.13.
+	 */
 	public static function BeforePageDisplay(
 		OutputPage &$out,
 		Skin &$skin ) {
-
 		$out->addModules( [
 			'ext.formWizard'
 		] );
 	}
 
 	public static function onParserSetup( &$parser ) {
-      // Create a function hook associating the "example" magic word with renderExample()
-      $parser->setFunctionHook( 'formwizard', 'FormWizardHooks::showPorjectButton' );
+			// Create a function hook associating the "formwizard" magic word with renderExample()
+			$parser->setFunctionHook( 'formwizard', 'FormWizardHooks::showPorjectButton' );
+	}
 
-	 }
-
-   // Render the output of {{#example:}}.
+	/**
+		* Contruct button from parser arguments.
+		*
+		* @param String $parser - The parse name.
+		* @param String $project - The project name in parser function defintion
+		* @param String $action - Text to display on the button.
+		* @param String $config - Path to config file.
+		* @param String $pageName - Name of the page to create.
+		*/
    public static function showPorjectButton( $parser, $project, $action, $config, $pageName ) {
-      // The input parameters are wikitext with templates expanded.
-      // The output should be wikitext too.
-      $output = "<span class='mw-ui-button mw-ui-progressive'
+		 // The input parameters are wikitext with templates expanded.
+		 // The output should be wikitext too.
+		 $output = "<span class='mw-ui-button mw-ui-progressive'
 				    id='formwizard-launch'
 				    color = 'blue'
 				    role='button'
-				    aria-disabled='false'>".$action."
-				</span>";
+				    aria-disabled='false'>" . $action . "
+			</span>";
 			$parser->getOutput()->setExtensionData( 'formWizardProject', $project );
-	  	$parser->getOutput()->setExtensionData( 'formWizardConfig', $config );
-	  	$parser->getOutput()->setExtensionData( 'formWizardPageName', $pageName );
-      return $output;
+			$parser->getOutput()->setExtensionData( 'formWizardConfig', $config );
+			$parser->getOutput()->setExtensionData( 'formWizardPageName', $pageName );
+			return $output;
    }
 
+	 /**
+	  * @param OutputPage &$out
+	  * @param ParserOutput $parseroutput
+	  */
    public static function onOutputPageParserOutput( OutputPage &$out, ParserOutput $parseroutput ) {
-   		$out->addJsConfigVars( 'formWizardConfig', $parseroutput->getExtensionData('formWizardConfig') );
-			$out->addJsConfigVars( 'formWizardProject', $parseroutput->getExtensionData( 'formWizardProject' ) );
-			$out->addJsConfigVars( 'formWizardPageName', $parseroutput->getExtensionData( 'formWizardPageName' ) );
-	 }
-
+		 $out->addJsConfigVars( 'formWizardConfig',
+		 $parseroutput->getExtensionData( 'formWizardConfig' ) );
+		 $out->addJsConfigVars( 'formWizardProject',
+		 $parseroutput->getExtensionData( 'formWizardProject' ) );
+		 $out->addJsConfigVars( 'formWizardPageName',
+		 $parseroutput->getExtensionData( 'formWizardPageName' ) );
+   }
 }
