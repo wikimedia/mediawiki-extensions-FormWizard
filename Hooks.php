@@ -17,8 +17,10 @@ class FormWizardHooks {
 	 *  loader
 	 * @return true
 	 */
-	public static function onResourceLoaderTestModules( array &$testModules,
-		ResourceLoader &$resourceLoader ) {
+	 public static function onResourceLoaderTestModules(
+		array &$testModules,
+		ResourceLoader &$resourceLoader
+	) {
 		$testModules['qunit']['ext.formWizard.tests'] = [
 			'scripts' => [
 				'tests/FormWizard.test.js'
@@ -29,8 +31,8 @@ class FormWizardHooks {
 			'localBasePath' => __DIR__,
 			'remoteExtPath' => 'FormWizard',
 		];
-		return true;``
-	}
+		return true;
+		}
 
 	/**
 	 * Hook for BeforePageDisplay.
@@ -45,7 +47,8 @@ class FormWizardHooks {
 		OutputPage &$out,
 		Skin &$skin ) {
 		$out->addModules( [
-			'ext.formWizard'
+			'ext.formWizard',
+			'oojs'
 		] );
 	}
 

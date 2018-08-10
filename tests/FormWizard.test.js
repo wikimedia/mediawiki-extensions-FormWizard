@@ -1,5 +1,6 @@
-( function ( mw, $ ) {
-	QUnit.module( 'ext.formWizard' );
+( function () {
+
+	// QUnit.module( 'ext.formWizard' );
 
 	/**
 	 * Write your QUnit tests here. For more information on
@@ -8,5 +9,4 @@
 	 * the manual:
 	 * https://www.mediawiki.org/wiki/Manual:JavaScript_unit_testing#Write_a_unit_test
 	 */
-
-} )( mediaWiki, jQuery );
+}() );

@@ -1,45 +1,46 @@
 ( function ( mw ) {
 	$( function () {
 		// {api} instance of mediaWiki api.``
-		// {object} configData data from the parsed wikitext.
+		// {Object} configData data from the parsed wikitext.
 		// {int} viewControl variable used to control the stack views.
 		var api, viewControl = 0;
 		api = new mw.Api();
-
 		/**
 			* Create a SelectFileWidget.
-			* @param {object} dict - The dictionary of configurations.
-			* @return {object} - The SelectFileWidget.
+			*
+			* @param {Object} dict - The dictionary of configurations.
+			* @return {Object} - The SelectFileWidget.
 			*/
 
 		function makeSelectFileWidget( dict ) {
 			var selectFileWidget = new OO.ui.SelectFileWidget( {
 				accept: dict.accept,
-				showDropTarget: dict.showDropTargets,
-				classes: [ dict.class ]
+				classes: [ dict.classes ]
 			} );
 			return selectFileWidget;
 		}
 
 		/**
 			* Create a DropdownInputWidget.
-			* @param {object} dict - The dictionary of configurations.
-			* @return {object} - The DropdownInputWidget.
+			*
+			* @param {Object} dict - The dictionary of configurations.
+			* @return {Object} - The DropdownInputWidget.
 			*/
 
 		function makeDropdownInputWidget( dict ) {
 			var dropdownInputWidget = new OO.ui.DropdownInputWidget( {
 				value: dict.value,
 				options: dict.options,
-				classes: [ dict.class ]
+				classes: [ dict.classeses ]
 			} );
 			return dropdownInputWidget;
 		}
 
 		/**
 			* Create a NumberInputWidget.
-			* @param {object} dict - The dictionary of configurations.
-			* @return {object} - The NumberInputWidget.
+			*
+			* @param {Object} dict - The dictionary of configurations.
+			* @return {Object} - The NumberInputWidget.
 			*/
 
 		function makeNumberInputWidget( dict ) {
@@ -47,30 +48,32 @@
 				isInteger: dict.isInteger,
 				min: dict.min,
 				max: dict.max,
-				classes: [ dict.class ]
+				classes: [ dict.classes ]
 			} );
 			return numberInputWidget;
 		}
 
 		/**
 			* Create a RadioSelectInputWidget.
-			* @param {object} dict - The dictionary of configurations.
-			* @return {object} - The RadioSelectInputWidget.
+			*
+			* @param {Object} dict - The dictionary of configurations.
+			* @return {Object} - The RadioSelectInputWidget.
 			*/
 
 		function makeRadioSelectInputWidget( dict ) {
 			var radioSelectInputWidget = new OO.ui.RadioSelectInputWidget( {
 				value: dict.value,
 				options: dict.options,
-				classes: [ dict.class ]
+				classes: [ dict.classes ]
 			} );
 			return radioSelectInputWidget;
 		}
 
 		/**
 			* Create a TextInputWidget.
-			* @param {object} dict - The dictionary of configurations.
-			* @return {object} - The TextInputWidget.
+			*
+			* @param {Object} dict - The dictionary of configurations.
+			* @return {Object} - The TextInputWidget.
 			*/
 
 		function makesmallTextBox( dict ) {
@@ -79,31 +82,32 @@
 				title: dict.title,
 				characterLength: dict.characterLength,
 				required: dict.required,
-				classes: [ dict.class ]
+				classes: [ dict.classes ]
 			} );
 			return smallTextBox;
 		}
 
 		/**
 			* Create a ComboBoxInputWidget.
-			* @param {object} dict - The dictionary of configurations.
-			* @return {object} - The ComboBoxInputWidget.
+			*
+			* @param {Object} dict - The dictionary of configurations.
+			* @return {Object} - The ComboBoxInputWidget.
 			*/
 
 		function makeComboBoxInputWidget( dict ) {
 			var comboBoxInputWidget = new OO.ui.ComboBoxInputWidget( {
 				options: dict.options,
 				label: dict.label,
-				menu: dict.menu.filterFromInput,
-				classes: [ dict.class ]
+				classes: [ dict.classes ]
 			} );
 			return comboBoxInputWidget;
 		}
 
 		/**
 			* Create a MultilineTextInputWidget.
-			* @param {object} dict - The dictionary of configurations.
-			* @return {object} - The MultilineTextInputWidget.
+			*
+			* @param {Object} dict - The dictionary of configurations.
+			* @return {Object} - The MultilineTextInputWidget.
 			*/
 
 		function makeMultilineText( dict ) {
@@ -112,36 +116,38 @@
 				value: dict.value,
 				autosize: dict.autosize,
 				placeholder: dict.placeholder,
-				classes: [ dict.class ]
+				classes: [ dict.classes ]
 			} );
 			return largeTextbox;
 		}
 
 		/**
 			* Create a CheckboxMultiselectInputWidget.
-			* @param {object} dict - The dictionary of configurations.
-			* @return {object} - The LabelText.
+			*
+			* @param {Object} dict - The dictionary of configurations.
+			* @return {Object} - The LabelText.
 			*/
 
 		function makeCheckboxMultiselect( dict ) {
 			var checkboxMultiselect = new OO.ui.CheckboxMultiselectInputWidget( {
 				value: dict.value,
 				options: dict.options,
-				classes: [ dict.class ]
+				classes: [ dict.classes ]
 			} );
 			return checkboxMultiselect;
 		}
 
 		/**
 			* Create a LabelWidget.
-			* @param {object} dict - The dictionary of configurations.
-			* @return {object} - The LabelText.
+			*
+			* @param {Object} dict - The dictionary of configurations.
+			* @return {Object} - The LabelText.
 			*/
 
 		function makeLabelText( dict ) {
 			var labelText = new OO.ui.LabelWidget( {
 				label: dict.label,
-				classes: [ dict.class ],
+				classes: [ dict.classes ],
 				align: 'left'
 			} );
 			return labelText;
@@ -149,31 +155,40 @@
 
 		/**
 			* Return a promise from the api call.
-			* @param {object} api - instance of the mediaWiki api.
-			* @return {object} - The promise.
+			*
+			* @param {Object} api - instance of the mediaWiki api.
+			* @return {Object} - The promise.
 			*/
 
 		function setConfigData( api ) {
-			var pr = api.get( {
+			var promise = api.get( {
 				action: 'parse',
 				page: mw.config.get( 'formWizardConfig' ),
 				format: 'json',
 				formatversion: 2,
 				prop: 'wikitext'
 			} );
-			return pr;
+			return promise;
 		}
 
 		/**
 			* Create elements from data from config data.
-			* @param {object} data - The json data from the api request.
-			* @return {object} - The set of elements in a schema.
+			*
+			* @param {Object} data - The json data from the api request.
+			* @return {Object} - The set of elements in a schema.
 			*/
 
 		function createElementsFromSchema( data ) {
-			var elementSet = [], smallTextBox, multilineText, comboBoxInputWidget,
-				checkboxMultiselect, numberInputWidget, labelText,
-				radioSelectInputWidget, dropdownInputWidget, selectFileWidget;
+			var elementSet = [],
+				smallTextBox,
+				multilineText,
+				comboBoxInputWidget,
+				checkboxMultiselect,
+				numberInputWidget,
+				labelText,
+				radioSelectInputWidget,
+				dropdownInputWidget,
+				selectFileWidget;
 			$.each( data.schema, function ( key, value ) {
 				switch ( value.type ) {
 					case 'smallTextBox':
@@ -219,8 +234,9 @@
 
 		/**
 			* Create a FieldsetLayout.
-			* @param {object} contentElements - The elements added to the fielset.
-			* @return {object} - The FieldsetLayout.
+			*
+			* @param {Object} contentElements - The elements added to the fielset.
+			* @return {Object} - The FieldsetLayout.
 			*/
 
 		function createFieldSet( contentElements ) {
@@ -233,12 +249,14 @@
 
 		/**
 			* Adds fioelset elements to  PanelLayout.
-			* @param {object} fieldSetContentElements - The elmentments of the fieldset.
-			* @return {object} - The panel containing elements.
+			*
+			* @param {Object} fieldSetContentElements - The elmentments of the fieldset.
+			* @return {Object} - The panel containing elements.
 			*/
 
 		function AddPanelElementsToPanel( fieldSetContentElements ) {
-			var fieldSet, panel;
+			var fieldSet,
+				panel;
 			fieldSet = createFieldSet( fieldSetContentElements );
 			panel = new OO.ui.PanelLayout( {
 				padded: true,
@@ -252,8 +270,9 @@
 
 		/**
 			* Create a StackLayout.
-			* @param {object} stackPanels - The panels to be added to the stack.
-			* @return {object} - The StackLayout containing panels.
+			*
+			* @param {Object} stackPanels - The panels to be added to the stack.
+			* @return {Object} - The StackLayout containing panels.
 			*/
 
 		function makeStack( stackPanels ) {
@@ -267,8 +286,9 @@
 
 		/**
 			* Get data from a fieldset by their label and value.
-			* @param {object} fieldset - the fielset where the data is obtained.
-			* @return {object} - The fieldset data.
+			*
+			* @param {Object} fieldset - the fielset where the data is obtained.
+			* @return {Object} - The fieldset data.
 			*/
 
 		function getFieldSetData( fieldset ) {
@@ -285,8 +305,9 @@
 
 		/**
 			* Gets the data from an object holding fieldsets.
-			* @param {object} fieldsetContainer - The container of fieldsets.
-			* @return {object} - The content of the fieldset.
+			*
+			* @param {Object} fieldsetContainer - The container of fieldsets.
+			* @return {Object} - The content of the fieldset.
 			*/
 
 		function getFieldSetContendData( fieldsetContainer ) {
@@ -300,7 +321,8 @@
 
 		/**
 			* construct the page content using data.
-			* @param {object} pageContentData - The data for the page.
+			*
+			* @param {Object} pageContentData - The data for the page.
 			* @return {string} - The content to be appended to page.
 			*/
 
@@ -318,8 +340,9 @@
 
 		/**
 			* An api request to edit a edit/create a page.
-			* @param {object} api - instance of the mw.api().
-			* @param {object} fieldsetContentData - The data used to create page.
+			*
+			* @param {Object} api - instance of the mw.api().
+			* @param {Object} fieldsetContentData - The data used to create page.
 			*/
 
 		function createPage( api, fieldsetContentData ) {
@@ -334,14 +357,15 @@
 			} ).done( function () {
 				mw.loader.using( 'mediawiki.notify', function () {
 					mw.notify( mw.config.get( 'formWizardProject' ) +
-						'Complete', { type: 'info' } );
+						' Complete', { type: 'info' } );
 				} );
 			} );
 		}
 
 		/**
 			* Create an instance of a dialog.
-			* @param {object} config - dialog configuration.
+			*
+			* @param {Object} config - dialog configuration.
 			* Note: Changing this name FormWizardDialog means changing the dialog
 			* 	name name below.
 			*/
@@ -352,14 +376,17 @@
 
 		// When the launch button is clicked
 		$( '#formwizard-launch' ).click( function () {
-			// {object} fieldsetElements stores step elements from data schema
-			// {object} fieldsetContent Holds the contents of eachfieldset
-			// {object} fieldsetContainer stores fielsets
-			// {object stackPanels }Holds the panels to be added to the stack
-			// {object} fieldsetContentData Holds data from the panel fieldset elements
+			// {Object} fieldsetElements stores step elements from data schema
+			// {Object} fieldsetContent Holds the contents of eachfieldset
+			// {Object} fieldsetContainer stores fielsets
+			// {Object} stackPanels }Holds the panels to be added to the stack
+			// {Object} fieldsetContentData Holds data from the panel fieldset elements
 			var fieldsetElements = [],
-				fieldsetContent = [], fieldsetContainer = [], stackPanels = [],
-				fieldsetContentData = [], configData;
+				fieldsetContent = [],
+				fieldsetContainer = [],
+				stackPanels = [],
+				fieldsetContentData = [],
+				configData;
 			setConfigData( api ).done( function ( data ) {
 				// Windows manager and ProcessDialog instances
 				var windowManager, ProcessDialog, dialog;
