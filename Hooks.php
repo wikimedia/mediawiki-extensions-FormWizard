@@ -66,7 +66,8 @@ class FormWizardHooks {
 		* @param String $config - Path to config file.
 		* @param String $pageName - Name of the page to create.
 		*/
-   public static function showPorjectButton( $parser, $project, $action, $config, $pageName ) {
+   public static function showPorjectButton( $parser, $project, $action, $config,
+	 $pageName, $pageType ) {
 		 // The input parameters are wikitext with templates expanded.
 		 // The output should be wikitext too.
 		 $output = "<span class='mw-ui-button mw-ui-progressive'
@@ -78,6 +79,7 @@ class FormWizardHooks {
 			$parser->getOutput()->setExtensionData( 'formWizardProject', $project );
 			$parser->getOutput()->setExtensionData( 'formWizardConfig', $config );
 			$parser->getOutput()->setExtensionData( 'formWizardPageName', $pageName );
+			$parser->getOutput()->setExtensionData( 'formWizardPageType', $pageType );
 			return $output;
    }
 
@@ -92,5 +94,7 @@ class FormWizardHooks {
 		 $parseroutput->getExtensionData( 'formWizardProject' ) );
 		 $out->addJsConfigVars( 'formWizardPageName',
 		 $parseroutput->getExtensionData( 'formWizardPageName' ) );
+		 $out->addJsConfigVars( 'formWizardPageType',
+		 $parseroutput->getExtensionData( 'formWizardPageType' ) );
    }
 }

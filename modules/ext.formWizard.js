@@ -3,8 +3,10 @@
 		// {api} instance of mediaWiki api.``
 		// {Object} configData data from the parsed wikitext.
 		// {int} viewControl variable used to control the stack views.
-		var api, viewControl = 0;
+		var api, viewControl = 0,
+		pageType;
 		api = new mw.Api();
+
 		/**
 			* Create a SelectFileWidget.
 			*
@@ -320,6 +322,36 @@
 		}
 
 		/**
+		* construct the page content using data.
+		*
+		* @return {string} - The probox to be added to the page.
+		*/
+
+		function getIdeaLabProbox() {
+			var probox = '\n{{probox \n' +
+			'|project=\n' +
+			'|portal=\n' +
+			'|summary=\n' +
+			'|country=\n' +
+			'|inspire_theme=\n' +
+			'|contact1=\n' +
+			'|advisor1=\n' +
+			'|community_organizer1=\n' +
+			'|designer1=\n' +
+			'|developer1=\n' +
+			'|developer2=\n' +
+			'|project_manager1=\n' +
+			'|researcher1=\n' +
+			'|image=\n' +
+			'|translations=\n' +
+			'|more_participants=\n' +
+			'|timestamp =\n' +
+			'|creator =\n' +
+			'}}';
+			return probox;
+		}
+
+		/**
 			* construct the page content using data.
 			*
 			* @param {Object} pageContentData - The data for the page.
@@ -327,14 +359,22 @@
 			*/
 
 		function constructPageContent( pageContentData ) {
-			var pageContent, i;
+			var pageContent, subContent, i;
+			pageType = mw.config.get( 'formWizardPageType' );
 			pageContentData.forEach( function ( contentData ) {
 				for ( i = 0; i < contentData.length; i++ ) {
 					if ( i % 2 === 0 ) {
-						pageContent += '\n== ' + contentData[ i ] + ' == \n' + contentData[ i + 1 ] + '\n';
+						subContent += '\n== ' + contentData[ i ] + ' == \n' + contentData[ i + 1 ] + '\n';
 					}
 				}
 			} );
+			switch ( pageType ) {
+				case 'IdeaLab':
+					pageContent = getIdeaLabProbox() + subContent;
+					break;
+				default:
+					pageContent = subContent;
+			}
 			return pageContent;
 		}
 
@@ -359,6 +399,7 @@
 					mw.notify( mw.config.get( 'formWizardProject' ) +
 						' Complete', { type: 'info' } );
 				} );
+				location.reload();
 			} );
 		}
 
