@@ -8,5 +8,5 @@ $specialPageAliases = array();
 
 /** English (English) */
 $specialPageAliases['en'] = array(
-	'formWizardPage' => array( 'formWizardPage' ),
+	'FormWizardPage' => array( 'FormWizardPage' ),
 );

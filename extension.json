@@ -1,67 +1,64 @@
 {
-    "name": "FormWizard",
-    "version": "0.0.1",
-    "author": [
-        "Egbe Eugene",
-        "James Hare"
-    ],
-    "url": "https://www.mediawiki.org/wiki/Extension:Formwizard",
-    "namemsg": "formWizard",
-    "descriptionmsg": "formWizard-desc",
-    "license-name": "GPL-2.0-or-later",
-    "type": "parserhook",
-    "manifest_version": 1,
-    "MessagesDirs": {
-        "FormWizard": [
-            "i18n"
-        ]
-    },
-    "AutoloadClasses": {
-        "SpecialFormWizardPage": "specials/SpecialFormWizardPage.php",
-        "FormWizardHooks": "Hooks.php"
-    },
-    "ResourceModules": {
-        "ext.formWizard": {
-            "scripts": [
-                "ext.formWizard.js"
-            ],
-            "styles": [
-                "ext.formWizard.css"
-            ],
-            "messages": [
-
-            ],
-            "dependencies": [
-                "oojs",
-                "oojs-ui"
-            ]
-        }
-    },
-    "ResourceFileModulePaths": {
-        "localBasePath": "modules",
-        "remoteExtPath": "FormWizard/modules"
-    },
-    "SpecialPages": {
-        "FormWizardPage": "SpecialFormWizardPage"
-    },
-    "ExtensionMessagesFiles": {
-        "FormWizardAlias": "FormWizard.alias.php"
-    },
-    "Hooks": {
-        "ResourceLoaderTestModules": [
-            "FormWizardHooks::onResourceLoaderTestModules"
-        ],
-        "BeforePageDisplay": [
-            "FormWizardHooks::BeforePageDisplay"
-        ],
-        "ParserFirstCallInit": [
-            "FormWizardHooks::onParserSetup"
-        ],
-        "OutputPageParserOutput": [
-            "FormWizardHooks::onOutputPageParserOutput"
-        ]
-    },
-    "ExtensionMessagesFiles": {
-        "formwizard": "FormWizard.i18n.php"
-    }
+	"name": "FormWizard",
+	"version": "0.0.1",
+	"author": [
+		"Egbe Eugene",
+		"James Hare"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:Formwizard",
+	"namemsg": "formWizard",
+	"descriptionmsg": "formWizard-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "parserhook",
+	"manifest_version": 1,
+	"MessagesDirs": {
+		"FormWizard": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"SpecialFormWizardPage": "specials/SpecialFormWizardPage.php",
+		"FormWizardHooks": "Hooks.php"
+	},
+	"ResourceModules": {
+		"ext.formWizard": {
+			"scripts": [
+				"ext.formWizard.js"
+			],
+			"styles": [
+				"ext.formWizard.css"
+			],
+			"messages": [
+			],
+			"dependencies": [
+				"oojs",
+				"oojs-ui"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "FormWizard/modules"
+	},
+	"SpecialPages": {
+		"FormWizardPage": "SpecialFormWizardPage"
+	},
+	"ExtensionMessagesFiles": {
+		"FormWizardAlias": "FormWizard.alias.php",
+		"FormWizardMagic": "FormWizard.magic.php"
+	},
+	"Hooks": {
+		"ResourceLoaderTestModules": [
+			"FormWizardHooks::onResourceLoaderTestModules"
+		],
+		"BeforePageDisplay": [
+			"FormWizardHooks::BeforePageDisplay"
+		],
+		"ParserFirstCallInit": [
+			"FormWizardHooks::onParserSetup"
+		],
+		"OutputPageParserOutput": [
+			"FormWizardHooks::onOutputPageParserOutput"
+		]
+	}
 }
