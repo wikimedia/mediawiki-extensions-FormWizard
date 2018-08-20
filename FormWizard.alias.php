@@ -2,11 +2,10 @@
 /**
  * Aliases for special pages in the FormWizard extension.
  */
-// @codingStandardsIgnoreFile
 
-$specialPageAliases = array();
+$specialPageAliases = [];
 
 /** English (English) */
-$specialPageAliases['en'] = array(
-	'FormWizardPage' => array( 'FormWizardPage' ),
-);
+$specialPageAliases['en'] = [
+	'FormWizardPage' => [ 'FormWizardPage' ],
+];

@@ -52,7 +52,7 @@
 			"FormWizardHooks::onResourceLoaderTestModules"
 		],
 		"BeforePageDisplay": [
-			"FormWizardHooks::BeforePageDisplay"
+			"FormWizardHooks::onBeforePageDisplay"
 		],
 		"ParserFirstCallInit": [
 			"FormWizardHooks::onParserSetup"
