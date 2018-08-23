@@ -4,7 +4,7 @@
 		// {Object} configData data from the parsed wikitext.
 		// {int} viewControl variable used to control the stack views.
 		var api, viewControl = 0,
-		pageType;
+			pageType;
 		api = new mw.Api();
 
 		/**
@@ -360,6 +360,8 @@
 
 		function constructPageContent( pageContentData ) {
 			var pageContent, subContent, i;
+			pageContent = '';
+			subContent = '\n';
 			pageType = mw.config.get( 'formWizardPageType' );
 			pageContentData.forEach( function ( contentData ) {
 				for ( i = 0; i < contentData.length; i++ ) {
