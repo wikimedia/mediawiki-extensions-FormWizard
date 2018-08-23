@@ -15,11 +15,10 @@
 			*/
 
 		function makeSelectFileWidget( dict ) {
-			var selectFileWidget = new OO.ui.SelectFileWidget( {
+			return new OO.ui.SelectFileWidget( {
 				accept: dict.accept,
 				classes: [ dict.classes ]
 			} );
-			return selectFileWidget;
 		}
 
 		/**
@@ -30,12 +29,11 @@
 			*/
 
 		function makeDropdownInputWidget( dict ) {
-			var dropdownInputWidget = new OO.ui.DropdownInputWidget( {
+			return new OO.ui.DropdownInputWidget( {
 				value: dict.value,
 				options: dict.options,
 				classes: [ dict.classeses ]
 			} );
-			return dropdownInputWidget;
 		}
 
 		/**
@@ -46,13 +44,12 @@
 			*/
 
 		function makeNumberInputWidget( dict ) {
-			var numberInputWidget = new OO.ui.NumberInputWidget( {
+			return new OO.ui.NumberInputWidget( {
 				isInteger: dict.isInteger,
 				min: dict.min,
 				max: dict.max,
 				classes: [ dict.classes ]
 			} );
-			return numberInputWidget;
 		}
 
 		/**
@@ -63,12 +60,11 @@
 			*/
 
 		function makeRadioSelectInputWidget( dict ) {
-			var radioSelectInputWidget = new OO.ui.RadioSelectInputWidget( {
+			return new OO.ui.RadioSelectInputWidget( {
 				value: dict.value,
 				options: dict.options,
 				classes: [ dict.classes ]
 			} );
-			return radioSelectInputWidget;
 		}
 
 		/**
@@ -79,14 +75,13 @@
 			*/
 
 		function makesmallTextBox( dict ) {
-			var smallTextBox = new OO.ui.TextInputWidget( {
+			return new OO.ui.TextInputWidget( {
 				placeholder: dict.placeholder,
 				title: dict.title,
 				characterLength: dict.characterLength,
 				required: dict.required,
 				classes: [ dict.classes ]
 			} );
-			return smallTextBox;
 		}
 
 		/**
@@ -97,12 +92,11 @@
 			*/
 
 		function makeComboBoxInputWidget( dict ) {
-			var comboBoxInputWidget = new OO.ui.ComboBoxInputWidget( {
+			return new OO.ui.ComboBoxInputWidget( {
 				options: dict.options,
 				label: dict.label,
 				classes: [ dict.classes ]
 			} );
-			return comboBoxInputWidget;
 		}
 
 		/**
@@ -113,14 +107,13 @@
 			*/
 
 		function makeMultilineText( dict ) {
-			var largeTextbox = new OO.ui.MultilineTextInputWidget( {
+			return new OO.ui.MultilineTextInputWidget( {
 				rows: dict.rows,
 				value: dict.value,
 				autosize: dict.autosize,
 				placeholder: dict.placeholder,
 				classes: [ dict.classes ]
 			} );
-			return largeTextbox;
 		}
 
 		/**
@@ -131,12 +124,11 @@
 			*/
 
 		function makeCheckboxMultiselect( dict ) {
-			var checkboxMultiselect = new OO.ui.CheckboxMultiselectInputWidget( {
+			return new OO.ui.CheckboxMultiselectInputWidget( {
 				value: dict.value,
 				options: dict.options,
 				classes: [ dict.classes ]
 			} );
-			return checkboxMultiselect;
 		}
 
 		/**
@@ -147,12 +139,11 @@
 			*/
 
 		function makeLabelText( dict ) {
-			var labelText = new OO.ui.LabelWidget( {
+			return new OO.ui.LabelWidget( {
 				label: dict.label,
 				classes: [ dict.classes ],
 				align: 'left'
 			} );
-			return labelText;
 		}
 
 		/**
@@ -163,14 +154,13 @@
 			*/
 
 		function setConfigData( api ) {
-			var promise = api.get( {
+			return api.get( {
 				action: 'parse',
 				page: mw.config.get( 'formWizardConfig' ),
 				format: 'json',
 				formatversion: 2,
 				prop: 'wikitext'
 			} );
-			return promise;
 		}
 
 		/**
@@ -278,12 +268,11 @@
 			*/
 
 		function makeStack( stackPanels ) {
-			var stack = new OO.ui.StackLayout( {
+			return new OO.ui.StackLayout( {
 				classes: [ 'container' ],
 				items: stackPanels,
 				padded: true
 			} );
-			return stack;
 		}
 
 		/**
@@ -328,26 +317,7 @@
 		*/
 
 		function getIdeaLabProbox() {
-			var probox = '\n{{probox \n' +
-			'|project=\n' +
-			'|portal=\n' +
-			'|summary=\n' +
-			'|country=\n' +
-			'|inspire_theme=\n' +
-			'|contact1=\n' +
-			'|advisor1=\n' +
-			'|community_organizer1=\n' +
-			'|designer1=\n' +
-			'|developer1=\n' +
-			'|developer2=\n' +
-			'|project_manager1=\n' +
-			'|researcher1=\n' +
-			'|image=\n' +
-			'|translations=\n' +
-			'|more_participants=\n' +
-			'|timestamp =\n' +
-			'|creator =\n' +
-			'}}';
+			var probox = '\n\n{{probox\n|project=\n|portal=\n|summary=\n|country=\n|inspire_theme=\n|contact1=\n|advisor1=\n|community_organizer1=\n|designer1=\n|developer1=\n|developer2=\n|project_manager1=\n|researcher1=\n|image=\n|translations=\n|more_participants=\n|timestamp =\n|creator =\n}}';
 			return probox;
 		}
 
