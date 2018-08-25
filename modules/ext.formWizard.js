@@ -242,7 +242,7 @@
 		/**
 			* Adds fioelset elements to  PanelLayout.
 			*
-			* @param {Object} fieldSetContentElements - The elmentments of the fieldset.
+			* @param {Object} fieldSetContentElements - The elements of the fieldset.
 			* @return {Object} - The panel containing elements.
 			*/
 
