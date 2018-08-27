@@ -330,9 +330,12 @@
 		function getRapidGrantsProbox() {
 			var div, endDiv, probox;
 			div = '\n<div style="float:right; width:24em">';
-			endDiv = '</div>';
+			endDiv = '</div>\n';
 			probox = div +
 				'\n{{Probox\n' +
+				'<!--The status on this should be set to "proposed" when your request is ready for review.' +
+				'Please contact rapidgrants@wikimedia.org when you\'re ready to' +
+				'move your request from "draft" to "proposed".-->\n' +
 				'|status=\n' +
 				'|grantee=\n' +
 				'|grantee2=\n' +
@@ -340,23 +343,45 @@
 				'|project=\n' +
 				'|summary=\n' +
 				'|target=\n' +
+				'<!--Add the MONTH and DAY you expect to begin spending funds for this project. ' +
+				'The start date should be at least 6 weeks after you submit your grant request ' +
+				'to allow time for review, discussion, and revision. -->\n' +
 				'|start_date=\n' +
+				'<!--Enter a start year-->\n' +
 				'|start_year=\n' +
+				'<!--Add the MONTH and DAY you expect to finish work on your project.-->\n' +
 				'|end_date=\n' +
+				'<!--Enter an end year-->\n' +
 				'|end_year=2018\n' +
+				'<!--Enter the amount requested in your local currency-->' +
 				'|amount_local=\n' +
+				'<!--Please provide an equivalent amount in US$,' +
+				'using the exchange rate provided by [http://www.oanda.com/ Oanda]' +
+				'on the date you open this request-->\n' +
 				'|amount=\n' +
+				'<!--Is this grant being requested by an organization, a group, or an individual?-->\n' +
 				'|grant_type=\n' +
+				'<!--IF THIS GRANT IS TO A GROUP OR ORGANIZATION: Provide the email address ' +
+				'(or username) of a secondary contact. You don\'t need to disclose your legal name publicly.-->\n' +
 				'|organization=\n' +
 				'|contact2=\n' +
 				'|contact3=\n' +
+				'<!--IF THIS GRANT IS TO A GROUP OR ORGANIZATION: Link to your organization website, ' +
+				'or any relevant online resources.-->\n' +
 				'|website=\n' +
+				'<!--IF THIS GRANT IS TO AN ORGANIZATION: Are you an incorporated organization able to ' +
+				'provide local proof of nonprofit status within your country? ' +
+				'(For-profit organizations are ineligible to receive grants through the PEG program.)-->\n' +
 				'|nonprofit=\n' +
+				'<!-- YOU DON\'T NEED TO EDIT THINGS BETWEEN THESE LINES -->\n' +
 				'|portal=Rapid\n' +
 				'|translations=Probox/Rapid/Content\n' +
 				'}}\n\n' +
 				'{{Rapid/button/report}}\n' +
-				endDiv;
+				endDiv +
+				'\nPlease see the sample' +
+				'[[Grants:Project/Rapid/Plan/SampleApplication/Editathon|Editathon/Training application] ' +
+				'before drafting your application.\n';
 			return probox;
 		}
 
