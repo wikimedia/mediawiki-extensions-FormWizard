@@ -322,6 +322,45 @@
 		}
 
 		/**
+         * construct the rapid grant page content using data.
+         *
+         * @return {string} - The probox to be added to the rapid grant page.
+         */
+
+		function getRapidGrantsProbox() {
+			var div, endDiv, probox;
+			div = '\n<div style="float:right; width:24em">';
+			endDiv = '</div>';
+			probox = div +
+				'\n{{Probox\n' +
+				'|status=\n' +
+				'|grantee=\n' +
+				'|grantee2=\n' +
+				'|contact=\n' +
+				'|project=\n' +
+				'|summary=\n' +
+				'|target=\n' +
+				'|start_date=\n' +
+				'|start_year=\n' +
+				'|end_date=\n' +
+				'|end_year=2018\n' +
+				'|amount_local=\n' +
+				'|amount=\n' +
+				'|grant_type=\n' +
+				'|organization=\n' +
+				'|contact2=\n' +
+				'|contact3=\n' +
+				'|website=\n' +
+				'|nonprofit=\n' +
+				'|portal=Rapid\n' +
+				'|translations=Probox/Rapid/Content\n' +
+				'}}\n\n' +
+				'{{Rapid/button/report}}\n' +
+				endDiv;
+			return probox;
+		}
+
+		/**
 			* construct the page content using data.
 			*
 			* @param {Object} pageContentData - The data for the page.
@@ -343,6 +382,9 @@
 			switch ( pageType ) {
 				case 'IdeaLab':
 					pageContent = getIdeaLabProbox() + subContent;
+					break;
+				case 'RapidGrant':
+					pageContent = getRapidGrantsProbox() + subContent;
 					break;
 				default:
 					pageContent = subContent;
