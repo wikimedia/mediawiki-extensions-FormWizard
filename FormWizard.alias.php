@@ -7,5 +7,5 @@ $specialPageAliases = [];
 
 /** English (English) */
 $specialPageAliases['en'] = [
-	'FormWizardPage' => [ 'FormWizardPage' ],
+	'FormWizard' => [ 'FormWizard' ],
 ];

@@ -6,7 +6,7 @@
 		"James Hare"
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:Formwizard",
-	"namemsg": "formWizard",
+	"namemsg": "formwizard",
 	"descriptionmsg": "formWizard-desc",
 	"license-name": "GPL-2.0-or-later",
 	"type": "parserhook",
@@ -17,7 +17,7 @@
 		]
 	},
 	"AutoloadClasses": {
-		"SpecialFormWizardPage": "specials/SpecialFormWizardPage.php",
+		"SpecialFormWizard": "specials/SpecialFormWizard.php",
 		"FormWizardHooks": "Hooks.php"
 	},
 	"ResourceModules": {
@@ -41,7 +41,7 @@
 		"remoteExtPath": "FormWizard/modules"
 	},
 	"SpecialPages": {
-		"FormWizardPage": "SpecialFormWizardPage"
+		"FormWizard": "SpecialFormWizard"
 	},
 	"ExtensionMessagesFiles": {
 		"FormWizardAlias": "FormWizard.alias.php",

@@ -5,9 +5,9 @@
  * @file
  * @ingroup Extensions
  */
-class SpecialFormWizardPage extends SpecialPage {
+class SpecialFormWizard extends SpecialPage {
 	public function __construct() {
-		parent::__construct( 'formWizardPage' );
+		parent::__construct( 'FormWizard' );
 	}
 
 	/**
@@ -17,9 +17,9 @@ class SpecialFormWizardPage extends SpecialPage {
 	 */
 	public function execute( $sub ) {
 		$out = $this->getOutput();
-		$out->setPageTitle( $this->msg( 'special-formWizardPage-title' ) );
+		$out->setPageTitle( $this->msg( 'special-formWizard-title' ) );
 		$out->addHelpLink( 'How to become a MediaWiki hacker' );
-		$out->addWikiMsg( 'special-formWizardPage-intro' );
+		$out->addWikiMsg( 'special-formWizard-intro' );
 	}
 
 	protected function getGroupName() {
