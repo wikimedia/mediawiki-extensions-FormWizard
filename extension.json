@@ -5,9 +5,9 @@
 		"Egbe Eugene",
 		"James Hare"
 	],
-	"url": "https://www.mediawiki.org/wiki/Extension:Formwizard",
+	"url": "https://www.mediawiki.org/wiki/Extension:FormWizard",
 	"namemsg": "formwizard",
-	"descriptionmsg": "formWizard-desc",
+	"descriptionmsg": "formwizard-desc",
 	"license-name": "GPL-2.0-or-later",
 	"type": "parserhook",
 	"manifest_version": 1,

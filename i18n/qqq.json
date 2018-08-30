@@ -5,7 +5,7 @@
 		]
 	},
 	"formwizard": "The name of the extension",
-	"formwizard-desc": "{{desc|name=FormWizard|url=https://www.mediawiki.org/wiki/Extension:Formwizard}}",
+	"formwizard-desc": "{{desc|name=FormWizard|url=https://www.mediawiki.org/wiki/Extension:FormWizard}}",
 	"special-formwizard-intro": "Description appearing on top of <tvar|1>Special:{{ll|FormWizardPage}}</>.",
 	"special-formwizard-title": "Title of the special page Special:FormWizardPage"
 }
