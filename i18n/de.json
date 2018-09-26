@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64"
+		]
+	},
+	"formwizard": "FormWizard",
+	"formwizard-desc": "Erlaubt die Installation und Nutzung des FormWizard-Helferleins in MediaWiki.",
+	"special-formwizard-intro": "FormWizard",
+	"special-formwizard-title": "Dies ist eine Einführung der Spezialseite „FormWizard“."
+}
