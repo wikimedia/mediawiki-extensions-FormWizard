@@ -62,28 +62,26 @@ class FormWizardHooks {
 	 * Contruct button from parser arguments.
 	 *
 	 * @param String $parser The parse name.
-	 * @param String $project The project name in parser function defintion
+	 * @param String $project The project name in parser function defintion.
 	 * @param String $action Text to display on the button.
 	 * @param String $config Path to config file.
-	 * @param String $pageName Name of the page to create.
-	 * @param String $pageType Type of the page to create.
+	 * @param String $pageMode The mdoe in which the wizard operates(subpage/append).
 	 * @return string
 	 */
-	public static function showProjectButton( $parser, $project, $action, $config,
-		$pageName, $pageType
+	public static function showProjectButton( $parser, $project, $action, $config, $pageMode
 	) {
 		// The input parameters are wikitext with templates expanded.
 		// The output should be wikitext too.
-		$output = "<span class='mw-ui-button mw-ui-progressive'
-				    id='formwizard-launch'
-				    color = 'blue'
-				    role='button'
-				    aria-disabled='false'>" . $action . "
-			</span>";
+		$output = "<div id='formwizard-init-form'>
+						<span class='mw-ui-button mw-ui-progressive'
+								id='formwizard-launch'
+								role='button'
+								aria-disabled='false'>" . $action . "
+						</span>" .
+					"</div>";
 		$parser->getOutput()->setExtensionData( 'formWizardProject', $project );
 		$parser->getOutput()->setExtensionData( 'formWizardConfig', $config );
-		$parser->getOutput()->setExtensionData( 'formWizardPageName', $pageName );
-		$parser->getOutput()->setExtensionData( 'formWizardPageType', $pageType );
+		$parser->getOutput()->setExtensionData( 'formWizardPageMode', $pageMode );
 		return $output;
 	}
 
@@ -96,9 +94,7 @@ class FormWizardHooks {
 			$parseroutput->getExtensionData( 'formWizardConfig' ) );
 		$out->addJsConfigVars( 'formWizardProject',
 			$parseroutput->getExtensionData( 'formWizardProject' ) );
-		$out->addJsConfigVars( 'formWizardPageName',
-			$parseroutput->getExtensionData( 'formWizardPageName' ) );
-		$out->addJsConfigVars( 'formWizardPageType',
-			$parseroutput->getExtensionData( 'formWizardPageType' ) );
+		$out->addJsConfigVars( 'formWizardPageMode',
+			$parseroutput->getExtensionData( 'formWizardPageMode' ) );
 	}
 }
