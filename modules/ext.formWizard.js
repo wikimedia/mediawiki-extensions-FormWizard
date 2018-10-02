@@ -4,8 +4,13 @@
 		// {Object} configData data from the parsed wikitext.
 		// {int} viewControl variable used to control the stack views.
 		var api, viewControl = 0,
-			pageType;
+			pageType, mode;
 		api = new mw.Api();
+		mode = mw.config.get( 'formWizardPageMode' );
+		if ( mode === 'subpage' ) {
+			$( '#formwizard-init-form' ).prepend( '<strong>Enter Sub-Page Name:</strong>' +
+				'<br/><input type="text" required="true" id="subpage-name">' );
+		}
 
 		/**
 			* Create a SelectFileWidget.
@@ -80,6 +85,7 @@
 				title: dict.title,
 				characterLength: dict.characterLength,
 				required: dict.required,
+				padded: true,
 				classes: [ dict.classes ]
 			} );
 		}
@@ -142,10 +148,10 @@
 			return new OO.ui.LabelWidget( {
 				label: dict.label,
 				classes: [ dict.classes ],
-				align: 'left'
+				align: 'left',
+				padded: true
 			} );
 		}
-
 		/**
 			* Return a promise from the api call.
 			*
@@ -233,7 +239,8 @@
 
 		function createFieldSet( contentElements ) {
 			var fieldset = new OO.ui.FieldsetLayout( {
-				classes: [ 'container' ]
+				classes: [ 'container' ],
+				padded: true
 			} );
 			fieldset.addItems( contentElements );
 			return fieldset;
@@ -422,23 +429,24 @@
 			*
 			* @param {Object} api - instance of the mw.api().
 			* @param {Object} fieldsetContentData - The data used to create page.
+			* @param {string} targetRootName - name fo the target root page.
 			*/
 
-		function createPage( api, fieldsetContentData ) {
+		function createPage( api, fieldsetContentData, targetRootName ) {
 			var date = new Date();
 			api.postWithToken( 'csrf', {
 				action: 'edit',
-				summary: mw.config.get( 'formWizardPageName' ),
-				text: mw.config.get( 'formWizardPageName' ),
-				title: mw.config.get( 'formWizardPageName' ),
+				summary: targetRootName,
+				text: targetRootName,
+				title: targetRootName + $( '#subpage-name' ).val(),
 				appendtext: constructPageContent( fieldsetContentData ),
 				basetimestamp: date.toISOString()
 			} ).done( function () {
+				location.reload();
 				mw.loader.using( 'mediawiki.notify', function () {
 					mw.notify( mw.config.get( 'formWizardProject' ) +
 						' Complete', { type: 'info' } );
 				} );
-				location.reload();
 			} );
 		}
 
@@ -466,99 +474,104 @@
 				fieldsetContainer = [],
 				stackPanels = [],
 				fieldsetContentData = [],
-				configData;
-			setConfigData( api ).done( function ( data ) {
-				// Windows manager and ProcessDialog instances
-				var windowManager, ProcessDialog, dialog;
-				configData = JSON.parse( data.parse.wikitext ).steps;
-				// Display a dialog for undefined JSON
-				if ( configData === undefined || configData === '' ) {
-					// alert user of poor configuration file
-					OO.ui.alert( 'Please Check the configuration settings!',
-						{ size: 'medium' } );
-				} else {
-					// getting schema and creating ooui elements and storing in container
-					$.each( configData, function ( step, schema ) {
-						fieldsetElements = createElementsFromSchema( schema );
-						fieldsetContainer.push( fieldsetElements );
-					} );
-					OO.inheritClass( FormWizardDialog, OO.ui.ProcessDialog );
-					FormWizardDialog.static.name = 'formWizardDialog';
-					FormWizardDialog.static.title = mw.config.get( 'formWizardProject' );
-					FormWizardDialog.static.actions = [
-						{ action: 'continue', modes: 'edit', label: 'Next', flags: [ 'primary',
-							'constructive' ] },
-						{ modes: [ 'edit', 'final' ], label: 'Cancel', flags: 'safe' },
-						{ modes: 'final', action: 'save', label: 'Done', flags: 'primary' }
-					];
-
-					FormWizardDialog.prototype.initialize = function () {
-						var panel, stack;
-						FormWizardDialog.parent.prototype.initialize.apply( this, arguments );
-						// get elements from the fieldset container
-						fieldsetContainer.forEach( function ( elt ) {
-							fieldsetContent.push( elt );
+				configData,
+				targetRootName;
+			if ( mw.config.get( 'formWizardPageMode' ) && $( '#subpage-name' ).val() === '' ) {
+				OO.ui.alert( 'Please tell us what to name your page!',
+							{ size: 'medium' } );
+			} else {
+				setConfigData( api ).done( function ( data ) {
+					// Windows manager and ProcessDialog instances
+					var windowManager, ProcessDialog, dialog;
+					configData = JSON.parse( data.parse.wikitext ).steps;
+					targetMode = JSON.parse( data.parse.wikitext ).target.mode;
+					targetRootName = JSON.parse( data.parse.wikitext ).target.rootname;
+					// Display a dialog for undefined JSON
+					if ( configData === undefined || configData === '' ) {
+						// alert user of poor configuration file
+						OO.ui.alert( 'Please Check the configuration settings!',
+							{ size: 'medium' } );
+					} else {
+						// getting schema and creating ooui elements and storing in container
+						$.each( configData, function ( step, schema ) {
+							fieldsetElements = createElementsFromSchema( schema, targetMode );
+							fieldsetContainer.push( fieldsetElements );
 						} );
-						fieldsetContent.forEach( function ( content ) {
-							panel = AddPanelElementsToPanel( content );
-							stackPanels.push( panel );
-						} );
-						// create a new stack with items araray of panels
-						stack = makeStack( stackPanels );
-						this.stackLayout = stack;
-						this.$body.append( this.stackLayout.$element );
-					};
-
-					// Set up the initial mode of the window ('edit', in this example.)
-					FormWizardDialog.prototype.getSetupProcess = function ( data ) {
-						return FormWizardDialog.super.prototype.getSetupProcess.call( this, data )
-							.next( function () {
-								this.actions.setMode( 'edit' );
-							}, this );
-					};
-
-					FormWizardDialog.prototype.getActionProcess = function ( action ) {
-						var dialog;
-						// The Done button has been clicked
-						if ( action === 'save' ) {
-							// we get the fieldsetContentData from the container of fieldsets
-							fieldsetContentData = getFieldSetContendData( fieldsetContainer );
-							// We make an API request to create a page
-							createPage( api, fieldsetContentData );
-							// Here we close the dialog after processing
-							dialog = this;
-							return new OO.ui.Process( function () {
-								// do something about the edit
-								dialog.close();
+						OO.inheritClass( FormWizardDialog, OO.ui.ProcessDialog );
+						FormWizardDialog.static.name = 'formWizardDialog';
+						FormWizardDialog.static.title = mw.config.get( 'formWizardProject' );
+						FormWizardDialog.static.actions = [
+							{ action: 'continue', modes: 'edit', label: 'Next', flags: [ 'primary',
+								'constructive' ] },
+							{ modes: [ 'edit', 'final' ], label: 'Cancel', flags: 'safe' },
+							{ modes: 'final', action: 'save', label: 'Done', flags: 'primary' }
+						];
+						FormWizardDialog.prototype.initialize = function () {
+							var panel, stack;
+							FormWizardDialog.parent.prototype.initialize.apply( this, arguments );
+							// get elements from the fieldset container
+							fieldsetContainer.forEach( function ( elt ) {
+								fieldsetContent.push( elt );
 							} );
-						} else if ( action === 'continue' && viewControl <
-							( stackPanels.length - 1 ) ) {
-							this.stackLayout.setItem( stackPanels[ viewControl + 1 ] );
-							viewControl++;
-							if ( viewControl === ( stackPanels.length - 1 ) ) {
-								this.actions.setMode( 'final' );
+							fieldsetContent.forEach( function ( content ) {
+								panel = AddPanelElementsToPanel( content );
+								stackPanels.push( panel );
+							} );
+							// create a new stack with items araray of panels
+							stack = makeStack( stackPanels );
+							this.stackLayout = stack;
+							this.$body.append( this.stackLayout.$element );
+						};
+						// Set up the initial mode of the window ('edit', in this example.)
+						FormWizardDialog.prototype.getSetupProcess = function ( data ) {
+							return FormWizardDialog.super.prototype.getSetupProcess.call( this, data )
+								.next( function () {
+									this.actions.setMode( 'edit' );
+								}, this );
+						};
+						FormWizardDialog.prototype.getActionProcess = function ( action ) {
+							var dialog;
+							// The Done button has been clicked
+							if ( action === 'save' ) {
+								// we get the fieldsetContentData from the container of fieldsets
+								fieldsetContentData = getFieldSetContendData( fieldsetContainer );
+								// We make an API request to create a page
+								createPage( api, fieldsetContentData, targetRootName );
+								// Here we close the dialog after processing
+								dialog = this;
+								return new OO.ui.Process( function () {
+									// do something about the edit
+									dialog.close();
+								} );
+							} else if ( action === 'continue' && viewControl <
+								( stackPanels.length - 1 ) ) {
+								this.stackLayout.setItem( stackPanels[ viewControl + 1 ] );
+								viewControl++;
+								if ( viewControl === ( stackPanels.length - 1 ) ) {
+									this.actions.setMode( 'final' );
+								}
+							} else {
+								window.location.reload();
 							}
-						} else {
-							window.location.reload();
-						}
-						return FormWizardDialog.parent.prototype.getActionProcess
-							.call( this, action );
-					};
-					// set the height of the dialog box
-					FormWizardDialog.prototype.getBodyHeight = function () {
-						return 550;
-					};
-					// create new windowManager
-					windowManager = new OO.ui.WindowManager();
-					$( 'body' ).append( windowManager.$element );
-					// set the width of the dialog
-					ProcessDialog = new FormWizardDialog( { } );
-					ProcessDialog.size = 'medium';
-					dialog = new FormWizardDialog();
-					windowManager.addWindows( [ dialog ] );
-					windowManager.openWindow( dialog );
-				}
-			} );
+							return FormWizardDialog.parent.prototype.getActionProcess
+								.call( this, action );
+						};
+						// set the height of the dialog box
+						FormWizardDialog.prototype.getBodyHeight = function () {
+							return 600;
+						};
+						// create new windowManager
+						windowManager = new OO.ui.WindowManager();
+						$( 'body' ).append( windowManager.$element );
+						// set the width of the dialog
+						ProcessDialog = new FormWizardDialog( { } );
+						ProcessDialog.size = 'medium';
+						dialog = new FormWizardDialog();
+						windowManager.addWindows( [ dialog ] );
+						windowManager.openWindow( dialog );
+					}
+				} );
+			}
 		} );
 	} );
 }( mediaWiki ) );

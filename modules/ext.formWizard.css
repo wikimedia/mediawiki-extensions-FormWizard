@@ -3,8 +3,7 @@
 }
 
 .container {
-  border-width: 0.5px;
-  padding: 4px;
+	padding: 12px;
 }
 
 .formWizard-element {
@@ -20,4 +19,11 @@
 
 .formWizard-popup-button {
 	float: right;
+}
+
+#subpage-name {
+	display: block;
+	width: 30%;
+	height: 20px;
+	line-height: 3.5em;
 }
