@@ -7,14 +7,16 @@
 }
 
 .formWizard-element {
-	padding-top: 1px;
-	padding-bottom: 20px;
+	padding-top: 0.5px;
+	padding-bottom: 15px;
 	align: right;
 }
 
 .formWizard-label {
 	font-weight: bold;
 	font-style: italic;
+	font-size: medium;
+	padding-bottom: 5px;
 }
 
 .formWizard-popup-button {

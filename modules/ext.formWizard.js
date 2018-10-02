@@ -22,7 +22,7 @@
 		function makeSelectFileWidget( dict ) {
 			return new OO.ui.SelectFileWidget( {
 				accept: dict.accept,
-				classes: [ dict.classes ]
+				classes: [ 'formWizard-element' ]
 			} );
 		}
 
@@ -37,7 +37,7 @@
 			return new OO.ui.DropdownInputWidget( {
 				value: dict.value,
 				options: dict.options,
-				classes: [ dict.classeses ]
+				classes: [ 'formWizard-element' ]
 			} );
 		}
 
@@ -53,7 +53,7 @@
 				isInteger: dict.isInteger,
 				min: dict.min,
 				max: dict.max,
-				classes: [ dict.classes ]
+				classes: [ 'formWizard-element' ]
 			} );
 		}
 
@@ -68,7 +68,7 @@
 			return new OO.ui.RadioSelectInputWidget( {
 				value: dict.value,
 				options: dict.options,
-				classes: [ dict.classes ]
+				classes: [ 'formWizard-element' ]
 			} );
 		}
 
@@ -85,8 +85,7 @@
 				title: dict.title,
 				characterLength: dict.characterLength,
 				required: dict.required,
-				padded: true,
-				classes: [ dict.classes ]
+				classes: [ 'formWizard-element' ]
 			} );
 		}
 
@@ -101,7 +100,7 @@
 			return new OO.ui.ComboBoxInputWidget( {
 				options: dict.options,
 				label: dict.label,
-				classes: [ dict.classes ]
+				classes: [ 'formWizard-element' ]
 			} );
 		}
 
@@ -118,7 +117,7 @@
 				value: dict.value,
 				autosize: dict.autosize,
 				placeholder: dict.placeholder,
-				classes: [ dict.classes ]
+				classes: [ 'formWizard-element' ]
 			} );
 		}
 
@@ -133,7 +132,7 @@
 			return new OO.ui.CheckboxMultiselectInputWidget( {
 				value: dict.value,
 				options: dict.options,
-				classes: [ dict.classes ]
+				classes: [ 'formWizard-element' ]
 			} );
 		}
 
@@ -147,9 +146,7 @@
 		function makeLabelText( dict ) {
 			return new OO.ui.LabelWidget( {
 				label: dict.label,
-				classes: [ dict.classes ],
-				align: 'left',
-				padded: true
+				classes: [ 'formWizard-label' ]
 			} );
 		}
 		/**
