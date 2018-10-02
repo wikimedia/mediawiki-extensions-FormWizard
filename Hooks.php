@@ -82,6 +82,7 @@ class FormWizardHooks {
 		$parser->getOutput()->setExtensionData( 'formWizardProject', $project );
 		$parser->getOutput()->setExtensionData( 'formWizardConfig', $config );
 		$parser->getOutput()->setExtensionData( 'formWizardPageMode', $pageMode );
+		$parser->getOutput()->preventClickjacking( true );
 		return $output;
 	}
 
