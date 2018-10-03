@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wladek92"
+		]
+	},
+	"formwizard": "FormWizard",
+	"formwizard-desc": "Vous permet d'installer et d'utiliser le gadget FormWizard Gadget in Mediawiki.",
+	"special-formwizard-intro": "FormWizard",
+	"special-formwizard-title": "Ceci est une introduction à la page spéciale de FormWizard."
+}

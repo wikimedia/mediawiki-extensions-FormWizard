@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardo Addad de Oliveira"
+		]
+	},
+	"formwizard": "Assistente de Formulário",
+	"formwizard-desc": "Permite que você instale e use o Gadget do Assistente de Formulário no Mediawiki.",
+	"special-formwizard-intro": "Assistente de Formulário",
+	"special-formwizard-title": "Esta é uma introdução à página especial do Assistente de formulários."
+}
