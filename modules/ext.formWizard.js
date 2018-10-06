@@ -6,11 +6,6 @@
 		var api, viewControl = 0,
 			pageType, mode;
 		api = new mw.Api();
-		mode = mw.config.get( 'formWizardPageMode' );
-		if ( mode === 'subpage' ) {
-			$( '#formwizard-init-form' ).prepend( '<strong>Enter Sub-Page Name:</strong>' +
-				'<br/><input type="text" required="true" id="subpage-name">' );
-		}
 
 		/**
 			* Create a SelectFileWidget.
@@ -457,6 +452,23 @@
 
 		function FormWizardDialog( config ) {
 			FormWizardDialog.parent.call( this, config );
+		}
+
+		/**
+			* Add TextField above button on setup page.
+			*
+			* @param {string}  parentElementID - The id of the parent element.
+			*/
+
+		function addTextFieldToPage( parentElementID ) {
+			$( parentElementID ).prepend( '<strong>Enter Sub-Page Name:</strong>' +
+				'<br/><input type="text" required="true" id="subpage-name">' );
+		}
+
+		// get the page mode and check if textfield should be added
+		mode = mw.config.get( 'formWizardPageMode' );
+		if ( mode === 'subpage' ) {
+			addTextFieldToPage( '#formwizard-init-form' );
 		}
 
 		// When the launch button is clicked
