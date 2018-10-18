@@ -421,10 +421,11 @@
 			*
 			* @param {Object} api - instance of the mw.api().
 			* @param {Object} fieldsetContentData - The data used to create page.
+			* @param {string} baseUrl - Project base url.
 			* @param {string} targetRootName - name fo the target root page.
 			*/
 
-		function createPage( api, fieldsetContentData, targetRootName ) {
+		function createPage( api, fieldsetContentData, baseUrl, targetRootName ) {
 			var date = new Date();
 			api.postWithToken( 'csrf', {
 				action: 'edit',
@@ -434,7 +435,8 @@
 				appendtext: constructPageContent( fieldsetContentData ),
 				basetimestamp: date.toISOString()
 			} ).done( function () {
-				location.reload();
+				window.location.replace( location.origin + '/' + baseUrl + '/' +
+					buildRedirectUrl( targetRootName, $( '#subpage-name' ).val() ) );
 				mw.loader.using( 'mediawiki.notify', function () {
 					mw.notify( mw.config.get( 'formWizardProject' ) +
 						' Complete', { type: 'info' } );
@@ -457,12 +459,23 @@
 		/**
 			* Add TextField above button on setup page.
 			*
-			* @param {string}  parentElementID - The id of the parent element.
+			* @param {string} parentElementID - The id of the parent element.
 			*/
 
 		function addTextFieldToPage( parentElementID ) {
 			$( parentElementID ).prepend( '<strong>Enter Sub-Page Name:</strong>' +
 				'<br/><input type="text" required="true" id="subpage-name">' );
+		}
+
+		/**
+			* Build Url to redirect user to created page.
+			*
+			* @param {string} targetRootName - Target root as provided in config file.
+			* @param {string} subpageName - The name of the subpage given by user.
+			*/
+
+		function buildRedirectUrl( targetRootName, subpageName ) {
+			return targetRootName + subpageName;
 		}
 
 		// get the page mode and check if textfield should be added
@@ -484,6 +497,7 @@
 				stackPanels = [],
 				fieldsetContentData = [],
 				configData,
+				baseUrl,
 				targetRootName;
 			if ( mw.config.get( 'formWizardPageMode' ) && $( '#subpage-name' ).val() === '' ) {
 				OO.ui.alert( 'Please tell us what to name your page!',
@@ -494,6 +508,7 @@
 					var windowManager, ProcessDialog, dialog;
 					configData = JSON.parse( data.parse.wikitext ).steps;
 					targetMode = JSON.parse( data.parse.wikitext ).target.mode;
+					baseUrl = JSON.parse( data.parse.wikitext ).target.baseUrl;
 					targetRootName = JSON.parse( data.parse.wikitext ).target.rootname;
 					// Display a dialog for undefined JSON
 					if ( configData === undefined || configData === '' ) {
@@ -545,7 +560,7 @@
 								// we get the fieldsetContentData from the container of fieldsets
 								fieldsetContentData = getFieldSetContendData( fieldsetContainer );
 								// We make an API request to create a page
-								createPage( api, fieldsetContentData, targetRootName );
+								createPage( api, fieldsetContentData, baseUrl, targetRootName );
 								// Here we close the dialog after processing
 								dialog = this;
 								return new OO.ui.Process( function () {
