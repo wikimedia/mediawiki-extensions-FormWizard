@@ -59,29 +59,51 @@ class FormWizardHooks {
 	}
 
 	/**
+	 * Converts an array of values in form [0] => "name=value" into a real
+	 * associative array in form [name] => value. If no = is provided,
+	 * true is assumed like this: [name] => true
+	 *
+	 * @param array string $options
+	 * @return array $results
+	 */
+	public static function extractOptions( array $options ) {
+		$results = [];
+
+		foreach ( $options as $option ) {
+			$pair = explode( '=', $option, 2 );
+			if ( count( $pair ) === 2 ) {
+				$name = trim( $pair[0] );
+				$value = trim( $pair[1] );
+				$results[$name] = $value;
+			}
+			if ( count( $pair ) === 1 ) {
+				$name = trim( $pair[0] );
+				$results[$name] = true;
+			}
+		}
+		return $results;
+	}
+
+	/**
 	 * Contruct button from parser arguments.
 	 *
 	 * @param String $parser The parse name.
-	 * @param String $project The project name in parser function defintion.
-	 * @param String $action Text to display on the button.
-	 * @param String $config Path to config file.
-	 * @param String $pageMode The mdoe in which the wizard operates(subpage/append).
-	 * @return string
+	 * @return String $output Contructed button output.
 	 */
-	public static function showProjectButton( $parser, $project, $action, $config, $pageMode
-	) {
+	public static function showProjectButton( $parser ) {
+		$options = self::extractOptions( array_slice( func_get_args(), 1 ) );
 		// The input parameters are wikitext with templates expanded.
 		// The output should be wikitext too.
 		$output = "<div id='formwizard-init-form'>
 						<span class='mw-ui-button mw-ui-progressive'
 								id='formwizard-launch'
 								role='button'
-								aria-disabled='false'>" . $action . "
+								aria-disabled='false'>" . $options[ 'action' ] . "
 						</span>" .
 					"</div>";
-		$parser->getOutput()->setExtensionData( 'formWizardProject', $project );
-		$parser->getOutput()->setExtensionData( 'formWizardConfig', $config );
-		$parser->getOutput()->setExtensionData( 'formWizardPageMode', $pageMode );
+		$parser->getOutput()->setExtensionData( 'formWizardProject', $options[ 'project' ] );
+		$parser->getOutput()->setExtensionData( 'formWizardConfig', $options[ 'config' ] );
+		$parser->getOutput()->setExtensionData( 'formWizardPageMode', $options[ 'mode' ] );
 		$parser->getOutput()->preventClickjacking( true );
 		return $output;
 	}
