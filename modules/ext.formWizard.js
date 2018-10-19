@@ -422,21 +422,28 @@
 			* @param {Object} api - instance of the mw.api().
 			* @param {Object} fieldsetContentData - The data used to create page.
 			* @param {string} baseUrl - Project base url.
+			* @param {string} targetMode - The target mode.
+			* @param {string} pageName - The name of the page not a subpage.
 			* @param {string} targetRootName - name fo the target root page.
 			*/
 
-		function createPage( api, fieldsetContentData, baseUrl, targetRootName ) {
-			var date = new Date();
+		function createPage( api, fieldsetContentData, baseUrl, targetMode, pageName, targetRootName ) {
+			var date, pageTitle;
+			if ( targetMode === 'subpage' ) {
+				pageTitle = targetRootName + $( '#subpage-name' ).val()
+			} else {
+				pageTitle = pageName;
+			}
+			date = new Date();
 			api.postWithToken( 'csrf', {
 				action: 'edit',
 				summary: targetRootName,
 				text: targetRootName,
-				title: targetRootName + $( '#subpage-name' ).val(),
+				title: pageTitle,
 				appendtext: constructPageContent( fieldsetContentData ),
 				basetimestamp: date.toISOString()
 			} ).done( function () {
-				window.location.replace( location.origin + '/' + baseUrl + '/' +
-					buildRedirectUrl( targetRootName, $( '#subpage-name' ).val() ) );
+				window.location.replace( location.origin + '/' + baseUrl + '/' + pageTitle );
 				mw.loader.using( 'mediawiki.notify', function () {
 					mw.notify( mw.config.get( 'formWizardProject' ) +
 						' Complete', { type: 'info' } );
@@ -466,18 +473,6 @@
 			$( parentElementID ).prepend( '<strong>Enter Sub-Page Name:</strong>' +
 				'<br/><input type="text" required="true" id="subpage-name">' );
 		}
-
-		/**
-			* Build Url to redirect user to created page.
-			*
-			* @param {string} targetRootName - Target root as provided in config file.
-			* @param {string} subpageName - The name of the subpage given by user.
-			*/
-
-		function buildRedirectUrl( targetRootName, subpageName ) {
-			return targetRootName + subpageName;
-		}
-
 		// get the page mode and check if textfield should be added
 		mode = mw.config.get( 'formWizardPageMode' );
 		if ( mode === 'subpage' ) {
@@ -498,6 +493,8 @@
 				fieldsetContentData = [],
 				configData,
 				baseUrl,
+				targetMode,
+				pageName,
 				targetRootName;
 			if ( mw.config.get( 'formWizardPageMode' ) && $( '#subpage-name' ).val() === '' ) {
 				OO.ui.alert( 'Please tell us what to name your page!',
@@ -508,6 +505,7 @@
 					var windowManager, ProcessDialog, dialog;
 					configData = JSON.parse( data.parse.wikitext ).steps;
 					targetMode = JSON.parse( data.parse.wikitext ).target.mode;
+					pageName = JSON.parse( data.parse.wikitext ).target.pagename;
 					baseUrl = JSON.parse( data.parse.wikitext ).target.baseUrl;
 					targetRootName = JSON.parse( data.parse.wikitext ).target.rootname;
 					// Display a dialog for undefined JSON
@@ -560,7 +558,7 @@
 								// we get the fieldsetContentData from the container of fieldsets
 								fieldsetContentData = getFieldSetContendData( fieldsetContainer );
 								// We make an API request to create a page
-								createPage( api, fieldsetContentData, baseUrl, targetRootName );
+								createPage( api, fieldsetContentData, baseUrl, targetMode, pageName, targetRootName );
 								// Here we close the dialog after processing
 								dialog = this;
 								return new OO.ui.Process( function () {
