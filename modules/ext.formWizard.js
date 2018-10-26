@@ -438,7 +438,6 @@
 			api.postWithToken( 'csrf', {
 				action: 'edit',
 				summary: targetRootName,
-				text: targetRootName,
 				title: pageTitle,
 				appendtext: constructPageContent( fieldsetContentData ),
 				basetimestamp: date.toISOString()
