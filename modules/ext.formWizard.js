@@ -3,17 +3,17 @@
 		// {api} instance of mediaWiki api.``
 		// {Object} configData data from the parsed wikitext.
 		// {int} viewControl variable used to control the stack views.
-		var api, viewControl = 0,
-			pageType, mode;
-		api = new mw.Api();
+		var api = new mw.Api(),
+			viewControl = 0,
+			pageType,
+			mode;
 
 		/**
-			* Create a SelectFileWidget.
-			*
-			* @param {Object} dict - The dictionary of configurations.
-			* @return {Object} - The SelectFileWidget.
-			*/
-
+		 * Create a SelectFileWidget.
+		 *
+		 * @param {Object} dict - The dictionary of configurations.
+		 * @return {Object} - The SelectFileWidget.
+		 */
 		function makeSelectFileWidget( dict ) {
 			return new OO.ui.SelectFileWidget( {
 				accept: dict.accept,
@@ -22,12 +22,11 @@
 		}
 
 		/**
-			* Create a DropdownInputWidget.
-			*
-			* @param {Object} dict - The dictionary of configurations.
-			* @return {Object} - The DropdownInputWidget.
-			*/
-
+		 * Create a DropdownInputWidget.
+		 *
+		 * @param {Object} dict - The dictionary of configurations.
+		 * @return {Object} - The DropdownInputWidget.
+		 */
 		function makeDropdownInputWidget( dict ) {
 			return new OO.ui.DropdownInputWidget( {
 				value: dict.value,
@@ -37,12 +36,11 @@
 		}
 
 		/**
-			* Create a NumberInputWidget.
-			*
-			* @param {Object} dict - The dictionary of configurations.
-			* @return {Object} - The NumberInputWidget.
-			*/
-
+		 * Create a NumberInputWidget.
+		 *
+		 * @param {Object} dict - The dictionary of configurations.
+		 * @return {Object} - The NumberInputWidget.
+		 */
 		function makeNumberInputWidget( dict ) {
 			return new OO.ui.NumberInputWidget( {
 				isInteger: dict.isInteger,
@@ -53,12 +51,11 @@
 		}
 
 		/**
-			* Create a RadioSelectInputWidget.
-			*
-			* @param {Object} dict - The dictionary of configurations.
-			* @return {Object} - The RadioSelectInputWidget.
-			*/
-
+		 * Create a RadioSelectInputWidget.
+		 *
+		 * @param {Object} dict - The dictionary of configurations.
+		 * @return {Object} - The RadioSelectInputWidget.
+		 */
 		function makeRadioSelectInputWidget( dict ) {
 			return new OO.ui.RadioSelectInputWidget( {
 				value: dict.value,
@@ -68,12 +65,11 @@
 		}
 
 		/**
-			* Create a TextInputWidget.
-			*
-			* @param {Object} dict - The dictionary of configurations.
-			* @return {Object} - The TextInputWidget.
-			*/
-
+		 * Create a TextInputWidget.
+		 *
+		 * @param {Object} dict - The dictionary of configurations.
+		 * @return {Object} - The TextInputWidget.
+		 */
 		function makesmallTextBox( dict ) {
 			return new OO.ui.TextInputWidget( {
 				placeholder: dict.placeholder,
@@ -85,12 +81,11 @@
 		}
 
 		/**
-			* Create a ComboBoxInputWidget.
-			*
-			* @param {Object} dict - The dictionary of configurations.
-			* @return {Object} - The ComboBoxInputWidget.
-			*/
-
+		 * Create a ComboBoxInputWidget.
+		 *
+		 * @param {Object} dict - The dictionary of configurations.
+		 * @return {Object} - The ComboBoxInputWidget.
+		 */
 		function makeComboBoxInputWidget( dict ) {
 			return new OO.ui.ComboBoxInputWidget( {
 				options: dict.options,
@@ -100,12 +95,11 @@
 		}
 
 		/**
-			* Create a MultilineTextInputWidget.
-			*
-			* @param {Object} dict - The dictionary of configurations.
-			* @return {Object} - The MultilineTextInputWidget.
-			*/
-
+		 * Create a MultilineTextInputWidget.
+		 *
+		 * @param {Object} dict - The dictionary of configurations.
+		 * @return {Object} - The MultilineTextInputWidget.
+		 */
 		function makeMultilineText( dict ) {
 			return new OO.ui.MultilineTextInputWidget( {
 				rows: dict.rows,
@@ -117,12 +111,11 @@
 		}
 
 		/**
-			* Create a CheckboxMultiselectInputWidget.
-			*
-			* @param {Object} dict - The dictionary of configurations.
-			* @return {Object} - The LabelText.
-			*/
-
+		 * Create a CheckboxMultiselectInputWidget.
+		 *
+		 * @param {Object} dict - The dictionary of configurations.
+		 * @return {Object} - The LabelText.
+		 */
 		function makeCheckboxMultiselect( dict ) {
 			return new OO.ui.CheckboxMultiselectInputWidget( {
 				value: dict.value,
@@ -132,25 +125,24 @@
 		}
 
 		/**
-			* Create a LabelWidget.
-			*
-			* @param {Object} dict - The dictionary of configurations.
-			* @return {Object} - The LabelText.
-			*/
-
+		 * Create a LabelWidget.
+		 *
+		 * @param {Object} dict - The dictionary of configurations.
+		 * @return {Object} - The LabelText.
+		 */
 		function makeLabelText( dict ) {
 			return new OO.ui.LabelWidget( {
 				label: dict.label,
 				classes: [ 'formWizard-label' ]
 			} );
 		}
-		/**
-			* Return a promise from the api call.
-			*
-			* @param {Object} api - instance of the mediaWiki api.
-			* @return {Object} - The promise.
-			*/
 
+		/**
+		 * Return a promise from the api call.
+		 *
+		 * @param {Object} api - instance of the mediaWiki api.
+		 * @return {Object} - The promise.
+		 */
 		function setConfigData( api ) {
 			return api.get( {
 				action: 'parse',
@@ -162,12 +154,11 @@
 		}
 
 		/**
-			* Create elements from data from config data.
-			*
-			* @param {Object} data - The json data from the api request.
-			* @return {Object} - The set of elements in a schema.
-			*/
-
+		 * Create elements from data from config data.
+		 *
+		 * @param {Object} data - The json data from the api request.
+		 * @return {Object} - The set of elements in a schema.
+		 */
 		function createElementsFromSchema( data ) {
 			var elementSet = [],
 				smallTextBox,
@@ -223,12 +214,11 @@
 		}
 
 		/**
-			* Create a FieldsetLayout.
-			*
-			* @param {Object} contentElements - The elements added to the fielset.
-			* @return {Object} - The FieldsetLayout.
-			*/
-
+		 * Create a FieldsetLayout.
+		 *
+		 * @param {Object} contentElements - The elements added to the fielset.
+		 * @return {Object} - The FieldsetLayout.
+		 */
 		function createFieldSet( contentElements ) {
 			var fieldset = new OO.ui.FieldsetLayout( {
 				classes: [ 'container' ],
@@ -239,12 +229,11 @@
 		}
 
 		/**
-			* Adds fioelset elements to  PanelLayout.
-			*
-			* @param {Object} fieldSetContentElements - The elements of the fieldset.
-			* @return {Object} - The panel containing elements.
-			*/
-
+		 * Adds fioelset elements to  PanelLayout.
+		 *
+		 * @param {Object} fieldSetContentElements - The elements of the fieldset.
+		 * @return {Object} - The panel containing elements.
+		 */
 		function AddPanelElementsToPanel( fieldSetContentElements ) {
 			var fieldSet,
 				panel;
@@ -260,12 +249,11 @@
 		}
 
 		/**
-			* Create a StackLayout.
-			*
-			* @param {Object} stackPanels - The panels to be added to the stack.
-			* @return {Object} - The StackLayout containing panels.
-			*/
-
+		 * Create a StackLayout.
+		 *
+		 * @param {Object} stackPanels - The panels to be added to the stack.
+		 * @return {Object} - The StackLayout containing panels.
+		 */
 		function makeStack( stackPanels ) {
 			return new OO.ui.StackLayout( {
 				classes: [ 'container' ],
@@ -275,12 +263,11 @@
 		}
 
 		/**
-			* Get data from a fieldset by their label and value.
-			*
-			* @param {Object} fieldset - the fielset where the data is obtained.
-			* @return {Object} - The fieldset data.
-			*/
-
+		 * Get data from a fieldset by their label and value.
+		 *
+		 * @param {Object} fieldset - the fielset where the data is obtained.
+		 * @return {Object} - The fieldset data.
+		 */
 		function getFieldSetData( fieldset ) {
 			var fieldData = [];
 			fieldset.forEach( function ( field ) {
@@ -294,12 +281,11 @@
 		}
 
 		/**
-			* Gets the data from an object holding fieldsets.
-			*
-			* @param {Object} fieldsetContainer - The container of fieldsets.
-			* @return {Object} - The content of the fieldset.
-			*/
-
+		 * Gets the data from an object holding fieldsets.
+		 *
+		 * @param {Object} fieldsetContainer - The container of fieldsets.
+		 * @return {Object} - The content of the fieldset.
+		 */
 		function getFieldSetContendData( fieldsetContainer ) {
 			var ContentData = [];
 			fieldsetContainer.forEach( function ( fieldset ) {
@@ -310,105 +296,60 @@
 		}
 
 		/**
-		* construct the page content using data.
-		*
-		* @return {string} - The probox to be added to the page.
-		*/
-
+		 * construct the page content using data.
+		 *
+		 * @return {string} - The probox to be added to the page.
+		 */
 		function getIdeaLabProbox() {
-			var probox = '\n\n{{probox\n|project=\n|portal=\n|summary=\n|country=\n|inspire_theme=\n|contact1=\n|advisor1=\n|community_organizer1=\n|designer1=\n|developer1=\n|developer2=\n|project_manager1=\n|researcher1=\n|image=\n|translations=\n|more_participants=\n|timestamp =\n|creator =\n}}';
-			return probox;
-		}
-
-		/**
-         * construct the rapid grant page content using data.
-         *
-         * @return {string} - The probox to be added to the rapid grant page.
-         */
-
-		function getRapidGrantsProbox() {
-			var div, endDiv, probox;
-			div = '\n<div style="float:right; width:24em">';
-			endDiv = '</div>\n';
-			probox = div +
-				'\n{{Probox\n' +
-				'<!--The status on this should be set to "proposed" when your request is ready for review.' +
-				'Please contact rapidgrants@wikimedia.org when you\'re ready to' +
-				'move your request from "draft" to "proposed".-->\n' +
-				'|status=\n' +
-				'|grantee=\n' +
-				'|grantee2=\n' +
-				'|contact=\n' +
+			var probox = '\n\n' +
+				'{{probox\n' +
 				'|project=\n' +
+				'|portal=\n' +
 				'|summary=\n' +
-				'|target=\n' +
-				'<!--Add the MONTH and DAY you expect to begin spending funds for this project. ' +
-				'The start date should be at least 6 weeks after you submit your grant request ' +
-				'to allow time for review, discussion, and revision. -->\n' +
-				'|start_date=\n' +
-				'<!--Enter a start year-->\n' +
-				'|start_year=\n' +
-				'<!--Add the MONTH and DAY you expect to finish work on your project.-->\n' +
-				'|end_date=\n' +
-				'<!--Enter an end year-->\n' +
-				'|end_year=2018\n' +
-				'<!--Enter the amount requested in your local currency-->' +
-				'|amount_local=\n' +
-				'<!--Please provide an equivalent amount in US$,' +
-				'using the exchange rate provided by [http://www.oanda.com/ Oanda]' +
-				'on the date you open this request-->\n' +
-				'|amount=\n' +
-				'<!--Is this grant being requested by an organization, a group, or an individual?-->\n' +
-				'|grant_type=\n' +
-				'<!--IF THIS GRANT IS TO A GROUP OR ORGANIZATION: Provide the email address ' +
-				'(or username) of a secondary contact. You don\'t need to disclose your legal name publicly.-->\n' +
-				'|organization=\n' +
-				'|contact2=\n' +
-				'|contact3=\n' +
-				'<!--IF THIS GRANT IS TO A GROUP OR ORGANIZATION: Link to your organization website, ' +
-				'or any relevant online resources.-->\n' +
-				'|website=\n' +
-				'<!--IF THIS GRANT IS TO AN ORGANIZATION: Are you an incorporated organization able to ' +
-				'provide local proof of nonprofit status within your country? ' +
-				'(For-profit organizations are ineligible to receive grants through the PEG program.)-->\n' +
-				'|nonprofit=\n' +
-				'<!-- YOU DON\'T NEED TO EDIT THINGS BETWEEN THESE LINES -->\n' +
-				'|portal=Rapid\n' +
-				'|translations=Probox/Rapid/Content\n' +
-				'}}\n\n' +
-				'{{Rapid/button/report}}\n' +
-				endDiv +
-				'\nPlease see the sample' +
-				'[[Grants:Project/Rapid/Plan/SampleApplication/Editathon|Editathon/Training application] ' +
-				'before drafting your application.\n';
+				'|country=\n' +
+				'|inspire_theme=\n' +
+				'|contact1=\n' +
+				'|advisor1=\n' +
+				'|community_organizer1=\n' +
+				'|designer1=\n' +
+				'|developer1=\n' +
+				'|developer2=\n' +
+				'|project_manager1=\n' +
+				'|researcher1=\n' +
+				'|image=\n' +
+				'|translations=\n' +
+				'|more_participants=\n' +
+				'|timestamp =\n' +
+				'|creator =\n' +
+				'}}';
 			return probox;
 		}
 
 		/**
-			* construct the page content using data.
-			*
-			* @param {Object} pageContentData - The data for the page.
-			* @return {string} - The content to be appended to page.
-			*/
-
+		 * construct the page content using data.
+		 *
+		 * @param {Object} pageContentData - The data for the page.
+		 * @return {string} - The content to be appended to page.
+		 */
 		function constructPageContent( pageContentData ) {
-			var pageContent, subContent, i;
-			pageContent = '';
-			subContent = '\n';
+			var pageContent = '',
+				subContent = '\n',
+				i;
 			pageType = mw.config.get( 'formWizardPageType' );
 			pageContentData.forEach( function ( contentData ) {
 				for ( i = 0; i < contentData.length; i++ ) {
 					if ( i % 2 === 0 ) {
-						subContent += '\n== ' + contentData[ i ] + ' == \n' + contentData[ i + 1 ] + '\n';
+						subContent += '\n== ' +
+							contentData[ i ] +
+							' == \n' +
+							contentData[ i + 1 ] +
+							'\n';
 					}
 				}
 			} );
 			switch ( pageType ) {
 				case 'IdeaLab':
 					pageContent = getIdeaLabProbox() + subContent;
-					break;
-				case 'RapidGrant':
-					pageContent = getRapidGrantsProbox() + subContent;
 					break;
 				default:
 					pageContent = subContent;
@@ -417,24 +358,23 @@
 		}
 
 		/**
-			* An api request to edit a edit/create a page.
-			*
-			* @param {Object} api - instance of the mw.api().
-			* @param {Object} fieldsetContentData - The data used to create page.
-			* @param {string} baseUrl - Project base url.
-			* @param {string} targetMode - The target mode.
-			* @param {string} pageName - The name of the page not a subpage.
-			* @param {string} targetRootName - name fo the target root page.
-			*/
-
+		 * An api request to edit a edit/create a page.
+		 *
+		 * @param {Object} api - instance of the mw.api().
+		 * @param {Object} fieldsetContentData - The data used to create page.
+		 * @param {string} baseUrl - Project base url.
+		 * @param {string} targetMode - The target mode.
+		 * @param {string} pageName - The name of the page not a subpage.
+		 * @param {string} targetRootName - name fo the target root page.
+		 */
 		function createPage( api, fieldsetContentData, baseUrl, targetMode, pageName, targetRootName ) {
-			var date, pageTitle;
+			var date = new Date(),
+				pageTitle;
 			if ( targetMode === 'subpage' ) {
 				pageTitle = targetRootName + $( '#subpage-name' ).val()
 			} else {
 				pageTitle = pageName;
 			}
-			date = new Date();
 			api.postWithToken( 'csrf', {
 				action: 'edit',
 				summary: targetRootName,
@@ -445,29 +385,28 @@
 				window.location.replace( location.origin + '/' + baseUrl + '/' + pageTitle );
 				mw.loader.using( 'mediawiki.notify', function () {
 					mw.notify( mw.config.get( 'formWizardProject' ) +
-						' Complete', { type: 'info' } );
+						' Complete',
+						{ type: 'info' } );
 				} );
 			} );
 		}
 
 		/**
-			* Create an instance of a dialog.
-			*
-			* @param {Object} config - dialog configuration.
-			* Note: Changing this name FormWizardDialog means changing the dialog
-			* 	name name below.
-			*/
-
+		 * Create an instance of a dialog.
+		 *
+		 * @param {Object} config - dialog configuration.
+		 * Note: Changing this name FormWizardDialog means changing the dialog
+		 * 	name name below.
+		 */
 		function FormWizardDialog( config ) {
 			FormWizardDialog.parent.call( this, config );
 		}
 
 		/**
-			* Add TextField above button on setup page.
-			*
-			* @param {string} parentElementID - The id of the parent element.
-			*/
-
+		 * Add TextField above button on setup page.
+		 *
+		 * @param {string} parentElementID - The id of the parent element.
+		 */
 		function addTextFieldToPage( parentElementID ) {
 			$( parentElementID ).prepend( '<strong>Enter subpage name:</strong>' +
 				'<br/><input type="text" required="true" id="subpage-name">' );
@@ -501,7 +440,9 @@
 			} else {
 				setConfigData( api ).done( function ( data ) {
 					// Windows manager and ProcessDialog instances
-					var windowManager, ProcessDialog, dialog;
+					var windowManager,
+						ProcessDialog,
+						dialog;
 					configData = JSON.parse( data.parse.wikitext ).steps;
 					targetMode = JSON.parse( data.parse.wikitext ).target.mode;
 					pageName = JSON.parse( data.parse.wikitext ).target.pagename;
@@ -522,13 +463,31 @@
 						FormWizardDialog.static.name = 'formWizardDialog';
 						FormWizardDialog.static.title = mw.config.get( 'formWizardProject' );
 						FormWizardDialog.static.actions = [
-							{ action: 'continue', modes: 'edit', label: 'Next', flags: [ 'primary',
-								'constructive' ] },
-							{ modes: [ 'edit', 'final' ], label: 'Cancel', flags: 'safe' },
-							{ modes: 'final', action: 'save', label: 'Done', flags: 'primary' }
+							{
+								action: 'continue',
+								modes: 'edit',
+								label: 'Next',
+								flags: [
+									'primary',
+									'constructive' ]
+							},
+							{
+								modes: [
+									'edit',
+									'final' ],
+								label: 'Cancel',
+								flags: 'safe'
+							},
+							{
+								modes: 'final',
+								action: 'save',
+								label: 'Done',
+								flags: 'primary'
+							}
 						];
 						FormWizardDialog.prototype.initialize = function () {
-							var panel, stack;
+							var panel,
+								stack;
 							FormWizardDialog.parent.prototype.initialize.apply( this, arguments );
 							// get elements from the fieldset container
 							fieldsetContainer.forEach( function ( elt ) {
@@ -557,15 +516,20 @@
 								// we get the fieldsetContentData from the container of fieldsets
 								fieldsetContentData = getFieldSetContendData( fieldsetContainer );
 								// We make an API request to create a page
-								createPage( api, fieldsetContentData, baseUrl, targetMode, pageName, targetRootName );
+								createPage( api,
+											fieldsetContentData,
+											baseUrl,
+											targetMode,
+											pageName,
+											targetRootName );
 								// Here we close the dialog after processing
 								dialog = this;
 								return new OO.ui.Process( function () {
 									// do something about the edit
 									dialog.close();
 								} );
-							} else if ( action === 'continue' && viewControl <
-								( stackPanels.length - 1 ) ) {
+							} else if ( action === 'continue' &&
+										viewControl < ( stackPanels.length - 1 ) ) {
 								this.stackLayout.setItem( stackPanels[ viewControl + 1 ] );
 								viewControl++;
 								if ( viewControl === ( stackPanels.length - 1 ) ) {
