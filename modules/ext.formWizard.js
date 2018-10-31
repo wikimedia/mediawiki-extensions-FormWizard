@@ -469,7 +469,7 @@
 			*/
 
 		function addTextFieldToPage( parentElementID ) {
-			$( parentElementID ).prepend( '<strong>Enter Sub-Page Name:</strong>' +
+			$( parentElementID ).prepend( '<strong>Enter subpage name:</strong>' +
 				'<br/><input type="text" required="true" id="subpage-name">' );
 		}
 		// get the page mode and check if textfield should be added
