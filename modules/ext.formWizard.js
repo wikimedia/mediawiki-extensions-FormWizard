@@ -1,7 +1,6 @@
 ( function ( mw ) {
 	$( function () {
 		// {api} instance of mediaWiki api.``
-		// {Object} configData data from the parsed wikitext.
 		// {int} viewControl variable used to control the stack views.
 		var api = new mw.Api(),
 			viewControl = 0,
@@ -424,6 +423,7 @@
 			// {Object} fieldsetContainer stores fielsets
 			// {Object} stackPanels }Holds the panels to be added to the stack
 			// {Object} fieldsetContentData Holds data from the panel fieldset elements
+			// {Object} configData data from the parsed wikitext
 			var fieldsetElements = [],
 				fieldsetContent = [],
 				fieldsetContainer = [],
