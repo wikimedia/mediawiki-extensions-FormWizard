@@ -4,5 +4,7 @@
 			"Vlad5250"
 		]
 	},
-	"formwizard-desc": "Позволяет установить и использовать FormWizard в Mediawiki."
+	"formwizard": "Мастер форм",
+	"formwizard-desc": "Позволяет установить и использовать FormWizard в Mediawiki.",
+	"special-formwizard-intro": "Мастер форм"
 }
