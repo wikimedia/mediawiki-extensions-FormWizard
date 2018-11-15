@@ -153,11 +153,13 @@
 
 		function setConfigData( api ) {
 			return api.get( {
-				action: 'parse',
-				page: mw.config.get( 'formWizardConfig' ),
+				action: 'query',
+				titles: mw.config.get( 'formWizardConfig' ),
 				format: 'json',
 				formatversion: 2,
-				prop: 'wikitext'
+				prop: 'revisions',
+				rvslots: 'main',
+				rvprop: 'content'
 			} );
 		}
 
@@ -491,6 +493,7 @@
 				stackPanels = [],
 				fieldsetContentData = [],
 				configData,
+				queryData,
 				baseUrl,
 				targetMode,
 				pageName,
@@ -501,12 +504,15 @@
 			} else {
 				setConfigData( api ).done( function ( data ) {
 					// Windows manager and ProcessDialog instances
-					var windowManager, ProcessDialog, dialog;
-					configData = JSON.parse( data.parse.wikitext ).steps;
-					targetMode = JSON.parse( data.parse.wikitext ).target.mode;
-					pageName = JSON.parse( data.parse.wikitext ).target.pagename;
-					baseUrl = JSON.parse( data.parse.wikitext ).target.baseUrl;
-					targetRootName = JSON.parse( data.parse.wikitext ).target.rootname;
+					var windowManager,
+						ProcessDialog,
+						dialog;
+					queryData = JSON.parse( data.query.pages[ 0 ].revisions[ 0 ].content );
+					configData = queryData.steps;
+					baseUrl = queryData.target.baseUrl;
+					targetMode = queryData.target.mode;
+					pageName = queryData.target.pagename;
+					targetRootName = queryData.target.rootname;
 					// Display a dialog for undefined JSON
 					if ( configData === undefined || configData === '' ) {
 						// alert user of poor configuration file
