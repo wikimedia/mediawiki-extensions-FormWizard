@@ -23,6 +23,6 @@ class SpecialFormWizard extends SpecialPage {
 	}
 
 	protected function getGroupName() {
-		return 'other';
+		return 'pagetools';
 	}
 }
