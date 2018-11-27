@@ -29,7 +29,7 @@ class FormWizardHooks {
 				'ext.formWizard'
 			],
 			'localBasePath' => __DIR__,
-			'remoteExtPath' => 'FormWizard',
+			'remoteExtPath' => 'FormWizard'
 		];
 		return true;
 	}

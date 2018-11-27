@@ -29,6 +29,7 @@
 				"ext.formWizard.css"
 			],
 			"messages": [
+				"formwizard-page-action-complete"
 			],
 			"dependencies": [
 				"oojs",

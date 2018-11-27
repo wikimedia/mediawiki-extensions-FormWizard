@@ -446,8 +446,8 @@
 			} ).done( function () {
 				window.location.replace( location.origin + '/' + baseUrl + '/' + pageTitle );
 				mw.loader.using( 'mediawiki.notify', function () {
-					mw.notify( mw.config.get( 'formWizardProject' ) +
-						' Complete', { type: 'info' } );
+					mw.notify( mw.msg( 'formwizard-page-action-complete',  mw.config.get( 'formWizardProject' ) ),
+						{ type: 'info' } );
 				} );
 			} );
 		}
