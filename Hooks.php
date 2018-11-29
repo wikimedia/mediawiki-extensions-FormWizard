@@ -101,23 +101,10 @@ class FormWizardHooks {
 								aria-disabled='false'>" . $options[ 'action' ] . "
 						</span>" .
 					"</div>";
-		$parser->getOutput()->setExtensionData( 'formWizardProject', $options[ 'project' ] );
-		$parser->getOutput()->setExtensionData( 'formWizardConfig', $options[ 'config' ] );
-		$parser->getOutput()->setExtensionData( 'formWizardPageMode', $options[ 'mode' ] );
+		$parser->getOutput()->addJsConfigVars( 'formWizardProject', $options[ 'project' ] );
+		$parser->getOutput()->addJsConfigVars( 'formWizardConfig', $options[ 'config' ] );
+		$parser->getOutput()->addJsConfigVars( 'formWizardPageMode', $options[ 'mode' ] );
 		$parser->getOutput()->preventClickjacking( true );
 		return $output;
-	}
-
-	/**
-	 * @param OutputPage &$out
-	 * @param ParserOutput $parseroutput
-	 */
-	public static function onOutputPageParserOutput( OutputPage &$out, ParserOutput $parseroutput ) {
-		$out->addJsConfigVars( 'formWizardConfig',
-			$parseroutput->getExtensionData( 'formWizardConfig' ) );
-		$out->addJsConfigVars( 'formWizardProject',
-			$parseroutput->getExtensionData( 'formWizardProject' ) );
-		$out->addJsConfigVars( 'formWizardPageMode',
-			$parseroutput->getExtensionData( 'formWizardPageMode' ) );
 	}
 }

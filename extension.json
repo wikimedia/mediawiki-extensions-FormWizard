@@ -56,9 +56,6 @@
 		],
 		"ParserFirstCallInit": [
 			"FormWizardHooks::onParserSetup"
-		],
-		"OutputPageParserOutput": [
-			"FormWizardHooks::onOutputPageParserOutput"
 		]
 	}
 }
