@@ -426,7 +426,7 @@
 			date = new Date();
 			api.postWithToken( 'csrf', {
 				action: 'edit',
-				summary: targetRootName,
+				summary: mw.msg( 'formwizard-page-edit-summary',  mw.config.get( 'formWizardProject' ) ),
 				title: pageTitle,
 				appendtext: constructPageContent( fieldsetContentData ),
 				basetimestamp: date.toISOString()

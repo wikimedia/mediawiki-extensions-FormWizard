@@ -10,5 +10,6 @@
 	"special-formwizard-title": "This is an introduction to the FormWizard Special page.",
 	"formwizard-wrong-config-file-alert": "Please check the configuration settings!",
 	"formwizard-page-action-complete": "$1 Action Complete",
-	"formwizard-no-subpage-name-alert": "Please tell us what to name your page!"
+	"formwizard-no-subpage-name-alert": "Please tell us what to name your page!",
+	"formwizard-page-edit-summary": "Modification made on $1"
 }
