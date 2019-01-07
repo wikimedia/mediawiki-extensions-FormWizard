@@ -29,7 +29,8 @@
 				"ext.formWizard.css"
 			],
 			"messages": [
-				"formwizard-page-action-complete"
+				"formwizard-page-action-complete",
+				"formwizard-wrong-config-file-alert"
 			],
 			"dependencies": [
 				"oojs",

@@ -8,5 +8,6 @@
 	"formwizard-desc": "Allows you to install and use the FormWizard Gadget in Mediawiki.",
 	"special-formwizard-intro": "FormWizard",
 	"special-formwizard-title": "This is an introduction to the FormWizard Special page.",
-	"formwizard-page-action-complete": "$1 Action Complete"
+	"formwizard-page-action-complete": "$1 Action complete",
+	"formwizard-wrong-config-file-alert": "Please check the configuration settings!"
 }

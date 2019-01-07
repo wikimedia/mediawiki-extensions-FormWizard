@@ -9,5 +9,6 @@
 	"formwizard-desc": "{{desc|name=FormWizard|url=https://www.mediawiki.org/wiki/Extension:FormWizard}}",
 	"special-formwizard-intro": "Description appearing on top of <tvar|1>Special:{{ll|FormWizardPage}}</>.",
 	"special-formwizard-title": "Title of the special page Special:FormWizardPage",
-	"formwizard-page-action-complete": "Message shown to user while page action is complete"
+	"formwizard-page-action-complete": "Message shown to user while page action is complete",
+	"formwizard-wrong-config-file-alert": "Message shown when config file is wrong"
 }

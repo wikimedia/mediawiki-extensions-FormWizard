@@ -516,7 +516,7 @@
 					// Display a dialog for undefined JSON
 					if ( configData === undefined || configData === '' ) {
 						// alert user of poor configuration file
-						OO.ui.alert( 'Please Check the configuration settings!',
+						OO.ui.alert( mw.msg( 'formwizard-wrong-config-file-alert' ),
 							{ size: 'medium' } );
 					} else {
 						// getting schema and creating ooui elements and storing in container
