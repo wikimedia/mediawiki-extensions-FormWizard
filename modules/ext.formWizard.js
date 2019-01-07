@@ -499,7 +499,7 @@
 				pageName,
 				targetRootName;
 			if ( mw.config.get( 'formWizardPageMode' ) && $( '#subpage-name' ).val() === '' ) {
-				OO.ui.alert( 'Please tell us what to name your page!',
+				OO.ui.alert( mw.msg( 'formwizard-no-subpage-name-alert' ),
 							{ size: 'medium' } );
 			} else {
 				setConfigData( api ).done( function ( data ) {
