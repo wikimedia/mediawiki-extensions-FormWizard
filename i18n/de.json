@@ -8,5 +8,6 @@
 	"formwizard-desc": "Erlaubt die Installation und Nutzung des FormWizard-Helferleins in MediaWiki.",
 	"special-formwizard-intro": "FormWizard",
 	"special-formwizard-title": "Dies ist eine Einführung der Spezialseite „FormWizard“.",
-	"formwizard-page-action-complete": "Aktion $1 abgeschlossen"
+	"formwizard-page-action-complete": "Aktion $1 abgeschlossen",
+	"formwizard-wrong-config-file-alert": "Bitte die Konfigurationseinstellungen überprüfen!"
 }
