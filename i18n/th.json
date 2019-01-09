@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"B20180"
+		]
+	},
+	"formwizard-page-action-complete": "$1 การดำเนินการเสร็จสมบูรณ์",
+	"formwizard-wrong-config-file-alert": "กรุณาตรวจสอบการตั้งค่า !"
+}

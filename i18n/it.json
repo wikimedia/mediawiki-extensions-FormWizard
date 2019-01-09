@@ -4,5 +4,6 @@
 			"Beta16"
 		]
 	},
-	"formwizard-page-action-complete": "Azione $1 completata"
+	"formwizard-page-action-complete": "Azione $1 completata",
+	"formwizard-wrong-config-file-alert": "Controlla le impostazioni di configurazione!"
 }

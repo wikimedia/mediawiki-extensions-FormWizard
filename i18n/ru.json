@@ -7,5 +7,6 @@
 	"formwizard": "Мастер форм",
 	"formwizard-desc": "Позволяет установить и использовать FormWizard в Mediawiki.",
 	"special-formwizard-intro": "Мастер форм",
-	"formwizard-page-action-complete": "Действие $1 выполнено"
+	"formwizard-page-action-complete": "Действие $1 выполнено",
+	"formwizard-wrong-config-file-alert": "Пожалуйста, проверьте настройки конфигурации!"
 }

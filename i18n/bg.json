@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"formwizard-page-action-complete": "Действието $1 е завършено",
+	"formwizard-wrong-config-file-alert": "Проверете настройките на поставките!"
+}

@@ -8,5 +8,6 @@
 	"formwizard-desc": "允許您在 Mediawiki 上安裝並使用 FormWizard 小工具。",
 	"special-formwizard-intro": "FormWizard",
 	"special-formwizard-title": "此為 FormWizard 特殊頁面的說明",
-	"formwizard-page-action-complete": "$1操作完成"
+	"formwizard-page-action-complete": "$1操作完成",
+	"formwizard-wrong-config-file-alert": "請檢查設置的設定！"
 }

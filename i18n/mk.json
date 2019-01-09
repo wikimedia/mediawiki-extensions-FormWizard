@@ -8,5 +8,6 @@
 	"formwizard-desc": "Овозможува воспоставка и употреба на Помошник со обрасци за МедијаВики.",
 	"special-formwizard-intro": "Помошник со обрасци",
 	"special-formwizard-title": "Ова е вовед во службената странца „Помошник со обрасци“.",
-	"formwizard-page-action-complete": "Дејството $1 е завршено"
+	"formwizard-page-action-complete": "Дејството $1 е завршено",
+	"formwizard-wrong-config-file-alert": "Проверете ги нагодувањата на поставките!"
 }
