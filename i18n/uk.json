@@ -1,8 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vlad5250"
+			"Vlad5250",
+			"Piramidion"
 		]
 	},
-	"formwizard-page-action-complete": "Дію $1 виконано"
+	"formwizard": "Майстер форм",
+	"formwizard-desc": "Дає Вам змогу встановити й використовувати додаток FormWizard у MediaWiki.",
+	"special-formwizard-intro": "Майстер форм",
+	"special-formwizard-title": "Це — вступ до спеціальної сторінки Майстра форм.",
+	"formwizard-page-action-complete": "Дію $1 виконано",
+	"formwizard-wrong-config-file-alert": "Будь ласка, перевірте налаштування конфігурації!"
 }

@@ -8,5 +8,6 @@
 	"formwizard-desc": "Te permette de installà e ausà 'u gadget FormWizard jndr'à MediaUicchi.",
 	"special-formwizard-intro": "FormWizard",
 	"special-formwizard-title": "Queste jè 'n'indroduzione a 'a pàgena speciale FormWizard.",
-	"formwizard-page-action-complete": "$1 Aziona Combletate"
+	"formwizard-page-action-complete": "$1 Aziona Combletate",
+	"formwizard-wrong-config-file-alert": "Condrolle le 'mbostaziune de configurazione!"
 }
