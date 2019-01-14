@@ -11,8 +11,9 @@
 	"formwizard-dialog-label-next": "Next",
 	"special-formwizard-intro": "FormWizard",
 	"special-formwizard-title": "This is an introduction to the FormWizard Special page.",
-	"formwizard-wrong-config-file-alert": "Please check the configuration settings!",
-	"formwizard-page-action-complete": "$1 Action Complete",
-	"formwizard-no-subpage-name-alert": "Please tell us what to name your page!",
-	"formwizard-page-edit-summary": "Modification made on $1"
+	"formwizard-no-subpage-name-alert": "Please tell us what to name your page",
+	"formwizard-page-edit-summary": "Modification made on $1",
+	"formwizard-page-action-complete": "$1 action complete",
+	"formwizard-subpage-request-text": "Enter subpage name:",
+	"formwizard-wrong-config-file-alert": "Please check the configuration settings!"
 }

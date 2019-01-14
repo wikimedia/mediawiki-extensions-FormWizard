@@ -32,10 +32,11 @@
 				"formwizard-dialog-label-cancel",
 				"formwizard-dialog-label-done",
 				"formwizard-dialog-label-next",
-				"formwizard-page-action-complete",
-				"formwizard-wrong-config-file-alert",
 				"formwizard-no-subpage-name-alert",
-				"formwizard-page-edit-summary"
+				"formwizard-page-action-complete",
+				"formwizard-page-edit-summary",
+				"formwizard-subpage-request-text",
+				"formwizard-wrong-config-file-alert"
 			],
 			"dependencies": [
 				"oojs",

@@ -16,5 +16,6 @@
 	"formwizard-wrong-config-file-alert": "Message shown when config file is wrong",
 	"formwizard-page-action-complete": "Message shown to user while page action is complete.\n\nParameters:\n* $1 - the form project in which the action was made",
 	"formwizard-no-subpage-name-alert": "Message shown when subpage name is not provided",
-	"formwizard-page-edit-summary": "Summary shown when a page has been edited.\n\nParameters:\n* $1 - the form project in which the edit was made"
+	"formwizard-page-edit-summary": "Summary shown when a page has been edited.\n\nParameters:\n* $1 - the form project in which the edit was made",
+	"formwizard-subpage-request-text": "Text which requests for the subpage from the user in subpage configuration mode"
 }

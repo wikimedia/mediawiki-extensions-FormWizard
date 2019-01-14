@@ -447,7 +447,9 @@
 		 */
 
 		function addTextFieldToPage( parentElementID ) {
-			$( parentElementID ).prepend( '<strong>Enter subpage name:</strong>' +
+			$( parentElementID ).prepend( '<strong>' +
+									mw.msg( 'formwizard-subpage-request-text' ) +
+									'</strong>' +
 				'<br/><input type="text" required="true" id="subpage-name">' );
 		}
 		// get the page mode and check if textfield should be added
