@@ -10,6 +10,9 @@
 	"special-formwizard-intro": "Description appearing on top of <tvar|1>Special:{{ll|FormWizardPage}}</>.",
 	"special-formwizard-title": "Title of the special page Special:FormWizardPage",
 	"formwizard-wrong-config-file-alert": "Message shown when config file is wrong",
+	"formwizard-dialog-label-cancel": "Button label on dialog to cancel operation",
+	"formwizard-dialog-label-done": "Button label on dialog to save operation (make changes)",
+	"formwizard-dialog-label-next": "Button label on dialog to move between screens",
 	"formwizard-page-action-complete": "Message shown to user while page action is complete",
 	"formwizard-no-subpage-name-alert": "Message shown when subpage name is not provided",
 	"formwizard-page-edit-summary": "Summary shown when a page has been edited. it takes parameter $1 - the form project in which the edit was made"
