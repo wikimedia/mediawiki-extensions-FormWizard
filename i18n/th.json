@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"B20180"
+			"B20180",
+			"Horus"
 		]
 	},
 	"formwizard-page-action-complete": "$1 การดำเนินการเสร็จสมบูรณ์",
-	"formwizard-wrong-config-file-alert": "กรุณาตรวจสอบการตั้งค่า !"
+	"formwizard-wrong-config-file-alert": "กรุณาตรวจสอบการตั้งค่า!"
 }
