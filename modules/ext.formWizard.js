@@ -311,17 +311,6 @@
 		}
 
 		/**
-		* construct the page content using data.
-		*
-		* @return {string} - The probox to be added to the page.
-		*/
-
-		function getIdeaLabProbox() {
-			var probox = '\n\n{{probox\n|project=\n|portal=\n|summary=\n|country=\n|inspire_theme=\n|contact1=\n|advisor1=\n|community_organizer1=\n|designer1=\n|developer1=\n|developer2=\n|project_manager1=\n|researcher1=\n|image=\n|translations=\n|more_participants=\n|timestamp =\n|creator =\n}}';
-			return probox;
-		}
-
-		/**
          * construct the rapid grant page content using data.
          *
          * @return {string} - The probox to be added to the rapid grant page.
