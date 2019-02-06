@@ -3,8 +3,7 @@
 		// {api} instance of mediaWiki api.``
 		// {Object} configData data from the parsed wikitext.
 		// {int} viewControl variable used to control the stack views.
-		var api, viewControl = 0,
-			pageType, mode;
+		var api, mode, viewControl = 0;
 		api = new mw.Api();
 
 		/**
@@ -394,8 +393,7 @@
 			*/
 
 		function constructPageContent( pageContentData ) {
-			var pageContent, subContent, i;
-			pageContent = '';
+			var subContent, i;
 			subContent = '\n';
 			pageType = mw.config.get( 'formWizardPageType' );
 			pageContentData.forEach( function ( contentData ) {
@@ -405,17 +403,7 @@
 					}
 				}
 			} );
-			switch ( pageType ) {
-				case 'IdeaLab':
-					pageContent = getIdeaLabProbox() + subContent;
-					break;
-				case 'RapidGrant':
-					pageContent = getRapidGrantsProbox() + subContent;
-					break;
-				default:
-					pageContent = subContent;
-			}
-			return pageContent;
+			return subContent;
 		}
 
 		/**
