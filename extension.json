@@ -30,7 +30,8 @@
 			],
 			"messages": [
 				"formwizard-page-action-complete",
-				"formwizard-wrong-config-file-alert"
+				"formwizard-wrong-config-file-alert",
+				"formwizard-no-subpage-name-alert"
 			],
 			"dependencies": [
 				"oojs",
