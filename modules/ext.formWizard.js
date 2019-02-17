@@ -397,7 +397,6 @@
 			var pageContent, subContent, i;
 			pageContent = '';
 			subContent = '\n';
-			pageType = mw.config.get( 'formWizardPageType' );
 			pageContentData.forEach( function ( contentData ) {
 				for ( i = 0; i < contentData.length; i++ ) {
 					if ( i % 2 === 0 ) {
