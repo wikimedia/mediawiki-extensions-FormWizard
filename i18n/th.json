@@ -5,6 +5,6 @@
 			"Horus"
 		]
 	},
-	"formwizard-page-action-complete": "$1 การดำเนินการเสร็จสมบูรณ์",
-	"formwizard-wrong-config-file-alert": "กรุณาตรวจสอบการตั้งค่า!"
+	"formwizard-wrong-config-file-alert": "กรุณาตรวจสอบการตั้งค่า!",
+	"formwizard-page-action-complete": "$1 การดำเนินการเสร็จสมบูรณ์"
 }

@@ -8,6 +8,7 @@
 	"formwizard-desc": "Permite que você instale e use o Gadget do Assistente de Formulário no Mediawiki.",
 	"special-formwizard-intro": "Assistente de Formulário",
 	"special-formwizard-title": "Esta é uma introdução à página especial do Assistente de formulários.",
+	"formwizard-wrong-config-file-alert": "Por favor, verifique as configurações!",
 	"formwizard-page-action-complete": "Ação $1 concluída",
-	"formwizard-wrong-config-file-alert": "Por favor, verifique as configurações!"
+	"formwizard-no-subpage-name-alert": "Diga-nos que nome dar à sua página, por favor!"
 }

@@ -9,6 +9,7 @@
 	"formwizard-desc": "Vous permet d'installer et d'utiliser le gadget FormWizard Gadget in Mediawiki.",
 	"special-formwizard-intro": "FormWizard",
 	"special-formwizard-title": "Ceci est une introduction à la page spéciale de FormWizard.",
+	"formwizard-wrong-config-file-alert": "Veuillez vérifier les paramètres de configuration !",
 	"formwizard-page-action-complete": "$1 action terminée",
-	"formwizard-wrong-config-file-alert": "Veuillez vérifier les paramètres de configuration !"
+	"formwizard-no-subpage-name-alert": "Veuillez nous indiquer comment nommer votre page !"
 }

@@ -9,6 +9,7 @@
 	"formwizard-desc": "يسمح لك بتنصيب واستخدام الإضافة FormWizard في ميدياويكي.",
 	"special-formwizard-intro": "ساحر النموذج",
 	"special-formwizard-title": "هذه مقدمة للصفحة الخاصة FormWizard.",
+	"formwizard-wrong-config-file-alert": "يُرجَى التحقق من إعدادات التكوين!",
 	"formwizard-page-action-complete": "اكتمل عمل $1",
-	"formwizard-wrong-config-file-alert": "يُرجَى التحقق من إعدادات التكوين!"
+	"formwizard-no-subpage-name-alert": "من فضلك أخبرنا ما اسم صفحتك!"
 }

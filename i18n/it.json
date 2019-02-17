@@ -4,6 +4,7 @@
 			"Beta16"
 		]
 	},
+	"formwizard-wrong-config-file-alert": "Controlla le impostazioni di configurazione!",
 	"formwizard-page-action-complete": "Azione $1 completata",
-	"formwizard-wrong-config-file-alert": "Controlla le impostazioni di configurazione!"
+	"formwizard-no-subpage-name-alert": "Dicci come chiamare la tua pagina!"
 }
