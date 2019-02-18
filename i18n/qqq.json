@@ -11,6 +11,5 @@
 	"special-formwizard-title": "Title of the special page Special:FormWizardPage",
 	"formwizard-wrong-config-file-alert": "Message shown when config file is wrong",
 	"formwizard-page-action-complete": "Message shown to user while page action is complete",
-	"formwizard-no-subpage-name-alert": "Message shown when subpage name is not provided",
-	"formwizard-page-edit-summary": "Summary shown when a page has been edited. it takes parameter $1 - the form project in which the edit was made"
+	"formwizard-no-subpage-name-alert": "Message shown when subpage name is not provided"
 }

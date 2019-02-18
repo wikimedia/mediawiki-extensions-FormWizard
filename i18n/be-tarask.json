@@ -9,5 +9,6 @@
 	"special-formwizard-intro": "FormWizard",
 	"special-formwizard-title": "Гэта ўводзіны да спэцыяльнай старонкі майстра формаў.",
 	"formwizard-wrong-config-file-alert": "Калі ласка, праверце налады канфігурацыі!",
-	"formwizard-page-action-complete": "Дзеяньне $1 выкананае"
+	"formwizard-page-action-complete": "Дзеяньне $1 выкананае",
+	"formwizard-no-subpage-name-alert": "Калі ласка, скажыце нам, як назваць вашую старонку!"
 }
