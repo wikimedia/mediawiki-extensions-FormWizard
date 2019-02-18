@@ -1,6 +1,6 @@
 ( function ( mw ) {
 	$( function () {
-		// {api} instance of mediaWiki api.``
+		// {api} instance of mediaWiki api.
 		// {Object} configData data from the parsed wikitext.
 		// {int} viewControl variable used to control the stack views.
 		var api, mode, viewControl = 0;
