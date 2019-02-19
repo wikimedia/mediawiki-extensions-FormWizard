@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hedda"
+			"Hedda",
+			"Mirzali"
 		]
 	},
 	"formwizard": "FormSihirbazı",
 	"formwizard-desc": "Mediawiki'de FormSihibrbazı aracını kurmanıza ve kullanmanıza izin verir.",
 	"special-formwizard-intro": "FormSihirbazı",
-	"special-formwizard-title": "Bu, FormSihirbazı özel sayfasına giriştir."
+	"special-formwizard-title": "Bu, FormSihirbazı özel sayfasına giriştir.",
+	"formwizard-page-edit-summary": "$1 tarihinde yapılan değişiklik"
 }

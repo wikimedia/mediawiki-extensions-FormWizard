@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Elroy"
+		]
+	},
+	"formwizard-page-action-complete": "$1 handeling voltooid",
+	"formwizard-no-subpage-name-alert": "Vertel ons hoe de pagina komt te heten!",
+	"formwizard-page-edit-summary": "Wijziging op $1 aangebracht"
+}

@@ -6,5 +6,6 @@
 	},
 	"formwizard-wrong-config-file-alert": "Controlla le impostazioni di configurazione!",
 	"formwizard-page-action-complete": "Azione $1 completata",
-	"formwizard-no-subpage-name-alert": "Dicci come chiamare la tua pagina!"
+	"formwizard-no-subpage-name-alert": "Dicci come chiamare la tua pagina!",
+	"formwizard-page-edit-summary": "Modifica effettuata su $1"
 }
