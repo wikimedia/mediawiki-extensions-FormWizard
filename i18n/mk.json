@@ -10,5 +10,6 @@
 	"special-formwizard-title": "Ова е вовед во службената странца „Помошник со обрасци“.",
 	"formwizard-wrong-config-file-alert": "Проверете ги нагодувањата на поставките!",
 	"formwizard-page-action-complete": "Дејството $1 е завршено",
-	"formwizard-no-subpage-name-alert": "Кажете ни како да ви ја наречеме страницата!"
+	"formwizard-no-subpage-name-alert": "Кажете ни како да ви ја наречеме страницата!",
+	"formwizard-page-edit-summary": "Измената е направена на $1"
 }

@@ -10,5 +10,6 @@
 	"special-formwizard-title": "Esta é uma introdução à página especial do Assistente de formulários.",
 	"formwizard-wrong-config-file-alert": "Por favor, verifique as configurações!",
 	"formwizard-page-action-complete": "Ação $1 concluída",
-	"formwizard-no-subpage-name-alert": "Diga-nos que nome dar à sua página, por favor!"
+	"formwizard-no-subpage-name-alert": "Diga-nos que nome dar à sua página, por favor!",
+	"formwizard-page-edit-summary": "Modificação feita em $1"
 }

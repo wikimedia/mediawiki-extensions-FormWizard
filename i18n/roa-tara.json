@@ -9,5 +9,7 @@
 	"special-formwizard-intro": "FormWizard",
 	"special-formwizard-title": "Queste jè 'n'indroduzione a 'a pàgena speciale FormWizard.",
 	"formwizard-wrong-config-file-alert": "Condrolle le 'mbostaziune de configurazione!",
-	"formwizard-page-action-complete": "$1 Aziona Combletate"
+	"formwizard-page-action-complete": "$1 Aziona Combletate",
+	"formwizard-no-subpage-name-alert": "Dinne accumme chiamà 'a pàgena toje!",
+	"formwizard-page-edit-summary": "Cangiamende fatte sus a $1"
 }
