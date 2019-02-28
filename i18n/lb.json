@@ -5,5 +5,6 @@
 		]
 	},
 	"formwizard-desc": "Erlaabt Iech et fir de FormWizard Gadget op MediaWiki z'installéieren",
-	"special-formwizard-intro": "FormWizard"
+	"special-formwizard-intro": "FormWizard",
+	"formwizard-page-action-complete": "$1 Aktioun ofgeschloss"
 }
