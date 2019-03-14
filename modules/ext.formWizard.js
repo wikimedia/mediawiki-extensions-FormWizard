@@ -504,10 +504,20 @@
 						FormWizardDialog.static.name = 'formWizardDialog';
 						FormWizardDialog.static.title = mw.config.get( 'formWizardProject' );
 						FormWizardDialog.static.actions = [
-							{ action: 'continue', modes: 'edit', label: 'Next', flags: [ 'primary',
-								'constructive' ] },
-							{ modes: [ 'edit', 'final' ], label: 'Cancel', flags: 'safe' },
-							{ modes: 'final', action: 'save', label: 'Done', flags: 'primary' }
+							{ action: 'continue',
+								modes: 'edit',
+								label: mw.msg( 'formwizard-dialog-label-next' ),
+								flags: [ 'primary', 'constructive' ]
+							},
+							{ modes: [ 'edit', 'final' ],
+								label: mw.msg( 'formwizard-dialog-label-cancel' ),
+								flags: 'safe'
+							},
+							{ modes: 'final',
+								action: 'save',
+								label: mw.msg( 'formwizard-dialog-label-done' ),
+								flags: 'primary'
+							}
 						];
 						FormWizardDialog.prototype.initialize = function () {
 							var panel, stack;

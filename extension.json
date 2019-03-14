@@ -29,6 +29,9 @@
 				"ext.formWizard.css"
 			],
 			"messages": [
+				"formwizard-dialog-label-cancel",
+				"formwizard-dialog-label-done",
+				"formwizard-dialog-label-next",
 				"formwizard-page-action-complete",
 				"formwizard-wrong-config-file-alert",
 				"formwizard-no-subpage-name-alert",
