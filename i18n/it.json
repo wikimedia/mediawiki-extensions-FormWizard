@@ -4,6 +4,9 @@
 			"Beta16"
 		]
 	},
+	"formwizard-dialog-label-cancel": "Annulla",
+	"formwizard-dialog-label-done": "Fatto",
+	"formwizard-dialog-label-next": "Successivo",
 	"formwizard-wrong-config-file-alert": "Controlla le impostazioni di configurazione!",
 	"formwizard-page-action-complete": "Azione $1 completata",
 	"formwizard-no-subpage-name-alert": "Dicci come chiamare la tua pagina!",

@@ -4,6 +4,9 @@
 			"Ykhwong"
 		]
 	},
+	"formwizard-dialog-label-cancel": "취소",
+	"formwizard-dialog-label-done": "완료",
+	"formwizard-dialog-label-next": "다음",
 	"formwizard-wrong-config-file-alert": "구성 설정을 확인해 주십시오!",
 	"formwizard-page-action-complete": "$1 동작 완료",
 	"formwizard-no-subpage-name-alert": "문서의 이름을 지정해 주십시오!"

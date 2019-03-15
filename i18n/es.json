@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fitoschido"
+			"Fitoschido",
+			"MarcoAurelio"
 		]
 	},
+	"formwizard-dialog-label-done": "Hecho",
+	"formwizard-dialog-label-next": "Siguiente",
 	"formwizard-page-edit-summary": "Modificación realizada en $1"
 }
