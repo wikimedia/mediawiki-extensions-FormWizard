@@ -6,6 +6,7 @@
 	},
 	"formwizard": "FormWizard",
 	"formwizard-desc": "Дазваляе вам усталяваць і ўжываць гаджэт FormWizard у Mediawiki.",
+	"formwizard-dialog-label-cancel": "Адмяніць",
 	"special-formwizard-intro": "FormWizard",
 	"special-formwizard-title": "Гэта ўводзіны да спэцыяльнай старонкі майстра формаў.",
 	"formwizard-wrong-config-file-alert": "Калі ласка, праверце налады канфігурацыі!",

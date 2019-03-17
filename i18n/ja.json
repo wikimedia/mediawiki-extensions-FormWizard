@@ -1,11 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"Omotecho"
+			"Omotecho",
+			"Shirayuki"
 		]
 	},
 	"formwizard": "FormWizard",
 	"formwizard-desc": "MediawikiにFormWizardをインストールして使用できるようにする。",
+	"formwizard-dialog-label-cancel": "キャンセル",
+	"formwizard-dialog-label-done": "完了",
+	"formwizard-dialog-label-next": "次へ",
 	"special-formwizard-intro": "FormWizard",
-	"special-formwizard-title": "FormWizard特別ページの導入部。"
+	"special-formwizard-title": "FormWizard特別ページの導入部。",
+	"formwizard-page-action-complete": "$1 操作完了"
 }

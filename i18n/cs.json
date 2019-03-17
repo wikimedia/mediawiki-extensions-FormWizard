@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michaelbrabec"
+		]
+	},
+	"formwizard-dialog-label-cancel": "Storno",
+	"formwizard-dialog-label-done": "Hotovo",
+	"formwizard-dialog-label-next": "Další"
+}

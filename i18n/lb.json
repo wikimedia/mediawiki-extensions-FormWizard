@@ -5,6 +5,9 @@
 		]
 	},
 	"formwizard-desc": "Erlaabt Iech et fir de FormWizard Gadget op MediaWiki z'installéieren",
+	"formwizard-dialog-label-cancel": "Ofbriechen",
+	"formwizard-dialog-label-done": "Fäerdeg",
+	"formwizard-dialog-label-next": "Weider",
 	"special-formwizard-intro": "FormWizard",
 	"formwizard-page-action-complete": "$1 Aktioun ofgeschloss"
 }
