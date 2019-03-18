@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"formwizard-dialog-label-cancel": "Encaboxar",
+	"formwizard-dialog-label-done": "Fecho",
+	"formwizard-dialog-label-next": "Siguiente"
+}
