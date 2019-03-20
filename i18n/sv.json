@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"WikiPhoenix"
+		]
+	},
+	"formwizard-dialog-label-cancel": "Avbryt",
+	"formwizard-dialog-label-done": "Klar",
+	"formwizard-dialog-label-next": "Nästa"
+}
