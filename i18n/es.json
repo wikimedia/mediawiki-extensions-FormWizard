@@ -5,6 +5,7 @@
 			"MarcoAurelio"
 		]
 	},
+	"formwizard-dialog-label-cancel": "Cancelar",
 	"formwizard-dialog-label-done": "Hecho",
 	"formwizard-dialog-label-next": "Siguiente",
 	"formwizard-page-edit-summary": "Modificación realizada en $1"
