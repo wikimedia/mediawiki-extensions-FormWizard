@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pyscowicz"
+		]
+	},
+	"formwizard-dialog-label-cancel": "Peruuta",
+	"formwizard-dialog-label-done": "Valmis",
+	"formwizard-dialog-label-next": "Seuraava"
+}
