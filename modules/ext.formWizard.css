@@ -1,17 +1,21 @@
+/* stylelint-disable-next-line selector-class-pattern */
 .formWizard-title {
 	font-size: 1.1em;
 }
 
+/* stylelint-disable-next-line selector-class-pattern */
 .container {
 	padding: 12px;
 }
 
+/* stylelint-disable-next-line selector-class-pattern */
 .formWizard-element {
 	padding-top: 0.5px;
 	padding-bottom: 15px;
-	align: right;
+	text-align: right;
 }
 
+/* stylelint-disable-next-line selector-class-pattern */
 .formWizard-label {
 	font-weight: bold;
 	font-style: italic;
@@ -19,10 +23,12 @@
 	padding-bottom: 5px;
 }
 
+/* stylelint-disable-next-line selector-class-pattern */
 .formWizard-popup-button {
 	float: right;
 }
 
+/* stylelint-disable-next-line selector-max-id */
 #subpage-name {
 	display: block;
 	width: 30%;
