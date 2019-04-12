@@ -11,6 +11,6 @@
 	"formwizard-dialog-label-done": "Готово",
 	"formwizard-dialog-label-next": "Следеће",
 	"special-formwizard-intro": "Чаробњак обрасца",
-	"formwizard-wrong-config-file-alert": "Проверите подешавања за конфигурацију.",
-	"formwizard-page-action-complete": "Радња $1 је завршена"
+	"formwizard-page-action-complete": "Радња $1 је завршена",
+	"formwizard-wrong-config-file-alert": "Проверите подешавања за конфигурацију."
 }

@@ -12,8 +12,9 @@
 	"formwizard-dialog-label-next": "Suivant",
 	"special-formwizard-intro": "FormWizard",
 	"special-formwizard-title": "Ceci est une introduction à la page spéciale de FormWizard.",
-	"formwizard-wrong-config-file-alert": "Veuillez vérifier les paramètres de configuration !",
+	"formwizard-no-subpage-name-alert": "Veuillez nous indiquer comment nommer votre page",
+	"formwizard-page-edit-summary": "Modification faite sur $1",
 	"formwizard-page-action-complete": "$1 action terminée",
-	"formwizard-no-subpage-name-alert": "Veuillez nous indiquer comment nommer votre page !",
-	"formwizard-page-edit-summary": "Modification faite sur $1"
+	"formwizard-subpage-request-text": "Entrez le nom de la sous-page :",
+	"formwizard-wrong-config-file-alert": "Veuillez vérifier les paramètres de configuration !"
 }

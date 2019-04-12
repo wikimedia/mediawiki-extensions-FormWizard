@@ -5,7 +5,7 @@
 			"Horus"
 		]
 	},
-	"formwizard-wrong-config-file-alert": "กรุณาตรวจสอบการตั้งค่า!",
+	"formwizard-no-subpage-name-alert": "โปรดบอกเราว่าจะตั้งชื่อหน้าของคุณยังไง !",
 	"formwizard-page-action-complete": "$1 การดำเนินการเสร็จสมบูรณ์",
-	"formwizard-no-subpage-name-alert": "โปรดบอกเราว่าจะตั้งชื่อหน้าของคุณยังไง !"
+	"formwizard-wrong-config-file-alert": "กรุณาตรวจสอบการตั้งค่า!"
 }

@@ -12,8 +12,9 @@
 	"formwizard-dialog-label-next": "التالي",
 	"special-formwizard-intro": "ساحر النموذج",
 	"special-formwizard-title": "هذه مقدمة للصفحة الخاصة FormWizard.",
-	"formwizard-wrong-config-file-alert": "يُرجَى التحقق من إعدادات التكوين!",
+	"formwizard-no-subpage-name-alert": "من فضلك أخبرنا ما اسم صفحتك",
+	"formwizard-page-edit-summary": "تم إجراء التعديل في $1",
 	"formwizard-page-action-complete": "اكتمل عمل $1",
-	"formwizard-no-subpage-name-alert": "من فضلك أخبرنا ما اسم صفحتك!",
-	"formwizard-page-edit-summary": "تم إجراء التعديل في $1"
+	"formwizard-subpage-request-text": "أدخل اسم الصفحة الفرعية:",
+	"formwizard-wrong-config-file-alert": "يُرجَى التحقق من إعدادات التكوين!"
 }

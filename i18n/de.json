@@ -11,8 +11,9 @@
 	"formwizard-dialog-label-next": "Nächster",
 	"special-formwizard-intro": "FormWizard",
 	"special-formwizard-title": "Dies ist eine Einführung der Spezialseite „FormWizard“.",
-	"formwizard-wrong-config-file-alert": "Bitte die Konfigurationseinstellungen überprüfen!",
+	"formwizard-no-subpage-name-alert": "Erzähle uns bitte, wie deine Seite heißen soll.",
+	"formwizard-page-edit-summary": "Veränderung durchgeführt am $1",
 	"formwizard-page-action-complete": "Aktion $1 abgeschlossen",
-	"formwizard-no-subpage-name-alert": "Erzähle uns bitte, wie deine Seite heißen soll!",
-	"formwizard-page-edit-summary": "Veränderung durchgeführt am $1"
+	"formwizard-subpage-request-text": "Namen der Unterseite eingeben:",
+	"formwizard-wrong-config-file-alert": "Bitte die Konfigurationseinstellungen überprüfen!"
 }

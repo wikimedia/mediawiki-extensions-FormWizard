@@ -8,8 +8,8 @@
 	"formwizard-desc": "Позволява инсталиране и използване на Помощник с формуляри за МедияУики.",
 	"special-formwizard-intro": "Помощник с формуляри",
 	"special-formwizard-title": "Това е въведение в специалната странца „Помощник с формуляри“.",
-	"formwizard-wrong-config-file-alert": "Проверете настройките на поставките!",
-	"formwizard-page-action-complete": "Действието $1 е завършено",
 	"formwizard-no-subpage-name-alert": "Кажете ни как да ви наречем страницата!",
-	"formwizard-page-edit-summary": "Промяната е направена на $1"
+	"formwizard-page-edit-summary": "Промяната е направена на $1",
+	"formwizard-page-action-complete": "Действието $1 е завършено",
+	"formwizard-wrong-config-file-alert": "Проверете настройките на поставките!"
 }

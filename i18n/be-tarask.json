@@ -11,8 +11,8 @@
 	"formwizard-dialog-label-next": "Далей",
 	"special-formwizard-intro": "FormWizard",
 	"special-formwizard-title": "Гэта ўводзіны да спэцыяльнай старонкі майстра формаў.",
-	"formwizard-wrong-config-file-alert": "Калі ласка, праверце налады канфігурацыі!",
+	"formwizard-no-subpage-name-alert": "Калі ласка, скажыце нам, як назваць вашую старонку",
+	"formwizard-page-edit-summary": "Мадыфікацыя зробленая $1",
 	"formwizard-page-action-complete": "Дзеяньне $1 выкананае",
-	"formwizard-no-subpage-name-alert": "Калі ласка, скажыце нам, як назваць вашую старонку!",
-	"formwizard-page-edit-summary": "Мадыфікацыя зробленая $1"
+	"formwizard-wrong-config-file-alert": "Калі ласка, праверце налады канфігурацыі!"
 }
