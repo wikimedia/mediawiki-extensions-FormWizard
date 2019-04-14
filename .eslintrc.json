@@ -6,17 +6,8 @@
 	],
 	"globals": {
 		"mw": false,
-		"mediaWiki": false,
 		"OO": false
 	},
 	"rules": {
-		"max-len": 0,
-		"no-unused-vars": 0,
-		"no-multi-spaces": 0,
-		"indent": 0,
-		"no-jquery/no-each-util": 0,
-		"no-jquery/no-global-selector": 0,
-		"no-jquery/no-event-shorthand": 0,
-		"semi": 0
 	}
 }
