@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hamilton Abreu"
+			"Hamilton Abreu",
+			"Fúlvio"
 		]
 	},
 	"formwizard": "Assistente de formulários",
@@ -11,8 +12,9 @@
 	"formwizard-dialog-label-next": "Seguinte",
 	"special-formwizard-intro": "Assistente de formulários",
 	"special-formwizard-title": "Esta é uma introdução para a página especial Assistente de formulários.",
-	"formwizard-no-subpage-name-alert": "Diga-nos que nome dar à sua página, por favor!",
+	"formwizard-no-subpage-name-alert": "Diga-nos que nome dar à sua página, por favor",
 	"formwizard-page-edit-summary": "Modificação feita em $1",
 	"formwizard-page-action-complete": "Operação $1 executada",
+	"formwizard-subpage-request-text": "Digite o nome da sub-página:",
 	"formwizard-wrong-config-file-alert": "Verifique as definições de configuração, por favor!"
 }
