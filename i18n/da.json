@@ -7,5 +7,7 @@
 	"formwizard-dialog-label-cancel": "Annullér",
 	"formwizard-dialog-label-done": "Udført",
 	"formwizard-dialog-label-next": "Næste",
-	"formwizard-page-action-complete": "Handlingen $1 er gennemført"
+	"formwizard-no-subpage-name-alert": "Venligst fortæl os hvad din side skal hedde",
+	"formwizard-page-action-complete": "Handlingen $1 er gennemført",
+	"formwizard-subpage-request-text": "Indtast navn på underside:"
 }
