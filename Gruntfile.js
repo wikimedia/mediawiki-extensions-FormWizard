@@ -18,7 +18,8 @@ module.exports = function ( grunt ) {
 		},
 		stylelint: {
 			all: [
-				'**/*.{c,le}ss'
+				'**/*.{c,le}ss',
+				'!vendor/**'
 			]
 		},
 		banana: {
@@ -30,7 +31,8 @@ module.exports = function ( grunt ) {
 			all: [
 				'*.json',
 				'**/*.json',
-				'!node_modules/**'
+				'!node_modules/**',
+				'!vendor/**'
 			]
 		}
 	} );
