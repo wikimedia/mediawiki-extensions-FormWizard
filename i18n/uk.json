@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Vlad5250",
-			"Piramidion"
+			"Piramidion",
+			"Ата"
 		]
 	},
 	"formwizard": "Майстер форм",
@@ -12,7 +13,9 @@
 	"formwizard-dialog-label-next": "Наступний",
 	"special-formwizard-intro": "Майстер форм",
 	"special-formwizard-title": "Це — вступ до спеціальної сторінки Майстра форм.",
+	"formwizard-no-subpage-name-alert": "Будь ласка, вкажіть, як назвати вашу сторінку",
 	"formwizard-page-edit-summary": "Зміну зроблено $1",
 	"formwizard-page-action-complete": "Дію $1 виконано",
+	"formwizard-subpage-request-text": "Введіть назву підсторінки:",
 	"formwizard-wrong-config-file-alert": "Будь ласка, перевірте налаштування конфігурації!"
 }
