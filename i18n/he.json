@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"YaronSh"
+			"YaronSh",
+			"Steeve815"
 		]
 	},
-	"formwizard-no-subpage-name-alert": "נא לספר לנו איך לקרוא לעמוד שלך!",
+	"formwizard-no-subpage-name-alert": "נא לספר לנו איך לקרוא לעמוד שלך",
 	"formwizard-page-edit-summary": "שינויים שבוצעו על $1",
 	"formwizard-page-action-complete": "הפעולה $1 הושלמה"
 }
