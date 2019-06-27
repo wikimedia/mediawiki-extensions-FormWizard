@@ -470,7 +470,11 @@ $( function () {
 				var windowManager,
 					ProcessDialog,
 					dialog;
-				queryData = JSON.parse( data.query.pages[ 0 ].revisions[ 0 ].content );
+				// TODO: this JSON.parse should be protected against cases where the config is unset
+				// or leads to wrong content. Perhaps a try/catch or an 'if exists' statement
+				// that leads to some error for the user to know that the config page is either
+				// missing or unreadable.
+				queryData = JSON.parse( data.query.pages[ 0 ].revisions[ 0 ].slots.main.content );
 				configData = queryData.steps;
 				baseUrl = queryData.target.baseUrl;
 				targetMode = queryData.target.mode;
