@@ -63,8 +63,8 @@ class FormWizardHooks {
 	 * associative array in form [name] => value. If no = is provided,
 	 * true is assumed like this: [name] => true
 	 *
-	 * @param array string $options
-	 * @return array $results
+	 * @param array $options
+	 * @return array Parser function options
 	 */
 	public static function extractOptions( array $options ) {
 		$results = [];
@@ -85,25 +85,35 @@ class FormWizardHooks {
 	}
 
 	/**
-	 * Contruct button from parser arguments.
+	 * Construct button from parser arguments.
 	 *
-	 * @param String $parser The parse name.
-	 * @return String $output Contructed button output.
+	 * @param string $parser The parser name
+	 * @return string Constructed button output
 	 */
 	public static function showProjectButton( $parser ) {
 		$options = self::extractOptions( array_slice( func_get_args(), 1 ) );
-		// The input parameters are wikitext with templates expanded.
-		// The output should be wikitext too.
-		$output = "<div id='formwizard-init-form'>
+		$setUpOptions = (object)$options;
+		if ( isset( $setUpOptions->project ) &&
+			isset( $setUpOptions->config ) &&
+			isset( $setUpOptions->mode )
+		) {
+			$parser->getOutput()->addJsConfigVars( 'formWizardProject',  $options[ 'project' ] );
+			$parser->getOutput()->addJsConfigVars( 'formWizardConfig', $options[ 'config' ] );
+			$parser->getOutput()->addJsConfigVars( 'formWizardPageMode', $options[ 'mode' ] );
+			// The input parameters are wikitext with templates expanded.
+			// The output should be wikitext too.
+			$output = "<div id='mw-formwizard-init-form'>
 						<span class='mw-ui-button mw-ui-progressive'
-								id='formwizard-launch'
+								id='mw-formwizard-launch'
 								role='button'
 								aria-disabled='false'>" . $options[ 'action' ] . "
 						</span>" .
 					"</div>";
-		$parser->getOutput()->addJsConfigVars( 'formWizardProject', $options[ 'project' ] );
-		$parser->getOutput()->addJsConfigVars( 'formWizardConfig', $options[ 'config' ] );
-		$parser->getOutput()->addJsConfigVars( 'formWizardPageMode', $options[ 'mode' ] );
+		} else {
+			$output = "<span class='error'>" .
+					wfMessage( 'formwizard-parser-function-error' )->text() .
+					"</span>";
+		}
 		$parser->getOutput()->preventClickjacking( true );
 		return $output;
 	}

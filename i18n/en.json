@@ -14,6 +14,7 @@
 	"formwizard-no-subpage-name-alert": "Please tell us what to name your page",
 	"formwizard-page-edit-summary": "Modification made on $1",
 	"formwizard-page-action-complete": "$1 action complete",
-	"formwizard-subpage-request-text": "Enter subpage name:",
+	"formwizard-parser-function-error": "Please check setup parameters",
+	"formwizard-subpage-request-text": "<strong> Enter subpage name:</strong>",
 	"formwizard-wrong-config-file-alert": "Please check the configuration settings!"
 }
