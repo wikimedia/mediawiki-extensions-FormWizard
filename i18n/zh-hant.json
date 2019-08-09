@@ -14,6 +14,7 @@
 	"formwizard-no-subpage-name-alert": "請告訴我們如何命名您的頁面",
 	"formwizard-page-edit-summary": "修改建立於$1",
 	"formwizard-page-action-complete": "$1操作完成",
-	"formwizard-subpage-request-text": "輸入子頁面名稱：",
+	"formwizard-parser-function-error": "請檢查設定參數",
+	"formwizard-subpage-request-text": "<strong>輸入子頁面名稱：</strong>",
 	"formwizard-wrong-config-file-alert": "請檢查設置的設定！"
 }

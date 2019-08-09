@@ -15,6 +15,7 @@
 	"formwizard-no-subpage-name-alert": "من فضلك أخبرنا ما اسم صفحتك",
 	"formwizard-page-edit-summary": "تم إجراء التعديل في $1",
 	"formwizard-page-action-complete": "اكتمل عمل $1",
-	"formwizard-subpage-request-text": "أدخل اسم الصفحة الفرعية:",
+	"formwizard-parser-function-error": "يُرجَى التحقق من وسائط الإعداد",
+	"formwizard-subpage-request-text": "<strong>أدخل اسم الصفحة الفرعية:</strong/>",
 	"formwizard-wrong-config-file-alert": "يُرجَى التحقق من إعدادات التكوين!"
 }

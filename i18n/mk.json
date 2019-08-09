@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bjankuloski06"
+			"Bjankuloski06",
+			"Vlad5250"
 		]
 	},
 	"formwizard": "Помошник со обрасци",
@@ -14,6 +15,7 @@
 	"formwizard-no-subpage-name-alert": "Кажете како да ја наречеме страницата",
 	"formwizard-page-edit-summary": "Измената е направена на $1",
 	"formwizard-page-action-complete": "Дејството $1 е завршено",
-	"formwizard-subpage-request-text": "Внесете назив на потстраницата:",
+	"formwizard-parser-function-error": "Проверете ги поставните параметри",
+	"formwizard-subpage-request-text": "<strong> Внесете го називот на потстраницата:</strong>",
 	"formwizard-wrong-config-file-alert": "Проверете ги нагодувањата на поставките!"
 }
