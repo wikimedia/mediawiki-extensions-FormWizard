@@ -15,6 +15,7 @@
 	"formwizard-no-subpage-name-alert": "Veuillez nous indiquer comment nommer votre page",
 	"formwizard-page-edit-summary": "Modification faite sur $1",
 	"formwizard-page-action-complete": "$1 action terminée",
-	"formwizard-subpage-request-text": "Entrez le nom de la sous-page :",
+	"formwizard-parser-function-error": "Veuillez vérifier les paramètres d’installation",
+	"formwizard-subpage-request-text": "<strong>Entrez le nom de la sous-page :</strong>",
 	"formwizard-wrong-config-file-alert": "Veuillez vérifier les paramètres de configuration !"
 }
