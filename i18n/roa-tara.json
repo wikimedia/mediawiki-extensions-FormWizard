@@ -14,6 +14,7 @@
 	"formwizard-no-subpage-name-alert": "Dinne accumme chiamà 'a pàgena toje",
 	"formwizard-page-edit-summary": "Cangiamende fatte sus a $1",
 	"formwizard-page-action-complete": "$1 Aziona Combletate",
-	"formwizard-subpage-request-text": "Mitte 'u nome d'a sottopàgene:",
+	"formwizard-parser-function-error": "Pe piacere condrolle le parametre de configurazione",
+	"formwizard-subpage-request-text": "<strong>Mitte 'u nome d'a sottopàgene:</strong>",
 	"formwizard-wrong-config-file-alert": "Condrolle le 'mbostaziune de configurazione!"
 }
