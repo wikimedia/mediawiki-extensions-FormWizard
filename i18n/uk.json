@@ -16,6 +16,6 @@
 	"formwizard-no-subpage-name-alert": "Будь ласка, вкажіть, як назвати вашу сторінку",
 	"formwizard-page-edit-summary": "Зміну зроблено $1",
 	"formwizard-page-action-complete": "Дію $1 виконано",
-	"formwizard-subpage-request-text": "Введіть назву підсторінки:",
+	"formwizard-subpage-request-text": "<strong> Введіть назву підсторінки:</strong>",
 	"formwizard-wrong-config-file-alert": "Будь ласка, перевірте налаштування конфігурації!"
 }
