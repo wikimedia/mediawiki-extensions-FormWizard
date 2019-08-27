@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Elroy",
-			"Mainframe98"
+			"Mainframe98",
+			"RadioAzureus"
 		]
 	},
 	"formwizard-dialog-label-cancel": "Annuleren",
@@ -10,5 +11,6 @@
 	"formwizard-dialog-label-next": "Volgende",
 	"formwizard-no-subpage-name-alert": "Vertel ons hoe de pagina komt te heten!",
 	"formwizard-page-edit-summary": "Wijziging op $1 aangebracht",
-	"formwizard-page-action-complete": "$1 handeling voltooid"
+	"formwizard-page-action-complete": "$1 handeling voltooid",
+	"formwizard-parser-function-error": "Controleer s.v.p de opstellings-parameters"
 }
