@@ -3,7 +3,8 @@
 		"authors": [
 			"Elroy",
 			"Mainframe98",
-			"RadioAzureus"
+			"RadioAzureus",
+			"Siebrand"
 		]
 	},
 	"formwizard-dialog-label-cancel": "Annuleren",
@@ -12,5 +13,5 @@
 	"formwizard-no-subpage-name-alert": "Vertel ons hoe de pagina komt te heten!",
 	"formwizard-page-edit-summary": "Wijziging op $1 aangebracht",
 	"formwizard-page-action-complete": "$1 handeling voltooid",
-	"formwizard-parser-function-error": "Controleer s.v.p de opstellings-parameters"
+	"formwizard-parser-function-error": "Controleer de parameters"
 }
