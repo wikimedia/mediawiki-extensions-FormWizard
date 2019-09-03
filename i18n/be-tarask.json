@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Red Winged Duck"
+			"Red Winged Duck",
+			"Vlad5250"
 		]
 	},
 	"formwizard": "FormWizard",
@@ -14,6 +15,6 @@
 	"formwizard-no-subpage-name-alert": "Калі ласка, скажыце нам, як назваць вашую старонку",
 	"formwizard-page-edit-summary": "Мадыфікацыя зробленая $1",
 	"formwizard-page-action-complete": "Дзеяньне $1 выкананае",
-	"formwizard-subpage-request-text": "Увядзіце назву падстаронкі:",
+	"formwizard-subpage-request-text": "<strong> Увядзіце назву падстаронкі:</strong>",
 	"formwizard-wrong-config-file-alert": "Калі ласка, праверце налады канфігурацыі!"
 }
