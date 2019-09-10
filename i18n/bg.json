@@ -5,14 +5,14 @@
 			"StanProg"
 		]
 	},
-	"formwizard": "Помощник с формуляри",
-	"formwizard-desc": "Позволява инсталиране и използване на Помощник с формуляри за МедияУики.",
+	"formwizard": "FormWizard",
+	"formwizard-desc": "Позволява инсталиране и използване на FormWizard за МедияУики.",
 	"formwizard-dialog-label-cancel": "Отказ",
 	"formwizard-dialog-label-next": "Следваща",
-	"special-formwizard-intro": "Помощник с формуляри",
-	"special-formwizard-title": "Това е въведение в специалната странца „Помощник с формуляри“.",
-	"formwizard-no-subpage-name-alert": "Кажете ни как да ви наречем страницата!",
+	"special-formwizard-intro": "FormWizard",
+	"special-formwizard-title": "Това е въведение в специалната страница FormWizard.",
+	"formwizard-no-subpage-name-alert": "Моля, кажете как да именуваме страницата Ви",
 	"formwizard-page-edit-summary": "Промяната е направена на $1",
 	"formwizard-page-action-complete": "Действието $1 е завършено",
-	"formwizard-wrong-config-file-alert": "Проверете настройките на поставките!"
+	"formwizard-wrong-config-file-alert": "Моля, проверете конфигурационните настройки!"
 }
