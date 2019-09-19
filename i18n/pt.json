@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Hamilton Abreu",
-			"Fúlvio"
+			"Fúlvio",
+			"Mansil alfalb"
 		]
 	},
 	"formwizard": "Assistente de formulários",
@@ -15,6 +16,6 @@
 	"formwizard-no-subpage-name-alert": "Diga-nos que nome dar à sua página, por favor",
 	"formwizard-page-edit-summary": "Modificação feita em $1",
 	"formwizard-page-action-complete": "Operação $1 executada",
-	"formwizard-subpage-request-text": "Digite o nome da sub-página:",
+	"formwizard-subpage-request-text": "<strong>Insira o nome da subpágina:</strong>",
 	"formwizard-wrong-config-file-alert": "Verifique as definições de configuração, por favor!"
 }
