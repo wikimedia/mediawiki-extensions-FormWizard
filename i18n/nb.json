@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"formwizard": "FormWizard",
+	"formwizard-desc": "Lar deg installere og bruke tilleggsfunksjonen FormWizard i MediaWiki.",
+	"formwizard-dialog-label-cancel": "Avbryt",
+	"formwizard-dialog-label-done": "Gjort",
+	"formwizard-dialog-label-next": "Neste",
+	"special-formwizard-intro": "FormWizard",
+	"special-formwizard-title": "Dette er en introduksjon til FormWizards spesialside.",
+	"formwizard-no-subpage-name-alert": "Fortell oss hva du vil at siden skal hete",
+	"formwizard-page-edit-summary": "Endringer gjort i $1",
+	"formwizard-page-action-complete": "$1-handling fullført",
+	"formwizard-parser-function-error": "Sjekk oppsettsparameterne",
+	"formwizard-subpage-request-text": "<strong>Skriv inn navn på underside:</strong>",
+	"formwizard-wrong-config-file-alert": "Sjekk konfigurasjonen!"
+}
