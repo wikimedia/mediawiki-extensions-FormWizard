@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vlad5250"
+			"Vlad5250",
+			"Okras"
 		]
 	},
 	"formwizard": "Мастер форм",
@@ -10,6 +11,11 @@
 	"formwizard-dialog-label-done": "Готово",
 	"formwizard-dialog-label-next": "Далее",
 	"special-formwizard-intro": "Мастер форм",
+	"special-formwizard-title": "Это введение к служебной странице FormWizard.",
+	"formwizard-no-subpage-name-alert": "Пожалуйста, укажите, как назвать вашу страницу",
+	"formwizard-page-edit-summary": "Модификация сделана в {{grammar:genitive|$1}}",
 	"formwizard-page-action-complete": "Действие $1 выполнено",
+	"formwizard-parser-function-error": "Пожалуйста, проверьте параметры настройки",
+	"formwizard-subpage-request-text": "<strong> Введите название подстраницы:</strong>",
 	"formwizard-wrong-config-file-alert": "Пожалуйста, проверьте настройки конфигурации!"
 }
