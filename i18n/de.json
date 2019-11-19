@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Metalhead64"
+			"Metalhead64",
+			"Killarnee"
 		]
 	},
 	"formwizard": "FormWizard",
@@ -14,6 +15,6 @@
 	"formwizard-no-subpage-name-alert": "Erzähle uns bitte, wie deine Seite heißen soll.",
 	"formwizard-page-edit-summary": "Veränderung durchgeführt am $1",
 	"formwizard-page-action-complete": "Aktion $1 abgeschlossen",
-	"formwizard-subpage-request-text": "Namen der Unterseite eingeben:",
+	"formwizard-subpage-request-text": "<strong>Namen der Unterseite eingeben:</strong>",
 	"formwizard-wrong-config-file-alert": "Bitte die Konfigurationseinstellungen überprüfen!"
 }
