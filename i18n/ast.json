@@ -1,10 +1,21 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fitoschido"
+			"Fitoschido",
+			"Xuacu"
 		]
 	},
+	"formwizard": "FormWizard",
+	"formwizard-desc": "Te permite instalar y usar l'accesoriu FormWizard en Mediawiki.",
 	"formwizard-dialog-label-cancel": "Encaboxar",
 	"formwizard-dialog-label-done": "Fecho",
-	"formwizard-dialog-label-next": "Siguiente"
+	"formwizard-dialog-label-next": "Siguiente",
+	"special-formwizard-intro": "FormWizard",
+	"special-formwizard-title": "Esto ye un entamu a la páxina Especial FormWizard.",
+	"formwizard-no-subpage-name-alert": "Cuéntanos cómo se llamará la páxina",
+	"formwizard-page-edit-summary": "Cambéu fechu en $1",
+	"formwizard-page-action-complete": "Aición de $1 completada",
+	"formwizard-parser-function-error": "Comprueba los parámetros de configuración",
+	"formwizard-subpage-request-text": "<strong> Escribe'l nome de la subpáxina:</strong>",
+	"formwizard-wrong-config-file-alert": "¡Comprueba les preferencies de configuración!"
 }
