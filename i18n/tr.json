@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Hedda",
-			"Mirzali"
+			"Mirzali",
+			"BaRaN6161 TURK"
 		]
 	},
 	"formwizard": "FormSihirbazı",
@@ -12,5 +13,10 @@
 	"formwizard-dialog-label-next": "Sonraki",
 	"special-formwizard-intro": "FormSihirbazı",
 	"special-formwizard-title": "Bu, FormSihirbazı özel sayfasına giriştir.",
-	"formwizard-page-edit-summary": "$1 tarihinde yapılan değişiklik"
+	"formwizard-no-subpage-name-alert": "Lütfen sayfanıza ne ad vereceğinizi söyleyin",
+	"formwizard-page-edit-summary": "$1 tarihinde yapılan değişiklik",
+	"formwizard-page-action-complete": "$1 işlem tamamlandı",
+	"formwizard-parser-function-error": "Lütfen kurulum parametrelerini kontrol edin",
+	"formwizard-subpage-request-text": "<strong> Alt sayfa adını girin:</strong>",
+	"formwizard-wrong-config-file-alert": "Lütfen yapılandırma ayarlarını kontrol edin!"
 }
