@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Wladek92",
-			"Gomoko"
+			"Gomoko",
+			"Thibaut120094"
 		]
 	},
 	"formwizard": "FormWizard",
@@ -17,5 +18,5 @@
 	"formwizard-page-action-complete": "$1 action terminée",
 	"formwizard-parser-function-error": "Veuillez vérifier les paramètres d’installation",
 	"formwizard-subpage-request-text": "<strong>Entrez le nom de la sous-page :</strong>",
-	"formwizard-wrong-config-file-alert": "Veuillez vérifier les paramètres de configuration !"
+	"formwizard-wrong-config-file-alert": "Veuillez vérifier les paramètres de configuration !"
 }
