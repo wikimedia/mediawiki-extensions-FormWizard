@@ -56,7 +56,6 @@
 		"FormWizardMagic": "FormWizard.magic.php"
 	},
 	"Hooks": {
-		"ResourceLoaderTestModules": "FormWizardHooks::onResourceLoaderTestModules",
 		"BeforePageDisplay": "FormWizardHooks::onBeforePageDisplay",
 		"ParserFirstCallInit": "FormWizardHooks::onParserSetup"
 	}
