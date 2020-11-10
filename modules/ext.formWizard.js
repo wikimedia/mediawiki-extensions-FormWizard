@@ -425,7 +425,7 @@
 						dialog,
 						key,
 						schema;
-					queryData = JSON.parse( data.query.pages[ 0 ].revisions[ 0 ].content );
+					queryData = JSON.parse( data.query.pages[ 0 ].revisions[ 0 ].slots.main.content );
 					configData = queryData.steps;
 					baseUrl = queryData.target.baseUrl;
 					targetMode = queryData.target.mode;
