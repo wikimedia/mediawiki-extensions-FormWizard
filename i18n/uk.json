@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"DDPAT",
 			"Movses",
 			"Piramidion",
 			"Vlad5250",
@@ -18,6 +19,6 @@
 	"formwizard-page-edit-summary": "Зміну зроблено $1",
 	"formwizard-page-action-complete": "Дію $1 виконано",
 	"formwizard-parser-function-error": "Будь ласка перевірте параметри налаштування",
-	"formwizard-subpage-request-text": "<strong> Введіть назву підсторінки:</strong>",
+	"formwizard-subpage-request-text": "<strong>Введіть назву підсторінки:</strong>",
 	"formwizard-wrong-config-file-alert": "Будь ласка, перевірте налаштування конфігурації!"
 }
