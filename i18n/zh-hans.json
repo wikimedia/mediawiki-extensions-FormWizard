@@ -1,12 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			")8",
 			"Liuxinyu970226",
 			"Looong"
 		]
 	},
 	"formwizard": "表单向导",
 	"formwizard-desc": "允许您在Mediawiki安装并使用表单向导小工具。",
+	"formwizard-dialog-label-cancel": "取消",
 	"special-formwizard-intro": "表单向导",
 	"special-formwizard-title": "这是表单向导特殊页面的介绍。",
 	"formwizard-parser-function-error": "请检查安装参数",
