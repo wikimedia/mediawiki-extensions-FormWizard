@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"formwizard-desc": "Permitte installar e usar le gadget FormWizard in MediaWiki.",
+	"formwizard-dialog-label-cancel": "Cancellar",
+	"formwizard-dialog-label-done": "Facite",
+	"formwizard-dialog-label-next": "Sequente",
+	"special-formwizard-intro": "Assistente de formularios",
+	"special-formwizard-title": "Isto es un introduction al pagina special del Assistente de formularios.",
+	"formwizard-no-subpage-name-alert": "Per favor dice nos como nominar tu pagina",
+	"formwizard-page-edit-summary": "Modification facite sur $1",
+	"formwizard-page-action-complete": "Action sur $1 terminate",
+	"formwizard-parser-function-error": "Per favor verifica le parametros de installation",
+	"formwizard-subpage-request-text": "<strong> Insere le nomine del subpagina:</strong>",
+	"formwizard-wrong-config-file-alert": "Per favor verifica le parametros de configuration."
+}
