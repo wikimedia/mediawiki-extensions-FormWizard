@@ -358,10 +358,8 @@
 				basetimestamp: date.toISOString()
 			} ).done( function () {
 				window.location.assign( location.origin + '/' + baseUrl + '/' + pageTitle );
-				mw.loader.using( 'mediawiki.notify', function () {
-					mw.notify( mw.msg( 'formwizard-page-action-complete', mw.config.get( 'formWizardProject' ) ),
-						{ type: 'info' } );
-				} );
+				mw.notify( mw.msg( 'formwizard-page-action-complete', mw.config.get( 'formWizardProject' ) ),
+					{ type: 'info' } );
 			} );
 		}
 
