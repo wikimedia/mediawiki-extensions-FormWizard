@@ -4,12 +4,13 @@
 			"Egbe Eugene",
 			"MuratTheTurkish",
 			"Shirayuki",
-			"Umherirrender"
+			"Umherirrender",
+			"Ajeje Brazorf"
 		]
 	},
 	"formwizard": "{{name}}",
 	"formwizard-desc": "{{desc|name=FormWizard|url=https://www.mediawiki.org/wiki/Extension:FormWizard}}",
-	"formwizard-dialog-label-cancel": "Button label on dialog to cancel operation",
+	"formwizard-dialog-label-cancel": "Button label on dialog to cancel operation\n\n{{Identical|Cancel}}",
 	"formwizard-dialog-label-done": "Button label on dialog to save operation (make changes)",
 	"formwizard-dialog-label-next": "Button label on dialog to move between screens",
 	"special-formwizard-intro": "Description appearing on top of FormWizardPage.",
