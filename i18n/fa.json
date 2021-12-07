@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jeeputer"
+		]
+	},
+	"formwizard-dialog-label-cancel": "لغو",
+	"formwizard-dialog-label-done": "انجام شد",
+	"formwizard-dialog-label-next": "بعدی",
+	"formwizard-page-action-complete": "$1 عمل انجام شد"
+}
