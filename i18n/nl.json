@@ -4,13 +4,14 @@
 			"Elroy",
 			"Mainframe98",
 			"RadioAzureus",
-			"Siebrand"
+			"Siebrand",
+			"McDutchie"
 		]
 	},
 	"formwizard-dialog-label-cancel": "Annuleren",
 	"formwizard-dialog-label-done": "Afgerond",
 	"formwizard-dialog-label-next": "Volgende",
-	"formwizard-no-subpage-name-alert": "Vertel ons hoe de pagina komt te heten!",
+	"formwizard-no-subpage-name-alert": "Vertel ons hoe de pagina komt te heten",
 	"formwizard-page-edit-summary": "Wijziging op $1 aangebracht",
 	"formwizard-page-action-complete": "$1 handeling voltooid",
 	"formwizard-parser-function-error": "Controleer de parameters"

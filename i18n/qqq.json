@@ -3,15 +3,17 @@
 		"authors": [
 			"Egbe Eugene",
 			"Shirayuki",
-			"Umherirrender"
+			"Umherirrender",
+			"Ajeje Brazorf",
+			"MuratTheTurkish"
 		]
 	},
 	"formwizard": "{{name}}",
 	"formwizard-desc": "{{desc|name=FormWizard|url=https://www.mediawiki.org/wiki/Extension:FormWizard}}",
-	"formwizard-dialog-label-cancel": "Button label on dialog to cancel operation",
+	"formwizard-dialog-label-cancel": "Button label on dialog to cancel operation\n\n{{Identical|Cancel}}",
 	"formwizard-dialog-label-done": "Button label on dialog to save operation (make changes)",
 	"formwizard-dialog-label-next": "Button label on dialog to move between screens",
-	"special-formwizard-intro": "Description appearing on top of <tvar|1>Special:{{ll|FormWizardPage}}</>.",
+	"special-formwizard-intro": "Description appearing on top of FormWizardPage.",
 	"special-formwizard-title": "Title of the special page Special:FormWizardPage",
 	"formwizard-no-subpage-name-alert": "Message shown when subpage name is not provided",
 	"formwizard-page-edit-summary": "Summary shown when a page has been edited.\n\nParameters:\n* $1 - the form project in which the edit was made",

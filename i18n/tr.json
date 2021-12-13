@@ -3,17 +3,18 @@
 		"authors": [
 			"BaRaN6161 TURK",
 			"Hedda",
-			"Mirzali"
+			"Mirzali",
+			"MuratTheTurkish"
 		]
 	},
 	"formwizard": "FormSihirbazı",
-	"formwizard-desc": "Mediawiki'de FormSihibrbazı aracını kurmanıza ve kullanmanıza izin verir.",
+	"formwizard-desc": "Mediawiki'de FormWizard aracını kurmanıza ve kullanmanıza izin verir.",
 	"formwizard-dialog-label-cancel": "İptal",
 	"formwizard-dialog-label-done": "Yapıldı",
 	"formwizard-dialog-label-next": "Sonraki",
-	"special-formwizard-intro": "FormSihirbazı",
-	"special-formwizard-title": "Bu, FormSihirbazı özel sayfasına giriştir.",
-	"formwizard-no-subpage-name-alert": "Lütfen sayfanıza ne ad vereceğinizi söyleyin",
+	"special-formwizard-intro": "FormWizard",
+	"special-formwizard-title": "Bu, FormWizard özel sayfasına giriştir.",
+	"formwizard-no-subpage-name-alert": "Lütfen bize sayfanıza ne ad vereceğinizi söyleyin",
 	"formwizard-page-edit-summary": "$1 tarihinde yapılan değişiklik",
 	"formwizard-page-action-complete": "$1 işlem tamamlandı",
 	"formwizard-parser-function-error": "Lütfen kurulum parametrelerini kontrol edin",
