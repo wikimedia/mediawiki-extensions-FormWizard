@@ -1,12 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
+			"DiegoAmbrocio",
 			"Fitoschido",
 			"MarcoAurelio"
 		]
 	},
+	"formwizard-desc": "Permite instalar y utilizar el Gadget FormWizard en Mediawiki.",
 	"formwizard-dialog-label-cancel": "Cancelar",
 	"formwizard-dialog-label-done": "Hecho",
 	"formwizard-dialog-label-next": "Siguiente",
-	"formwizard-page-edit-summary": "Modificación realizada en $1"
+	"formwizard-page-edit-summary": "Modificación realizada en $1",
+	"formwizard-page-action-complete": "$1 acción completa",
+	"formwizard-parser-function-error": "Por favor, compruebe los parámetros de configuración",
+	"formwizard-wrong-config-file-alert": "Por favor, compruebe los ajustes de configuración."
 }
