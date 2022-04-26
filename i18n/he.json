@@ -3,9 +3,11 @@
 		"authors": [
 			"Steeve815",
 			"Strayblues",
-			"YaronSh"
+			"YaronSh",
+			"Ex-Diktator"
 		]
 	},
+	"formwizard-dialog-label-cancel": "ביטול",
 	"formwizard-no-subpage-name-alert": "איזה שם לתת לעמוד שלך?",
 	"formwizard-page-edit-summary": "שינויים שבוצעו על $1",
 	"formwizard-page-action-complete": "הפעולה $1 הושלמה"
