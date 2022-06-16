@@ -5,7 +5,7 @@
 		]
 	},
 	"formwizard": "FormWizard",
-	"formwizard-desc": "允許您在 Mediawiki 上安裝並使用 FormWizard 小工具。",
+	"formwizard-desc": "允許您在 MediaWiki 上安裝並使用 FormWizard 小工具。",
 	"formwizard-dialog-label-cancel": "取消",
 	"formwizard-dialog-label-done": "完成",
 	"formwizard-dialog-label-next": "下一個",

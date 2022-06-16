@@ -6,7 +6,7 @@
 		]
 	},
 	"formwizard": "Мастер форм",
-	"formwizard-desc": "Позволяет установить и использовать FormWizard в Mediawiki.",
+	"formwizard-desc": "Позволяет установить и использовать FormWizard в MediaWiki.",
 	"formwizard-dialog-label-cancel": "Отмена",
 	"formwizard-dialog-label-done": "Готово",
 	"formwizard-dialog-label-next": "Далее",
