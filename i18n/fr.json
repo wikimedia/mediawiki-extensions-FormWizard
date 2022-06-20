@@ -3,11 +3,12 @@
 		"authors": [
 			"Gomoko",
 			"Thibaut120094",
-			"Wladek92"
+			"Wladek92",
+			"Verdy p"
 		]
 	},
 	"formwizard": "FormWizard",
-	"formwizard-desc": "Vous permet d'installer et d'utiliser le gadget FormWizard Gadget in Mediawiki.",
+	"formwizard-desc": "Vous permet d'installer et d'utiliser le gadget FormWizard Gadget in MediaWiki.",
 	"formwizard-dialog-label-cancel": "Annuler",
 	"formwizard-dialog-label-done": "Fait",
 	"formwizard-dialog-label-next": "Suivant",
