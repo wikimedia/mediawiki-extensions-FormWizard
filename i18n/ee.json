@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aguve"
+			"Aguve",
+			"Amire80"
 		]
 	},
 	"formwizard-no-subpage-name-alert": "Taflatsɛ, gblɔ ŋkɔ si míana wò axaa",
 	"formwizard-page-action-complete": "$1 wu enu",
-	"formwizard-subpage-request-text": "Ŋlɔ axɛ ƒe ŋkɔ:"
+	"formwizard-subpage-request-text": "<strong> Ŋlɔ axɛ ƒe ŋkɔ:</strong>"
 }
