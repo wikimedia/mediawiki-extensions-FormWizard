@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"formwizard-dialog-label-cancel": "Otkaži",
+	"formwizard-dialog-label-done": "Gotovo",
+	"formwizard-dialog-label-next": "Sljedeće",
+	"formwizard-page-action-complete": "$1 radnja izvršena"
+}
