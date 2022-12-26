@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"formwizard": "Čarobnjak obrasca",
+	"formwizard-dialog-label-cancel": "Otkaži",
+	"formwizard-dialog-label-done": "Gotovo",
+	"formwizard-dialog-label-next": "Sledeće",
+	"special-formwizard-intro": "Čarobnjak obrasca",
+	"formwizard-page-action-complete": "Radnja $1 je završena",
+	"formwizard-wrong-config-file-alert": "Proverite podešavanja za konfiguraciju."
+}
