@@ -4,11 +4,12 @@
 			"Ex-Diktator",
 			"Steeve815",
 			"Strayblues",
-			"YaronSh"
+			"YaronSh",
+			"Amire80"
 		]
 	},
 	"formwizard-dialog-label-cancel": "ביטול",
-	"formwizard-no-subpage-name-alert": "איזה שם לתת לעמוד שלך?",
+	"formwizard-no-subpage-name-alert": "נא לספר לנו איך לקרוא לדף שלך",
 	"formwizard-page-edit-summary": "שינויים שבוצעו על $1",
 	"formwizard-page-action-complete": "הפעולה $1 הושלמה"
 }
