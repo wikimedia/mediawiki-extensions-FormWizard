@@ -4,5 +4,16 @@
 			"Eleassar"
 		]
 	},
-	"formwizard-dialog-label-cancel": "Prekliči"
+	"formwizard": "FormWizard",
+	"formwizard-dialog-label-cancel": "Prekliči",
+	"formwizard-dialog-label-done": "Končano",
+	"formwizard-dialog-label-next": "Naprej",
+	"special-formwizard-intro": "FormWizard",
+	"special-formwizard-title": "To je uvod v posebno stran FormWizard.",
+	"formwizard-no-subpage-name-alert": "Povejte nam, kako naj poimenujemo vašo stran",
+	"formwizard-page-edit-summary": "Sprememba, opravljena v projektu $1",
+	"formwizard-page-action-complete": "Dejanje $1 opravljeno",
+	"formwizard-parser-function-error": "Preverite nastavitvene parametre",
+	"formwizard-subpage-request-text": "<strong>Vnesite ime podstrani:</strong>",
+	"formwizard-wrong-config-file-alert": "Preverite nastavitve konfiguracije!"
 }
