@@ -8,8 +8,16 @@
 			"YaronSh"
 		]
 	},
+	"formwizard-desc": "מאפשרת לך להתקין ולהשתמש בגאדג'ט FormWizard במדיה־ויקי.",
 	"formwizard-dialog-label-cancel": "ביטול",
+	"formwizard-dialog-label-done": "בוצע",
+	"formwizard-dialog-label-next": "הבא",
+	"special-formwizard-intro": "אשף טפסים",
+	"special-formwizard-title": "זהו מבוא לדף המיוחד אשף טפסים.",
 	"formwizard-no-subpage-name-alert": "נא לספר לנו איך לקרוא לדף שלך",
 	"formwizard-page-edit-summary": "שינויים שבוצעו על $1",
-	"formwizard-page-action-complete": "הפעולה $1 הושלמה"
+	"formwizard-page-action-complete": "הפעולה $1 הושלמה",
+	"formwizard-parser-function-error": "נא לבדוק את הפרמטרים של ההגדרה",
+	"formwizard-subpage-request-text": "<strong>נא להזין שם דף־משנה:</strong>",
+	"formwizard-wrong-config-file-alert": "נא לבדוק את הגדרות התצורה!"
 }
