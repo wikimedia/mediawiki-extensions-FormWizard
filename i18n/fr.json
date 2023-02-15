@@ -7,17 +7,17 @@
 			"Verdy p"
 		]
 	},
-	"formwizard": "FormWizard",
+	"formwizard": "Assistant de formulaire",
 	"formwizard-desc": "Vous permet d'installer et d'utiliser le gadget FormWizard Gadget in MediaWiki.",
 	"formwizard-dialog-label-cancel": "Annuler",
 	"formwizard-dialog-label-done": "Fait",
 	"formwizard-dialog-label-next": "Suivant",
-	"special-formwizard-intro": "FormWizard",
-	"special-formwizard-title": "Ceci est une introduction à la page spéciale de FormWizard.",
+	"special-formwizard-intro": "Assistant de formulaire",
+	"special-formwizard-title": "Ceci est une introduction à la page spéciale de l’Assistant de formulaire.",
 	"formwizard-no-subpage-name-alert": "Veuillez nous indiquer comment nommer votre page",
-	"formwizard-page-edit-summary": "Modification faite sur $1",
+	"formwizard-page-edit-summary": "Modification effectuée sur $1",
 	"formwizard-page-action-complete": "$1 action terminée",
 	"formwizard-parser-function-error": "Veuillez vérifier les paramètres d’installation",
-	"formwizard-subpage-request-text": "<strong>Entrez le nom de la sous-page :</strong>",
-	"formwizard-wrong-config-file-alert": "Veuillez vérifier les paramètres de configuration !"
+	"formwizard-subpage-request-text": "<strong>Entrez le nom de la sous-page :</strong>",
+	"formwizard-wrong-config-file-alert": "Veuillez vérifier les paramètres de configuration !"
 }
