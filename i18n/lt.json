@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nokeoo"
+		]
+	},
+	"formwizard-dialog-label-cancel": "Atšaukti",
+	"formwizard-dialog-label-done": "Atlikta",
+	"formwizard-dialog-label-next": "Kitas",
+	"special-formwizard-intro": "FormWizard",
+	"special-formwizard-title": "Tai įvadas į specialų „FormWizard“ puslapį.",
+	"formwizard-no-subpage-name-alert": "Nurodykite kaip pavadinti jūsų puslapį",
+	"formwizard-page-edit-summary": "Pakeitimas atliktas $1",
+	"formwizard-page-action-complete": "$1 veiksmas baigtas",
+	"formwizard-parser-function-error": "Patikrinkite sąrankos parametrus",
+	"formwizard-subpage-request-text": "<strong> Įveskite polapio pavadinimą:</strong>",
+	"formwizard-wrong-config-file-alert": "Patikrinkite konfigūracijos nustatymus!"
+}
