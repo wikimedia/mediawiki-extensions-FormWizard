@@ -2,12 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Fitoschido",
-			"Xuacu"
+			"Xuacu",
+			"YoaR"
 		]
 	},
 	"formwizard": "FormWizard",
 	"formwizard-desc": "Te permite instalar y usar l'accesoriu FormWizard en MediaWiki.",
-	"formwizard-dialog-label-cancel": "Encaboxar",
+	"formwizard-dialog-label-cancel": "Zarrar",
 	"formwizard-dialog-label-done": "Fecho",
 	"formwizard-dialog-label-next": "Siguiente",
 	"special-formwizard-intro": "FormWizard",
