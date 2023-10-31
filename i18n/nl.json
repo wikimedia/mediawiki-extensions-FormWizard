@@ -8,11 +8,16 @@
 			"Siebrand"
 		]
 	},
+	"formwizard-desc": "Hiermee kunt u de FormWizard-gadget in MediaWiki installeren en gebruiken.",
 	"formwizard-dialog-label-cancel": "Annuleren",
 	"formwizard-dialog-label-done": "Afgerond",
 	"formwizard-dialog-label-next": "Volgende",
+	"special-formwizard-intro": "FormWizard",
+	"special-formwizard-title": "Dit is een inleiding tot de speciale pagina van FormWizard.",
 	"formwizard-no-subpage-name-alert": "Vertel ons hoe de pagina komt te heten",
 	"formwizard-page-edit-summary": "Wijziging op $1 aangebracht",
 	"formwizard-page-action-complete": "$1 handeling voltooid",
-	"formwizard-parser-function-error": "Controleer de parameters"
+	"formwizard-parser-function-error": "Controleer de parameters",
+	"formwizard-subpage-request-text": "<strong> Voer de naam van de subpagina in:</strong>",
+	"formwizard-wrong-config-file-alert": "Controleer de configuratie-instellingen!"
 }
