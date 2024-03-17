@@ -71,7 +71,7 @@ class FormWizardHooks {
 			isset( $setUpOptions->config ) &&
 			isset( $setUpOptions->mode )
 		) {
-			$parser->getOutput()->addJsConfigVars( 'formWizardProject',  $options[ 'project' ] );
+			$parser->getOutput()->addJsConfigVars( 'formWizardProject', $options[ 'project' ] );
 			$parser->getOutput()->addJsConfigVars( 'formWizardConfig', $options[ 'config' ] );
 			$parser->getOutput()->addJsConfigVars( 'formWizardPageMode', $options[ 'mode' ] );
 			// The input parameters are wikitext with templates expanded.
