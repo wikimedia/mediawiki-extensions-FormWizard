@@ -3,14 +3,21 @@
 		"authors": [
 			")8",
 			"Liuxinyu970226",
-			"Looong"
+			"Looong",
+			"Anterdc99"
 		]
 	},
 	"formwizard": "表单向导",
 	"formwizard-desc": "允许您在MediaWiki安装并使用表单向导小工具。",
 	"formwizard-dialog-label-cancel": "取消",
+	"formwizard-dialog-label-done": "完成",
+	"formwizard-dialog-label-next": "下一个",
 	"special-formwizard-intro": "表单向导",
 	"special-formwizard-title": "这是表单向导特殊页面的介绍。",
+	"formwizard-no-subpage-name-alert": "请告诉我们您页面的名称",
+	"formwizard-page-edit-summary": "在$1做出的修改",
+	"formwizard-page-action-complete": "$1操作完成",
 	"formwizard-parser-function-error": "请检查安装参数",
-	"formwizard-subpage-request-text": "<strong>进入子页面的名字：</strong>"
+	"formwizard-subpage-request-text": "<strong>进入子页面的名字：</strong>",
+	"formwizard-wrong-config-file-alert": "请检查配置设置！"
 }
