@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chaduvari"
+		]
+	},
+	"formwizard-desc": "మీడియావికీలో FormWizard గాడ్జెట్‌ను స్థాపించడానికి, వాడడానికీ వీలు కలిగిస్తుంది",
+	"formwizard-dialog-label-cancel": "రద్దుచేయి",
+	"formwizard-dialog-label-done": "పూర్తయింది",
+	"formwizard-dialog-label-next": "తరువాతి",
+	"special-formwizard-intro": "FormWizard",
+	"special-formwizard-title": "ఇది FormWizard ప్రత్యేక పేజీకి పరిచయం.",
+	"formwizard-no-subpage-name-alert": "మీ పేజీకి ఏ పేరు పెట్టాలో చెప్పండి",
+	"formwizard-page-edit-summary": "$1 లో చేసిన సవరణ",
+	"formwizard-page-action-complete": "$1 చర్య పూర్తయింది",
+	"formwizard-parser-function-error": "సెటప్ పరామితులను తనిఖీ చేయండి",
+	"formwizard-subpage-request-text": "<strong>ఉపపేజీ పేరు ఇవ్వండి:</strong>",
+	"formwizard-wrong-config-file-alert": "కాన్ఫిగరేషన్ సెట్టింగులను తనిఖీ చేయండి!"
+}
