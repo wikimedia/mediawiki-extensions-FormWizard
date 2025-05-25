@@ -1,9 +1,9 @@
 ( function () {
-	$( function () {
+	$( () => {
 		// {api} instance of mediaWiki api.
 		// {Object} configData data from the parsed wikitext.
 		// {int} viewControl variable used to control the stack views.
-		var api, mode, viewControl = 0;
+		let api, mode, viewControl = 0;
 		api = new mw.Api();
 
 		/**
@@ -170,7 +170,7 @@
 			*/
 
 		function createElementsFromSchema( data ) {
-			var elementSet = [],
+			let elementSet = [],
 				smallTextBox,
 				multilineText,
 				comboBoxInputWidget,
@@ -180,7 +180,7 @@
 				radioSelectInputWidget,
 				dropdownInputWidget,
 				selectFileWidget;
-			data.schema.forEach( function ( value ) {
+			data.schema.forEach( ( value ) => {
 				switch ( value.type ) {
 					case 'smallTextBox':
 						smallTextBox = makesmallTextBox( value );
@@ -231,7 +231,7 @@
 			*/
 
 		function createFieldSet( contentElements ) {
-			var fieldset = new OO.ui.FieldsetLayout( {
+			const fieldset = new OO.ui.FieldsetLayout( {
 				classes: [ 'container' ],
 				padded: true
 			} );
@@ -247,7 +247,7 @@
 			*/
 
 		function AddPanelElementsToPanel( fieldSetContentElements ) {
-			var fieldSet,
+			let fieldSet,
 				panel;
 			fieldSet = createFieldSet( fieldSetContentElements );
 			panel = new OO.ui.PanelLayout( {
@@ -283,8 +283,8 @@
 			*/
 
 		function getFieldSetData( fieldset ) {
-			var fieldData = [];
-			fieldset.forEach( function ( field ) {
+			const fieldData = [];
+			fieldset.forEach( ( field ) => {
 				if ( field.label ) {
 					fieldData.push( field.label );
 				} else {
@@ -302,9 +302,9 @@
 			*/
 
 		function getFieldSetContendData( fieldsetContainer ) {
-			var ContentData = [];
-			fieldsetContainer.forEach( function ( fieldset ) {
-				var fieldsetData = getFieldSetData( fieldset );
+			const ContentData = [];
+			fieldsetContainer.forEach( ( fieldset ) => {
+				const fieldsetData = getFieldSetData( fieldset );
 				ContentData.push( fieldsetData );
 			} );
 			return ContentData;
@@ -318,9 +318,9 @@
 			*/
 
 		function constructPageContent( pageContentData ) {
-			var subContent, i;
+			let subContent, i;
 			subContent = '\n';
-			pageContentData.forEach( function ( contentData ) {
+			pageContentData.forEach( ( contentData ) => {
 				for ( i = 0; i < contentData.length; i++ ) {
 					if ( i % 2 === 0 ) {
 						subContent += '\n== ' + contentData[ i ] + ' == \n' + contentData[ i + 1 ] + '\n';
@@ -343,7 +343,7 @@
 
 		function createPage( api, fieldsetContentData,
 			baseUrl, targetMode, pageName, targetRootName ) {
-			var date, pageTitle;
+			let date, pageTitle;
 			if ( targetMode === 'subpage' ) {
 				pageTitle = targetRootName + $( document.getElementById( 'mw-subpage-name' ) ).val();
 			} else {
@@ -356,7 +356,7 @@
 				title: pageTitle,
 				appendtext: constructPageContent( fieldsetContentData ),
 				basetimestamp: date.toISOString()
-			} ).done( function () {
+			} ).done( () => {
 				window.location.assign( location.origin + '/' + baseUrl + '/' + pageTitle );
 				mw.notify( mw.msg( 'formwizard-page-action-complete', mw.config.get( 'formWizardProject' ) ),
 					{ type: 'info' } );
@@ -393,14 +393,14 @@
 		}
 
 		// When the launch button is clicked
-		$( document.getElementById( 'mw-formwizard-launch' ) ).on( 'click', function () {
+		$( document.getElementById( 'mw-formwizard-launch' ) ).on( 'click', () => {
 			// {Object} fieldsetElements stores step elements from data schema
 			// {Object} fieldsetContent Holds the contents of eachfieldset
 			// {Object} fieldsetContainer stores fielsets
 			// {Object} configData data from the parsed wikitext.
 			// {Object} stackPanels }Holds the panels to be added to the stack
 			// {Object} fieldsetContentData Holds data from the panel fieldset elements
-			var fieldsetElements = [],
+			let fieldsetElements = [],
 				fieldsetContent = [],
 				fieldsetContainer = [],
 				stackPanels = [],
@@ -416,9 +416,9 @@
 				OO.ui.alert( mw.msg( 'formwizard-no-subpage-name-alert' ),
 					{ size: 'medium' } );
 			} else {
-				getConfigData( api ).done( function ( data ) {
+				getConfigData( api ).done( ( data ) => {
 					// Windows manager and ProcessDialog instances
-					var windowManager,
+					let windowManager,
 						ProcessDialog,
 						dialog,
 						key,
@@ -451,13 +451,13 @@
 							{ modes: 'final', action: 'save', label: 'Done', flags: 'primary' }
 						];
 						FormWizardDialog.prototype.initialize = function () {
-							var panel, stack;
+							let panel, stack;
 							FormWizardDialog.parent.prototype.initialize.apply( this, arguments );
 							// get elements from the fieldset container
-							fieldsetContainer.forEach( function ( elt ) {
+							fieldsetContainer.forEach( ( elt ) => {
 								fieldsetContent.push( elt );
 							} );
-							fieldsetContent.forEach( function ( content ) {
+							fieldsetContent.forEach( ( content ) => {
 								panel = AddPanelElementsToPanel( content );
 								stackPanels.push( panel );
 							} );
@@ -475,7 +475,7 @@
 								}, this );
 						};
 						FormWizardDialog.prototype.getActionProcess = function ( action ) {
-							var dialog;
+							let dialog;
 							// The Done button has been clicked
 							if ( action === 'save' ) {
 								// we get the fieldsetContentData from the container of fieldsets
@@ -486,7 +486,7 @@
 									targetMode, pageName, targetRootName );
 								// Here we close the dialog after processing
 								dialog = this;
-								return new OO.ui.Process( function () {
+								return new OO.ui.Process( () => {
 									// do something about the edit
 									dialog.close();
 								} );
