@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Meno25",
-			"ديفيد"
+			"ديفيد",
+			"Mohammed Qays"
 		]
 	},
 	"formwizard": "ساحر النموذج",
@@ -16,6 +17,6 @@
 	"formwizard-page-edit-summary": "تم إجراء التعديل في $1",
 	"formwizard-page-action-complete": "اكتمل عمل $1",
 	"formwizard-parser-function-error": "يُرجَى التحقق من وسائط الإعداد",
-	"formwizard-subpage-request-text": "<strong>أدخل اسم الصفحة الفرعية:</strong/>",
+	"formwizard-subpage-request-text": "<strong>أدخل عنوان الصفحة الفرعية:</strong/>",
 	"formwizard-wrong-config-file-alert": "يُرجَى التحقق من إعدادات التكوين!"
 }
