@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"formwizard": "Asistente de formularios",
+	"formwizard-desc": "Permite instalar e usar o trebello FormWizard en MediaWiki.",
+	"formwizard-dialog-label-cancel": "Cancelar",
+	"formwizard-dialog-label-done": "Feito",
+	"formwizard-dialog-label-next": "Seguinte",
+	"special-formwizard-intro": "Asistente de formularios",
+	"special-formwizard-title": "Esta é unha introdución á páxina especial do asistente de formularios.",
+	"formwizard-no-subpage-name-alert": "Indica como queres chamar a páxina",
+	"formwizard-page-edit-summary": "Modificación feita en $1",
+	"formwizard-page-action-complete": "Completouse a acción en $1",
+	"formwizard-parser-function-error": "Comproba os parámetros de configuración",
+	"formwizard-subpage-request-text": "<strong>Escribe o nome da subpáxina:</strong>",
+	"formwizard-wrong-config-file-alert": "Comproba os axustes de configuración!"
+}
