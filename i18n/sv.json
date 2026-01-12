@@ -1,11 +1,20 @@
 {
 	"@metadata": {
 		"authors": [
+			"Stefan2255",
 			"WikiPhoenix"
 		]
 	},
+	"formwizard-desc": "Låter dig installera och använda FormWizard-gadgeten i MediaWiki.",
 	"formwizard-dialog-label-cancel": "Avbryt",
 	"formwizard-dialog-label-done": "Klar",
 	"formwizard-dialog-label-next": "Nästa",
-	"formwizard-subpage-request-text": "<strong>Ange namnet på undersidan:</strong>"
+	"special-formwizard-intro": "Formulärguiden",
+	"special-formwizard-title": "Detta är en introduktion till FormWizard Special-sidan.",
+	"formwizard-no-subpage-name-alert": "Berätta gärna vad vi ska döpa din sida till",
+	"formwizard-page-edit-summary": "Ändring gjord på $1",
+	"formwizard-page-action-complete": "Åtgärd på $1 slutförd",
+	"formwizard-parser-function-error": "Kontrollera inställningsparametrarna",
+	"formwizard-subpage-request-text": "<strong>Ange namnet på undersidan:</strong>",
+	"formwizard-wrong-config-file-alert": "Kontrollera konfigurationsinställningarna!"
 }
