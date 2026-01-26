@@ -22,8 +22,7 @@ class FormWizardHooks {
 		Skin &$skin
 	) {
 		$out->addModules( [
-			'ext.formWizard',
-			'oojs'
+			'ext.formWizard'
 		] );
 	}
 
