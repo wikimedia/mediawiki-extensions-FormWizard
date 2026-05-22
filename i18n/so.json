@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"AhmedG612"
+		]
+	},
+	"formwizard-desc": "Waxay kuu oggolaanaysaa inaad rakibto oo isticmaasho FormWizard Gadget gudaha MediaWiki.",
+	"formwizard-dialog-label-cancel": "Jooji",
+	"formwizard-dialog-label-done": "La dhammeeyay",
+	"formwizard-dialog-label-next": "Xiga",
+	"special-formwizard-intro": "Wizard-ka Foomka",
+	"special-formwizard-title": "Tani waa hordhac ku saabsan bogga gaarka ah ee FormWizard.",
+	"formwizard-no-subpage-name-alert": "Fadlan noo sheeg magaca aad u bixinayso boggaaga",
+	"formwizard-page-edit-summary": "Isbeddel lagu sameeyay $1",
+	"formwizard-page-action-complete": "$1 hawl ayaa la dhammaystiray",
+	"formwizard-parser-function-error": "Fadlan hubi cabbirrada dejinta",
+	"formwizard-subpage-request-text": "<strong> Geli magaca bog-hoosaadka:</strong>",
+	"formwizard-wrong-config-file-alert": "Fadlan hubi dejimaha habaynta!"
+}
