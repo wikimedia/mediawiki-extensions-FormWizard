@@ -5,6 +5,7 @@
 			"Tensama0415"
 		]
 	},
+	"formwizard": "폼위자드",
 	"formwizard-desc": "미디어위키에 FormWizard 소도구를 설치하고 사용할 수 있습니다",
 	"formwizard-dialog-label-cancel": "취소",
 	"formwizard-dialog-label-done": "완료",
@@ -13,7 +14,7 @@
 	"special-formwizard-title": "이 문서는 폼위자드 특수 문서에 대한 소개입니다.",
 	"formwizard-no-subpage-name-alert": "문서의 이름을 지정해 주십시오",
 	"formwizard-page-edit-summary": "$1 수정됨",
-	"formwizard-page-action-complete": "$1 동작 완료",
+	"formwizard-page-action-complete": "$1 작업 완료",
 	"formwizard-parser-function-error": "설정 매개변수를 확인해 주세요",
 	"formwizard-subpage-request-text": "<strong> 하위 문서 이름 입력:</strong>",
 	"formwizard-wrong-config-file-alert": "구성 설정을 확인해 주십시오!"
