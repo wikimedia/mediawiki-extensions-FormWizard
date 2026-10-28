@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"formwizard": "FormWizard",
+	"formwizard-desc": "Umožňuje nainštalovať a používať gadget FormWizard v MediaWiki.",
+	"formwizard-dialog-label-cancel": "Zrušiť",
+	"formwizard-dialog-label-done": "Hotovo",
+	"formwizard-dialog-label-next": "Ďalej",
+	"special-formwizard-intro": "FormWizard",
+	"special-formwizard-title": "Toto je úvod do špeciálnej stránky FormWizard.",
+	"formwizard-no-subpage-name-alert": "Povedzte nám, ako sa má vaša stránka volať",
+	"formwizard-page-edit-summary": "Úprava vykonaná dňa $1",
+	"formwizard-page-action-complete": "Akcia $1 dokončená",
+	"formwizard-parser-function-error": "Skontrolujte parametre nastavenia",
+	"formwizard-subpage-request-text": "<strong> Zadajte názov podstránky:</strong>",
+	"formwizard-wrong-config-file-alert": "Skontrolujte nastavenia konfigurácie!"
+}
